@@ -20,3 +20,13 @@ Keep your local master branches up to date
 [This should work](https://gist.github.com/mandiwise/44d1edce18f2ffb14f63)
 
 Main changes are incorporated from branches into master, then into gh-pages. Ideally.
+
+NOTE: From my limited experience, this doesn't entirely work. You'll need to run
+
+```
+git fetch origin
+git rebase origin/gh-pages
+git push origin gh-pages
+```
+
+
