@@ -43,4 +43,9 @@ git rebase origin/gh-pages
 git push origin gh-pages
 ```
 
-just after git rebase master. Keep using git log to check that the commit history is clean.
+just after `git rebase master`. Keep using git log to check that the commit history is clean.
+
+To be noted. You'll probably run into merge conflicts. And they'll be painful. Very painful.
+
+Most of these issues arise with the `gh-pages` branch, with the baseurl in `_config.yml`
+Please suggest a simpler fix 
