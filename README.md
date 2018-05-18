@@ -11,13 +11,27 @@ Keep your local master branches up to date
 
 ### For those without master access
 
-Fork, branch out for any change, and submit PRs. 
+Fork, branch out for any change, and submit PRs.
 
 Keep your local master branches up to date
 
 ## Keeping gh-pages up to date with master
 
 [This should work](https://gist.github.com/mandiwise/44d1edce18f2ffb14f63)
+
+```
+// Reference: http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/
+
+$ git add .
+$ git status // to see what changes are going to be commited
+$ git commit -m 'Some descriptive commit message'
+$ git push origin master
+
+$ git checkout gh-pages // go to the gh-pages branch
+$ git rebase master // bring gh-pages up to date with master
+$ git push origin gh-pages // commit the changes
+$ git checkout master // return to the master branch
+```
 
 Main changes are incorporated from branches into master, then into gh-pages. Ideally.
 
@@ -29,4 +43,4 @@ git rebase origin/gh-pages
 git push origin gh-pages
 ```
 
-
+just after git rebase master. Keep using git log to check that the commit history is clean.
