@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   If you're here, it's probably through github. If not and you can see this
   text in the actual website, please inform Zubair Abid, Pulkit Gera, or
   Abhigyan Ghosh.
-baseurl: "ECell_build1" # the subpath of your site, e.g. /blog
-url: "https://zubairabid.github.io/ECell_build1" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ECell_build1" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mylittlepony
 github_username:  mylittlepony
 
