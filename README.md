@@ -4,16 +4,27 @@ Built with Jekyll and Bootstrap 4
 
 ## Contribution guideline
 
-### For those with master access
-Create a branch for any change and merge accordingly.
+### Git Workflow
 
-Keep your local master branches up to date
+https://musescore.org/en/handbook/developers-handbook/finding-your-way-around/git-workflow
 
-### For those without master access
+#### Summary
 
-Fork, branch out for any change, and submit PRs.
+1. Fork on GitHub (click Fork button) (if you don't have master access)
+2. Clone to computer, preferably use SSH URL (`git clone git@github.com:you/MuseScore.git`)
+3. Don't forget to cd into your repo: (`cd MuseScore/`)
+4. Set up remote upstream (`git remote add upstream git://github.com/musescore/MuseScore.git`) (for forks)
+5. Create a branch for new issue (`git checkout -b 404-new-feature`)
+6. Develop on issue branch. [Time passes, the main MuseScore repository accumulates new commits]
+7. Commit changes to your local issue branch. (`git add . ; git commit -m 'commit message'`)
+8. Fetch upstream (`git fetch upstream`) (for those with master access, fetch origin)
+9. Update local master (`git checkout master; git merge upstream/master`)
+10. Rebase issue branch (`git checkout 404-new-feature; git rebase master`)
+11. Repeat steps 6-11 until dev is complete
+12. Push branch to GitHub (`git push origin 404-new-feature`)
+13. Start your browser, go to your GitHub repo, switch to "404-new-feature" branch and press the [Pull Request] button
 
-Keep your local master branches up to date
+After having made a Pull Request don't pull/merge anymore, it'll mess up the commit history. If you (have to) rebase, use 'push --force' (`git push --force`) to send it up to your GitHub repository, this will update the PR too. Be careful not to do this while the core team is working on merging in your PR.
 
 ## Keeping gh-pages up to date with master
 
@@ -34,18 +45,3 @@ $ git checkout master // return to the master branch
 ```
 
 Main changes are incorporated from branches into master, then into gh-pages. Ideally.
-
-NOTE: From my limited experience, this doesn't entirely work. You'll need to run
-
-```
-git fetch origin
-git rebase origin/gh-pages
-git push origin gh-pages
-```
-
-just after `git rebase master`. Keep using git log to check that the commit history is clean.
-
-To be noted. You'll probably run into merge conflicts. And they'll be painful. Very painful.
-
-Most of these issues arise with the `gh-pages` branch, with the baseurl in `_config.yml`
-Please suggest a simpler fix 
