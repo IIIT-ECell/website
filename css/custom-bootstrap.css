@@ -1,0 +1,59 @@
+
+/* start modifying bootstrap element properties */
+.navbar {
+  border-radius: 0;
+}
+
+.collapse.navbar-collapse {
+  height: 100%;
+}
+
+.nav-item{
+  padding: .4rem;
+}
+
+/* end modifying bootstrap element properties */
+
+
+/* start palette colours */
+.coral {
+  background-color: #e14658;
+}
+
+.coral-text {
+  color: #e14658;
+}
+
+.navy {
+  background-color: #22252c;
+}
+
+.navy-text {
+  color: #22252c;
+}
+
+.mountain {
+  background-color: #3f3250;
+}
+
+.mountain-text {
+  color: #3f3250;
+}
+
+.scrub {
+  background-color: #c0b3a0;
+}
+
+.scrub-text {
+  color: #c0b3a0;
+}
+
+.wash {
+  background-color: #d7dbe2;
+}
+
+.wash-text {
+  color: #d7dbe2;
+}
+
+/* end palette colours*/
