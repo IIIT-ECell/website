@@ -28,6 +28,37 @@ a:active {
   text-decoration: none;
   color: #c0b3a0;
 }
+
+
+.container.content a {
+  text-decoration: none;
+  color: #22252c;
+}
+
+.container.content a:link {
+  text-decoration: none;
+  color: #22252c;
+}
+
+.container.content a:visited {
+  text-decoration: none;
+  color: #3f3250;
+}
+
+.container.content a:focus {
+  text-decoration: none;
+  color: #e14658;
+}
+
+.container.content a:hover {
+  text-decoration: none;
+  color: #e14658;
+}
+
+.container.content a:active {
+  text-decoration: none;
+  color: #c0b3a0;
+}
 /* end link styling */
 
 
