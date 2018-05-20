@@ -1,5 +1,42 @@
+/* start link styling */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #e14658;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #e14658;
+}
+
+a:active {
+  text-decoration: none;
+  color: #c0b3a0;
+}
+/* end link styling */
+
 
 /* start modifying bootstrap element properties */
+pre {
+  padding: 1rem;
+  background-color: #d7dbe2;
+}
+
 .navbar {
   border-radius: 0;
 }
@@ -12,6 +49,20 @@
   padding: .4rem;
 }
 
+.nav-item:hover, .navbar-brand:hover, .dropdown-item:hover{
+  background-color: #3f3250;
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #e14658;
+  color: white;
+}
+
+.active {
+  background-color: #e14658;
+  color: white;
+}
 /* end modifying bootstrap element properties */
 
 
@@ -49,7 +100,7 @@
 }
 
 .wash {
-  background-color: #d7dbe2;
+  background-color: #d7dfea;
 }
 
 .wash-text {
