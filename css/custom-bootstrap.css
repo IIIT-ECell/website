@@ -10,22 +10,18 @@ a:link {
 }
 
 a:visited {
-  text-decoration: none;
   color: white;
 }
 
 a:focus {
-  text-decoration: none;
   color: #e14658;
 }
 
 a:hover {
-  text-decoration: none;
   color: #e14658;
 }
 
 a:active {
-  text-decoration: none;
   color: #c0b3a0;
 }
 
@@ -41,24 +37,21 @@ a:active {
 }
 
 .container.content a:visited {
-  text-decoration: none;
   color: #3f3250;
 }
 
 .container.content a:focus {
-  text-decoration: none;
   color: #e14658;
 }
 
 .container.content a:hover {
-  text-decoration: none;
   color: #e14658;
 }
 
 .container.content a:active {
-  text-decoration: none;
   color: #c0b3a0;
 }
+
 /* end link styling */
 
 /* start cover styling */
@@ -117,11 +110,18 @@ a:active {
 
 /* end cover styling */
 
-.card {
-  min-height: 20rem;
-  background-color: black;
+.category {
+  padding: .3rem;
+  background-color: #d7dfea;
 }
 
+.card {
+  /* min-height: 10rem; */
+}
+
+.carousel-item .card {
+  height: 20rem;
+}
 
 /* start modifying bootstrap element properties */
 pre {
