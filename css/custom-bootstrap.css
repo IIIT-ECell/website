@@ -61,6 +61,67 @@ a:active {
 }
 /* end link styling */
 
+/* start cover styling */
+.cover {
+  height: 100vh;
+  width: 100%;
+
+  background-color: #3f3250;
+  /* background-image: url("https://ecell.iiit.ac.in//static/images/index/coolspace.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+.cover .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cover .container .row {
+  justify-content: center;
+  align-items: center;
+}
+
+.cover .container .row .col-sm-12 {
+  display: flex;
+  justify-content: center;
+}
+
+.cover .container .row .col-md-5 {
+  display: flex;
+  justify-content: center;
+}
+
+.cover .container .row .col-md-7 {
+  display: flex;
+  justify-content: center;
+}
+
+.cover .container .row h1{
+  font-size: 10vh;
+  color: white;
+  text-transform: uppercase;
+}
+
+.cover .container .row h2{
+  font-size: 4vh;
+  color: #d7dfea;
+  /* text-transform: uppercase; */
+}
+
+/* end cover styling */
+
+.card {
+  min-height: 20rem;
+  background-color: black;
+}
+
 
 /* start modifying bootstrap element properties */
 pre {
