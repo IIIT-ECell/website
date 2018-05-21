@@ -3,12 +3,20 @@ layout: wrapper
 ---
 
 <!-- TODO add a landing page image container -->
+{% include cover.html %}
 
-<!-- TODO add a 'work done so far' fluff sidepiece -->
+<div class="container content mt-5 p-2">
+  <!-- TODO add a 'work done so far' fluff sidepiece -->
+  <h1>OUR WORK</h1>
 
-<!-- list all blog posts -->
-{% include lsposts.html %}
+  <!-- list all blog posts -->
+  <h1>BLOG</h1>
+  {% include lsposts.html %}
 
-<!-- TODO add carousel of past speakers -->
+  <!-- TODO add carousel of past speakers -->
+  <h1>PAST SPEAKERS</h1>
+  {% include carousel.html %}
 
-{{content}}
+
+  {{content}}
+</div>
