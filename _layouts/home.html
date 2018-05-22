@@ -13,10 +13,13 @@ layout: wrapper
   <h1 id="blog">BLOG</h1>
   {% include lsposts.html %}
 
-  <!-- TODO add carousel of past speakers -->
-  <h1 id="pastSpeakers">PAST SPEAKERS</h1>
-  {% include carousel.html %}
 
 
   {{content}}
 </div>
+
+<!-- TODO add carousel of past speakers -->
+<br id="speakers">
+{% include carousel.html %}
+
+{% include contact.html %}
