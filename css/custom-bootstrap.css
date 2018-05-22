@@ -158,6 +158,10 @@ a:active {
   background-color: #d7dfea;
 }
 
+.formbut {
+  border: none;
+  color: white;
+}
 /* end contact styling */
 
 /* start modifying bootstrap element properties */
