@@ -1,18 +1,9 @@
 ---
+
 layout: page
 title: About
 permalink: /about/
+
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+ We want to build an ecosystem where networking and knowledge sharing can happen. The cell conducts numerous workshops, seminars, events and interactive sessions with eminent entrepreneurs, thus, providing the students unparalleled exposure to the entrepreneurial world. It also provides the students a platform to work on the live projects from start-ups which adds a star to their work experience and boosts management expertise. 
