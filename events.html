@@ -1,0 +1,29 @@
+---
+layout: page
+title : talks
+permalink : /talks/
+---
+<h1 class ="text-center"> Talk Sessions </h1>
+
+<div class="card-column">
+
+	{% for post in site.posts %}
+	{% if post.categories contains "talk_session" %}
+	
+	<div class="card">
+		{% if post.img %}
+		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
+		{% endif %}
+		<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
+		<div class="card-body">
+			{{post.date|date_to_string}}			{{post.content}}
+			
+		</div>
+	</div>
+	{% endif %}
+	<br>
+{% endfor %}	
+</div>
+
+
+
