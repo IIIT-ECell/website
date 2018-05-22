@@ -8,7 +8,7 @@ layout: page
 	{% for post in site.posts %}
   	{% if post.categories contains "hackathons" %}
 
-    	<div class="card col-sm-12 col-xs-12 col-md-6">
+    	<div class="card col-sm-6 md-6">
     		{% if post.img %}
     		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
     		{% endif %}
@@ -21,6 +21,7 @@ layout: page
     			{% endif %}
     		</div>
     	</div>
+
   	{% endif %}
   	<br>
   {% endfor %}
