@@ -1,7 +1,5 @@
 ---
 layout: page
-title : Workshops
-permalink : /workshops/
 ---
 
 <br>
@@ -9,7 +7,7 @@ permalink : /workshops/
 
 	{% for post in site.posts %}
 	{% if post.categories contains "workshops" %}
-	
+
 	<div class="card col-sm-6 md-6">
 		{% if post.img %}
 		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
@@ -25,6 +23,5 @@ permalink : /workshops/
 	</div>
 	{% endif %}
 	<br>
-{% endfor %}	
+{% endfor %}
 </div>
-
