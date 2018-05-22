@@ -5,12 +5,12 @@ permalink : /hackathons/
 ---
 <h1 class ="text-center"> Hackathons </h1>
 
-<div class="card-column">
+<div class="row">
 
 	{% for post in site.posts %}
 	{% if post.categories contains "hackathons" %}
 	
-	<div class="card">
+	<div class="card col-sm-6 md-6">
 		{% if post.img %}
 		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
 		{% endif %}
