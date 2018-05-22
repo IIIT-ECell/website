@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-md navbar-dark fixed-top navy py-0">
 
     <!-- TODO 1. Get the Icon, 2. Also behaves as home -->
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="{{site.baseurl}}/">
       <img src="https://ecell.iiit.ac.in/static/images/logo-ecell.png" height="40">
     </a>
 
@@ -14,10 +14,10 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#blog">Blog</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/#blog">Blog</a> <!-- TODO link -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about/">About Us</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/about/">About Us</a> <!-- TODO link -->
         </li>
         <li class="nav-item dropdown show"> <!-- TODO links -->
           <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Initiatives</a>
@@ -30,9 +30,9 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item white-text" href="#">So you think you can pitch</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item white-text" href="/ECell_build1/talks/">Talks</a>
-            <a class="dropdown-item white-text" href="/ECell_build1/hackathons/">Hackathons</a>
-            <a class="dropdown-item white-text" href="/ECell_build1/workshops/">Workshops</a>
+            <a class="dropdown-item white-text" href="{{site.baseurl}}/talks/">Talks</a>
+            <a class="dropdown-item white-text" href="{{site.baseurl}}/hackathons/">Hackathons</a>
+            <a class="dropdown-item white-text" href="{{site.baseurl}}/workshops/">Workshops</a>
 
           </div>
         </li>
@@ -43,7 +43,7 @@
           <a class="nav-link" href="#">Partners</a> <!-- TODO link -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Us</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/#contact">Contact Us</a> <!-- TODO link -->
         </li>
       </ul>
 
