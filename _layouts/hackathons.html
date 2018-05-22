@@ -8,7 +8,7 @@ layout: page
 	{% for post in site.posts %}
   	{% if post.categories contains "hackathons" %}
 
-    	<div class="card col-sm-6 md-6">
+    	<div class="card col-sm-12 col-xs-12 col-md-6">
     		{% if post.img %}
     		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
     		{% endif %}
@@ -21,27 +21,7 @@ layout: page
     			{% endif %}
     		</div>
     	</div>
-
-<<<<<<< 225adb12bc938ec29d39bab81a23c3c85ea7b12b
-	<div class="card col-sm-6 md-6">
-		{% if post.img %}
-		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
-		{% endif %}
-		<div class="card-body">
-			<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
-			<b>{{post.date|date_to_string}}</b>
-			{{post.content}}
-			{% if post.link %}
-			<center><a class="btn btn-warning btn-lg" href="{{post.link | uri_escape}}" target=_blank role="button">Link</a></center>
-			{% endif %}
-		</div>
-	</div>
-	{% endif %}
-	<br>
-{% endfor %}
-=======
   	{% endif %}
   	<br>
   {% endfor %}
->>>>>>> fixed basic linking and buttons
 </div>
