@@ -1,9 +1,10 @@
 ---
+
 layout : page
 title : An Interaction With Mr. Ronnie Screwvala
-
 categories : events talk_session
 img : ronnie.jpg 
+
 ---
 
 Founder and former CEO of UTV group (later acquired by Disney)
