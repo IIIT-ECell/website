@@ -152,6 +152,12 @@ a:active {
 .wide {
   width: 100%;
 }
+
+.form-control, .formbut {
+  border-radius: 0;
+  background-color: #d7dfea;
+}
+
 /* end contact styling */
 
 /* start modifying bootstrap element properties */
