@@ -117,13 +117,48 @@ a:active {
 
 .card {
   /* min-height: 10rem; */
+  border-radius: 0;
 }
 
 .carousel-item .card {
-  height: 20rem;
+  height: 50vh;
 }
 
+/* start contact styling */
+
+#contact {
+  background-color: #3f3250;
+  color: white;
+  text-transform: uppercase;
+}
+
+#contact .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .container .row {
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .container .row .col-sm-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wide {
+  width: 100%;
+}
+/* end contact styling */
+
 /* start modifying bootstrap element properties */
+footer {
+  min-height: 50vh;
+}
+
 pre {
   padding: 1rem;
   background-color: #d7dbe2;
