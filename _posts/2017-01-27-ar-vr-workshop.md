@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : AR/VR Workshop
 categories : events workshops 
 img : arvr.jpg

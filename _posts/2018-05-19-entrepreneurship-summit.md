@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Entrepreneurship Summit
 categories : events workshops 
 img : entrepreneur.jpeg
