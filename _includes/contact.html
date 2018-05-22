@@ -5,7 +5,7 @@
         <h1 class="pb-5">Get in touch</h1>
       </div>
 
-      <form class="col-sm-12">
+      <form class="col-sm-12 col-md-12" action="https://formspree.io/abhigyanghosh30@gmail.com" method="POST">
         <div class="row">
           <div class = "col-sm-12 col-md-4">
             <div class="form-group wide">
@@ -26,17 +26,18 @@
             </div>
           </div>
 
-          <div class = "col-sm-12">
+          <div class = "col-sm-12 col-md-12">
             <div class="form-group wide">
               <label for="mailbody">Message</label>
               <textarea class="form-control" id="mailbody" rows="6"></textarea>
             </div>
           </div>
 
-          <div class = "col-sm-12">
-            <button type="submit" class="btn btn-light formbut coral wide">Submit</button>
+          <div class = "col-sm-12 col-md-12">
+            <input type="submit" class="btn btn-light formbut coral wide" value="Send">
           </div>
-
+            <input type="hidden" name="_cc" value="@gmail.com" />
+            <input type="hidden" name="_next" value="http://127.0.0.1:4000/ECell_build1/"/>
         </div>
       </form>
     </div>
