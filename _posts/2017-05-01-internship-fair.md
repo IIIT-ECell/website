@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Internship Fair 
 categories : events workshops 
 img : internshipfair.png

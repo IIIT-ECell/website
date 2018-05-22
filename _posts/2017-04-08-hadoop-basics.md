@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Hadoop Basics
 categories : events workshops
 img : hadoop.jpg 
