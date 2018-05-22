@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Talk on Financial Education 
 categories : events talk_session
 img : gyandhan.jpg 

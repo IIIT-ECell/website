@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Zero To One Crore
 img : zerotoone.png
 categories : events workshops 
