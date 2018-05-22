@@ -4,7 +4,6 @@ title : Talk Sessions
 permalink : /talks/
 ---
 
-
 <div class="row">
 
 	{% for post in site.posts %}
@@ -16,7 +15,9 @@ permalink : /talks/
 		{% endif %}
 		<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
 		<div class="card-body">
+
 			<b>{{post.date|date_to_string}}	</b>		{{post.content}}
+
 			
 		</div>
 	</div>
