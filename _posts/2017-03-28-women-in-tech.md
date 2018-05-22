@@ -1,5 +1,5 @@
 ---
-layout : page
+layout : blog
 title : Women In Tech
 categories : events talk_session
 img : womensday.jpg 
