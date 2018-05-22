@@ -5,21 +5,19 @@ layout: page
 <div class="row">
 
 	{% for post in site.posts %}
-	{% if post.categories contains "talk_session" %}
+		{% if post.categories contains "talk_session" %}
 
-	<div class="card col-sm-6 md-6">
-		{% if post.img %}
-		<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
+			<div class="card col-sm-6 md-6">
+				{% if post.img %}
+				<img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
+				{% endif %}
+				<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
+				<div class="card-body">
+					<b>{{post.date|date_to_string}}	</b>		{{post.content}}
+				</div>
+			</div>
+
 		{% endif %}
-		<div class="card-body">
-			<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
-
-			<b>{{post.date|date_to_string}}	</b>		{{post.content}}
-
-
-		</div>
-	</div>
-	{% endif %}
-	<br>
-{% endfor %}
+		<br>
+	{% endfor %}
 </div>
