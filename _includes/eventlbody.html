@@ -1,0 +1,13 @@
+<div class="card col-sm-6 md-6">
+  {% if post.img %}
+  <img class="card-img-top" src="../eventsimages/{{post.img}}" alt="{{post.title}}">
+  {% endif %}
+  <div class="card-body">
+    <h4 class="card-title text-center"><b>{{post.title}}</b></h4>
+    <b>{{post.date|date_to_string}}</b>
+    {{post.content}}
+    {% if post.link %}
+    <center><a class="btn btn-light wide coral white-text" href="{{post.link | uri_escape}}" target=_blank role="button">Link</a></center>
+    {% endif %}
+  </div>
+</div>
