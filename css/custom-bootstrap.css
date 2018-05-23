@@ -124,6 +124,48 @@ a:active {
   height: 50vh;
 }
 
+/* start showcase styling */
+
+#portfolio {
+  width: 100%;
+}
+
+.port.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* .port.row .col-sm-6, .port.row .col-md-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.showcase {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.counter {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.numeric {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.count-caption {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* end showcase styling */
+
 /* start contact styling */
 
 #contact {

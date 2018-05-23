@@ -41,3 +41,25 @@
 	}
 	$(document).ready(checkActiveNav);
 </script>
+
+<script type="text/javascript">
+$('.numeric').each(function() {
+	var $this = $(this),
+			countTo = $this.attr('count');
+
+	$({ countNum: $this.text()}).animate({
+		countNum: countTo
+	},
+	{
+		duration: 2000,
+		easing:'linear',
+		step: function() {
+			$this.text(Math.floor(this.countNum));
+		},
+		complete: function() {
+			$this.text(this.countNum);
+			//alert('finished');
+		}
+	});
+});
+</script>
