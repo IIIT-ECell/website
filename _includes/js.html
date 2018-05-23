@@ -6,13 +6,38 @@
 	function checkActiveNav()
 	{
 		var pagename = "{{page.title}}";
+		document.getElementById("contactus").classList.remove("active");
 		document.getElementById("blog").classList.remove("active");
+		if(pagename =="Index")
+		{
+			var pageUrl=window.location.pathname;
+			pageUrl += window.location.hash;
+			console.log(pageUrl);
+			console.log("{{site.baseurl}}/#contact");
+			if(pageUrl == "{{site.baseurl}}/#contact")
+				document.getElementById("contactus").classList.add("active");
+			else
+				document.getElementById("blog").classList.add("active");
+
+		}
+		else
 		if(pagename =="About")
 			document.getElementById("about").classList.add("active");
+		else
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
-		if(pagename =="Index")
-			document.getElementById("contactus").classList.add("active");
+	};
+	function gotoBlog()
+	{
+		window.location.hash="blog";
+		window.location.pathname="{{site.baseurl}}/"
+		checkActiveNav();
+	}
+	function gotoContact()
+	{
+		window.location.hash="contact";
+		window.location.pathname="{{site.baseurl}}/"
+		checkActiveNav();
 	}
 	$(document).ready(checkActiveNav);
 </script>
