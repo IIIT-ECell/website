@@ -26,7 +26,7 @@ https://musescore.org/en/handbook/developers-handbook/finding-your-way-around/gi
 
 After having made a Pull Request don't pull/merge anymore, it'll mess up the commit history. If you (have to) rebase, use 'push --force' (`git push --force`) to send it up to your GitHub repository, this will update the PR too. Be careful not to do this while the core team is working on merging in your PR.
 
-## Keeping gh-pages up to date with master
+### Keeping gh-pages up to date with master
 
 [This should work](https://gist.github.com/mandiwise/44d1edce18f2ffb14f63)
 
