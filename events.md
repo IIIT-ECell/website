@@ -1,6 +1,5 @@
 ---
-layout: page
-title : events
-permalink : /events1/
+layout: events
+title : Events
+permalink : /events/
 ---
-this is the events page
