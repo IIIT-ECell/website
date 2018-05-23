@@ -1,14 +1,14 @@
 ---
 layout: page
-title : Workshops
-permalink : /workshops/
+title : Talk Sessions
+permalink : /talks/
 ---
 
-<br>
+
 <div class="row">
 
 	{% for post in site.posts %}
-	{% if post.categories contains "workshops" %}
+	{% if post.categories contains "talk_session" %}
 	
 	<div class="card col-sm-6 md-6">
 		{% if post.img %}
@@ -16,15 +16,14 @@ permalink : /workshops/
 		{% endif %}
 		<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
 		<div class="card-body">
-			<b>{{post.date|date_to_string}}</b>
-			{{post.content}}
-			{% if post.link %}
-			<center><a class="btn btn-warning btn-lg" href="{{post.link | uri_escape}}" target=_blank role="button">Link</a></center>
-			{% endif %}
+			<b>{{post.date|date_to_string}}	</b>		{{post.content}}
+			
 		</div>
 	</div>
 	{% endif %}
 	<br>
 {% endfor %}	
 </div>
+
+
 
