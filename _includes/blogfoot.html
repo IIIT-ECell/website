@@ -1,9 +1,13 @@
 <hr>
 <div class="row text-center">
+	{% if page.previous %}
 	<div class="col-md-6 col-xs-6 col-sm-6">
 		<a href="{{site.baseurl}}{{page.previous.url}}"><h2><i class="fa fa-angle-left"></i></h2>Previous post</a>
 	</div>
+	{% endif %}
+	{% if page.next %}
 	<div class="col-md-6 col-xs-6 col-sm-6">
 		<a href="{{site.baseurl}}{{page.next.url}}"><h2><i class="fa fa-angle-right"></i></h2>Next Post</a>
 	</div>
+	{% endif %}
 </div>
