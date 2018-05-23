@@ -1,9 +1,14 @@
+---
+layout: page
+title : Talk Sessions
+permalink : /talks/
+---
 
 
 <div class="row">
 
 	{% for post in site.posts %}
-	{% if post.categories contains include.event %}
+	{% if post.categories contains "talk_session" %}
 	
 	<div class="card col-sm-6 md-6">
 		{% if post.img %}
@@ -11,7 +16,7 @@
 		{% endif %}
 		<h4 class="card-title text-center"><b>{{post.title}}</b></h4>
 		<div class="card-body">
-			{{post.date|date_to_string}}			{{post.content}}
+			<b>{{post.date|date_to_string}}	</b>		{{post.content}}
 			
 		</div>
 	</div>
@@ -19,3 +24,6 @@
 	<br>
 {% endfor %}	
 </div>
+
+
+
