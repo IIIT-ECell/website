@@ -1,31 +1,33 @@
 ---
-layout : page
+layout : wrapper
 ---
+{% include pagehead.html %}
+<div class="mountain mt-0">
+	<h2 class = "text-center p-5">Core Team</h2>
 
-<div class=""
+	<div class="row text-center white-text">
+		{% for names in site.data.team %}
 
-<h2 class = "text-center mb-5">Core Team</h2>
+			{% if names.Core %}
+				{% include profilecard.html %}
+			{% endif %}
 
-<div class="row text-center white-text">
-	{% for names in site.data.team %}
-
-	{% if names.Core %}
-	{% include profilecard.html %}
-	{% endif %}
-
-	{% endfor %}
+		{% endfor %}
+	</div>
 </div>
-<hr>
-<h2 class = "text-center">Members</h2>
 
-<div class="row text-center text-white">
-	{% for names in site.data.team %}
+<div>
+	<h2 class = "text-center">Members</h2>
 
-	{% if names.Core %}
-	{% continue %}
-	{% else %}
-	{% include profilecard.html %}
-	{% endif %}
+	<div class="row text-center text-white">
+		{% for names in site.data.team %}
 
-	{% endfor %}
+			{% if names.Core %}
+				{% continue %}
+			{% else %}
+				{% include profilecard.html %}
+			{% endif %}
+
+		{% endfor %}
+	</div>
 </div>
