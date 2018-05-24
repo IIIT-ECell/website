@@ -2,10 +2,11 @@
 layout : wrapper
 ---
 {% include pagehead.html %}
-<div class="mountain mt-0">
-	<h2 class = "text-center p-5">Core Team</h2>
+<div class="mountain m-0 py-3">
 
-	<div class="row text-center white-text">
+	<h2 class = "text-center p-3 white-text">Core Team</h2>
+
+	<div class="row text-center white-text m-0">
 		{% for names in site.data.team %}
 
 			{% if names.Core %}
@@ -17,9 +18,9 @@ layout : wrapper
 </div>
 
 <div>
-	<h2 class = "text-center">Members</h2>
+	<h2 class = "text-center p-5">Members</h2>
 
-	<div class="row text-center text-white">
+	<div class="row text-center white-text m-0">
 		{% for names in site.data.team %}
 
 			{% if names.Core %}
