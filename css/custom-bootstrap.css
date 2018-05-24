@@ -121,7 +121,7 @@ a:active {
 }
 
 .carousel-item .card {
-  min-height: 50vh;
+  min-height: 100vh;
 }
 
 /* start showcase styling */
@@ -250,6 +250,19 @@ a:active {
   color: white;
 }
 /* end contact styling */
+
+
+
+
+
+/* start htime style */
+/* end htime style */
+
+
+
+
+
+
 
 /* start modifying bootstrap element properties */
 .btn {
