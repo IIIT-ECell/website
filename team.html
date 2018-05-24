@@ -9,15 +9,17 @@ permalink : /team/
 }
 .greeny {
 	background-color:   #0b5345 ;
-
 }
 .magenta
 {
 	background-color: #750017; 
-
 }
 .browny {
-	background-color: #b50000
+	background-color: #b50000;
+}
+.browny,.greeny,.violet,.magenta,.bg-dark,.bg-danger{
+	border: 1px solid whitesmoke;
+	padding-bottom: 1em;
 }
 </style>
 
@@ -25,91 +27,80 @@ permalink : /team/
 
 <h2 class = "text-center" style = "color: Purple;">Core Team</h2>
 <br>
-<div class ="row "  >
-	
+
+<div class="row text-center text-white">
 	{% for names in site.data.team %}
 	{% if names.Core %}
-	<div class="col-md-4 col-xs-4 col-sm-4" style="padding:2rem">
-
-		<div class="card text-white" style="width:400px;bottom-margin: 10px; ">
-			<img class="card-img-top" src="https://i.ytimg.com/vi/DgyKBO-6Qtc/maxresdefault.jpg" alt="Profile Image">
-			{% if names.Team == "Web Dev" %}
-			<div class="card-body bg-dark">
-			{% elsif names.Team == "Finance" %}
-			<div class="card-body violet">
-			{% elsif names.Team == "Design" %}
-			<div class="card-body browny">
-			{% elsif names.Team == "Marketing " %}
-			<div class="card-body bg-danger">
-			{% elsif names.Team == "Corporate Relations" %}
-			<div class="card-body magenta">
-			{% else %}
-			<div class="card-body greeny">
-			{% endif %}
-				<h3 class="card-title">{{names.Name}}</h3>
-				<h5 >{{ names.Team }}</h5>
-				<ul class="list-inline pt-3">
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Facebook}}"><h5><i class="fa fa-facebook"></i></h5></a></li>
-					{% if names.LinkedIn %}
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.LinkedIn}}"><h5><i class="fa fa-linkedin"></i></h5></a></li>
-					{% else %}
-					<li class="list-inline-item p-2"><h5><i class="fa fa-linkedin"></i></h5></li>
-					{% endif %}
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Email_Id}}"><h5><i class="fa fa-at"></i></h5></a></li>
-				</ul>
-				<h5><i class="fa fa-phone"></i> {{ names.Mobile_Number }}</h5>
-			</div>
-		</div>&nbsp
-		<br>
-	</div>
-	
+	{% if names.Team == "Web Dev" %}
+	<div class=" col-md-4 col-xs-4 col-sm-4 bg-dark">
+	{% elsif names.Team == "Finance" %}
+	<div class="violet col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Design" %}
+	<div class="browny col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Marketing " %}
+	<div class="bg-danger col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Corporate Relations" %}
+	<div class="magenta col-md-4 col-xs-4 col-sm-4">
+	{% else %}
+	<div class="greeny col-md-4 col-xs-4 col-sm-4">
 	{% endif %}
+		<img class="img-fluid" src="https://i.ytimg.com/vi/DgyKBO-6Qtc/maxresdefault.jpg" alt="Profile Image">
+		<h3>{{names.Name}}</h3>
+		<h5>{{ names.Team }}</h5>
+		<p>{{names.About}}</p>
+		<ul class="list-inline pt-3">
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Facebook}}"><h5><i class="fa fa-facebook"></i></h5></a></li>
+			{% if names.LinkedIn %}
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.LinkedIn}}"><h5><i class="fa fa-linkedin"></i></h5></a></li>
+			{% else %}
+			<li class="list-inline-item p-2"><h5><i class="fa fa-linkedin"></i></h5></li>
+			{% endif %}
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Email_Id}}"><h5><i class="fa fa-at"></i></h5></a></li>
+		</ul>
+		<h5><i class="fa fa-phone"></i> {{ names.Mobile_Number }}</h5>
+	</div>
+	{% endif %}
+	
 	{% endfor %}
 </div>
-
+<hr>
 <h2 class = "text-center" style = "color: Purple;">Members</h2>
 
-<div class ="row "  >
-	
+<div class="row text-center text-white">
 	{% for names in site.data.team %}
 	{% if names.Core %}
 	{% continue %}
 	{% else %}
-	<div class="col-md-4 col-xs-4 col-sm-4" style="padding:2rem">
-
-		<div class="card text-white" style="width:400px;bottom-margin: 10px; ">
-			<img class="card-img-top" src="https://i.ytimg.com/vi/DgyKBO-6Qtc/maxresdefault.jpg" alt="Profile Image">
-			{% if names.Team == "Web Dev" %}
-			<div class="card-body bg-dark">
-			{% elsif names.Team == "Finance" %}
-			<div class="card-body violet">
-			{% elsif names.Team == "Design" %}
-			<div class="card-body browny">
-			{% elsif names.Team == "Marketing " %}
-			<div class="card-body bg-danger">
-			{% elsif names.Team == "Corporate Relations" %}
-			<div class="card-body magenta">
-			{% else %}
-			<div class="card-body greeny">
-			{% endif %}
-				<h3 class="card-title">{{names.Name}}</h3>
-				<h5 >{{ names.Team }}</h5>
-				<ul class="list-inline pt-3">
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Facebook}}"><h5><i class="fa fa-facebook"></i></h5></a></li>
-					{% if names.LinkedIn %}
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.LinkedIn}}"><h5><i class="fa fa-linkedin"></i></h5></a></li>
-					{% else %}
-					<li class="list-inline-item p-2"><h5><i class="fa fa-linkedin"></i></h5></li>
-					{% endif %}
-					<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Email_Id}}"><h5><i class="fa fa-at"></i></h5></a></li>
-				</ul>
-				<h5><i class="fa fa-phone"></i> {{ names.Mobile_Number }}</h5>
-			</div>
-		</div>&nbsp
-		<br>
-	</div>
-	
+	{% if names.Team == "Web Dev" %}
+	<div class=" col-md-4 col-xs-4 col-sm-4 bg-dark">
+	{% elsif names.Team == "Finance" %}
+	<div class="violet col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Design" %}
+	<div class="browny col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Marketing " %}
+	<div class="bg-danger col-md-4 col-xs-4 col-sm-4">
+	{% elsif names.Team == "Corporate Relations" %}
+	<div class="magenta col-md-4 col-xs-4 col-sm-4">
+	{% else %}
+	<div class="greeny col-md-4 col-xs-4 col-sm-4">
 	{% endif %}
+		<img class="img-fluid" src="{{names.Photo}}" alt="Profile Image">
+		<h3>{{ names.Name }}</h3>
+		<h5>{{ names.Team }}</h5>
+		<p>{{names.About}}</p>
+		<ul class="list-inline pt-3">
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Facebook}}"><h5><i class="fa fa-facebook"></i></h5></a></li>
+			{% if names.LinkedIn %}
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.LinkedIn}}"><h5><i class="fa fa-linkedin"></i></h5></a></li>
+			{% else %}
+			<li class="list-inline-item p-2"><h5><i class="fa fa-linkedin"></i></h5></li>
+			{% endif %}
+			<li class="list-inline-item p-2"><a class="faficon text-white" href="{{names.Email_Id}}"><h5><i class="fa fa-at"></i></h5></a></li>
+		</ul>
+		<h5><i class="fa fa-phone"></i> {{ names.Mobile_Number }}</h5>
+	</div>
+	{% endif %}
+	
 	{% endfor %}
 </div>
 
