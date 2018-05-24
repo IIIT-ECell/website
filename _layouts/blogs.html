@@ -7,7 +7,6 @@ layout : page
 <div class= "row">
 
 	{% for post in site.posts %}
-	<!--Replace events with blogs will do in a while -->
 	{% if post.categories contains "blogs" %}
 	<div class ="col-md-6 sm-6">
 		<b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
@@ -20,12 +19,11 @@ layout : page
 	{% endif %}
 	{% endfor %}
 </div>
-	<h1 class="text-center">Events</h1>
+<!-- 	<h1 class="text-center">Events</h1>
 	<br>
 
 <div class="row">
 	{% for post in site.posts %}
-	<!--Replace events with blogs will do in a while -->
 	{% if post.categories contains "events" %}
 	<div class ="col-md-6 sm-6">
 		<b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
@@ -38,3 +36,4 @@ layout : page
 	{% endif %}
 	{% endfor %}
 </div>
+ -->
