@@ -1,5 +1,5 @@
 ---
 layout : blogs
-title : Blogs
+title : Blogs and Events
 permalink : /blogs/
 ---
