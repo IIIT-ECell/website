@@ -24,7 +24,7 @@ baseurl: "/ECell_build1" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mylittlepony
 github_username:  mylittlepony
-
+pagination : 10
 # Build settings
 markdown: kramdown
 theme: minima
