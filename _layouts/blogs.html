@@ -1,7 +1,5 @@
---- 
+---
 layout : page
-title : Blogs
-permalink : /blogs/
 ---
 <div class= "row">
 
@@ -12,7 +10,7 @@ permalink : /blogs/
 		<b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
 		<h4><i>Read{{post.subtitle}}</i></h4>
 		<h6>Posted on {{post.date|date_to_string}}</h6>
-		<p>{{post.content|slice : 0,250}} ...<b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">[Read more]</a></b></p> 
+		<p>{{post.content|slice : 0,250}} ...<b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">[Read more]</a></b></p>
 		<br>
 		<hr>
 	</div>
