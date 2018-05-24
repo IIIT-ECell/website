@@ -1,7 +1,7 @@
 <!-- facebook Open Graph Metadatas -->
 <meta property="fb:app_id"       content="142981703176476" />
 <!-- <meta content="your_facebook_app_id" property="fb:app_id"> -->
-<meta content="{{ site.title }}" property="og:site_name">
+<!-- <meta content="{{ site.title }}" property="og:site_name">
 {% if page.title %}
   <meta content="{{ page.title }}" property="og:title">
 {% else %}
@@ -38,4 +38,10 @@
   {% for tag in page.tags %}
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
-{% endif %}
+{% endif %} -->
+<meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.content | markdownify | strip_html | strip_newlines | truncate: 300 }}" />
+<meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
+
