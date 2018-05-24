@@ -4,9 +4,9 @@
 
 // START: Animating the "Reach and stats" section
 
-var element_position = $('#portfolio').offset().top;
+var element_position = $('#count-1').offset().top;
 var screen_height = $(window).height();
-var activation_offset = 0.5;//determines how far up the the page the element needs to be before triggering the function
+var activation_offset = 0.8;//determines how far up the the page the element needs to be before triggering the function
 var activation_point = element_position - (screen_height * activation_offset);
 var max_scroll_height = $('body').height() - screen_height - 5;//-5 for a little bit of buffer
 
