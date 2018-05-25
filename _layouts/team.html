@@ -39,7 +39,11 @@ layout : wrapper
 	<div class="col-sm-12 col-md-3 prow prow-head">
 		<h2>{{cat.cat}}</h2><br>
 	</div>
+	{% if cat.cat == "Overall Head" %}
+	<div class="col-sm-12 col-md-9 p-4 mountain">
+	{% else %}
 	<div class="col-sm-12 col-md-9 p-4">
+	{% endif %}
 		<div class="row prow">
 			{% for names in site.data.team %}
 				{% if names.Team == {{cat.cat}} %}
