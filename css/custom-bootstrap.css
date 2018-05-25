@@ -97,12 +97,14 @@ a:active {
 }
 
 .cover .container .row h1{
+  font-weight: lighter;
   font-size: 16vh;
   color: white;
   text-transform: uppercase;
 }
 
 .cover .container .row h2{
+  font-weight: lighter;
   font-size: 4vh;
   color: #d7dfea;
   /* text-transform: uppercase; */
@@ -151,7 +153,7 @@ a:active {
 }
 
 .showcase-img {
-  height: 100%;
+  width: 100%;
 }
 
 .overlay-show {

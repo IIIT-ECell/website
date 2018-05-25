@@ -2,36 +2,6 @@
 layout : wrapper
 ---
 {% include pagehead.html %}
-<!-- <div class="mountain m-0 py-3">
-
-	<h2 class = "text-center p-3 white-text">Core Team</h2>
-
-	<div class="row text-center white-text m-0">
-		{% for names in site.data.team %}
-
-			{% if names.Core %}
-				{% include profilecard.html %}
-			{% endif %}
-
-		{% endfor %}
-	</div>
-</div>
-
-<div>
-	<h2 class = "text-center p-5">Members</h2>
-
-	<div class="row text-center white-text m-0">
-		{% for names in site.data.team %}
-
-			{% if names.Core %}
-				{% continue %}
-			{% else %}
-				{% include profilecard.html %}
-			{% endif %}
-
-		{% endfor %}
-	</div>
-</div> -->
 
 {% for cat in site.data.loopteamcat %}
 <div class="row prow-major">
