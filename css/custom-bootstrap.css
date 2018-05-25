@@ -202,7 +202,7 @@ a:active {
 
 /* start team styling */
 .prow-major {
-  border-bottom: 1px solid #d7dfea;
+  /* border-bottom: 1px solid #d7dfea; */
 }
 
 .prow {
@@ -214,7 +214,12 @@ a:active {
 }
 
 .prow-head {
-  background-color: #d7dfea;
+  background-color: #e14658;
+  color: white;
+}
+
+.prow-head h2 {
+  font-weight: lighter;
 }
 
 .pcol {
@@ -266,6 +271,7 @@ a:active {
 .pcard-footer {
   display: flex;
   justify-content: space-between;
+  border-radius: 0;
 }
 
 .picon {
