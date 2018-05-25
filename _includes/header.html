@@ -4,7 +4,11 @@
 
     <!-- TODO 1. Get the Icon, 2. Also behaves as home -->
     <a class="navbar-brand" href="{{site.baseurl}}/">
-      <img src="../assets/logos/logo-ecell.png" height="57">
+      {% for file in site.static_files %}
+        {% if file.path contains "logo-ecell.png" %}
+        <img src="{{site.baseurl}}{{file.path}}" height="57">
+        {% endif %}
+      {% endfor %}
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
