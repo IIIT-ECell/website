@@ -178,6 +178,9 @@ a:active {
 /* end speakers styling */
 
 /* start team styling */
+.prow-major {
+  border-bottom: 1px solid #d7dfea;
+}
 
 .prow {
   display: flex;
