@@ -41,7 +41,13 @@
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-3">
 				<a style="vertical-align:middle">
-					<li class="list-unstyled quick-links"><img src="../assets/logos/logo-ecell2x.png" width="100%"></li>
+					<li class="list-unstyled quick-links">
+						{% for file in site.static_files %}
+			        {% if file.path contains "logo-ecell2x.png" %}
+							<img src="{{site.baseurl}}{{file.path}}" width="100%">
+			        {% endif %}
+			      {% endfor %}
+					</li>
 				</a>
 			</div>
 		</div>
