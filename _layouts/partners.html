@@ -9,7 +9,9 @@ layout: page
 {% for file in site.static_files %}
 	{% if file.path contains '/associates/' %}
 	<div class="col-md-4 col-xs-4 col-sm-4">
-		<a href="https://{{file.basename}}" target="_blank"><img src="{{site.baseurl}}{{file.path}}" alt="{{file.name}}" class="img-fluid"></a>
+		<a href="https://{{file.basename}}" target="_blank">
+			<img src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}" class="img-fluid ilink p-3">
+		</a>
 	</div>
 	{% endif %}
 {% endfor %}
@@ -20,11 +22,15 @@ layout: page
 {% for file in site.static_files %}
 	{% if file.basename == 'ecell-iimb' %}
 		<div class="col-md-4 col-xs-4 col-sm-4">
-			<a href="http://spidi2.iimb.ernet.in/~eni/" target="_blank"><img src="{{site.baseurl}}{{file.path}}" alt="{{file.name}}" class="img-fluid"></a>
+			<a href="http://spidi2.iimb.ernet.in/~eni/" target="_blank">
+				<img src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}" class="img-fluid ilink p-3">
+			</a>
 		</div>
 	{% elsif file.path contains '/partners/' %}
 		<div class="col-md-4 col-xs-4 col-sm-4">
-		<a href="https://{{file.basename}}" target="_blank"><img src="{{site.baseurl}}{{file.path}}" alt="{{file.name}}" class="img-fluid"></a>
+		<a href="https://{{file.basename}}" target="_blank">
+			<img src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}" class="img-fluid ilink p-3">
+		</a>
 		</div>
 	{% endif %}
 {% endfor %}

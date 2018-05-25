@@ -2,6 +2,7 @@
 a {
   text-decoration: none;
   color: white;
+  transition: 0.5s ease;
 }
 
 a:link {
@@ -29,6 +30,7 @@ a:active {
 .container.content a {
   text-decoration: none;
   color: #22252c;
+  transition: 0.5s ease;
 }
 
 .container.content a:link {
@@ -53,6 +55,14 @@ a:active {
 }
 
 /* end link styling */
+
+.ilink {
+  transition: 0.5s ease;
+}
+
+.ilink:hover {
+  background-color: #e14658;
+}
 
 /* start cover styling */
 .cover {
@@ -331,6 +341,7 @@ a:active {
 .formbut {
   border: none;
   color: white;
+  transition: 0.5s ease;
 }
 /* end contact styling */
 
@@ -377,6 +388,7 @@ pre {
 
 .nav-item{
   padding: .4rem;
+  transition: 0.5s ease;
 }
 
 .nav-item:hover, .navbar-brand:hover, .dropdown-item:hover{
