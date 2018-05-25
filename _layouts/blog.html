@@ -23,7 +23,7 @@ layout: wrapper
    <div class = row>
 
      {% for post in site.posts limit :4%}
-     {% if post.categories contains "events" %}
+     {% if post.categories contains "blogs" %}
      {% if post.url == page.url %}
      {% continue %}
      {% endif %}
