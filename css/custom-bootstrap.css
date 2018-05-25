@@ -202,7 +202,9 @@ a:active {
 }
 
 .pcard-image-container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  /* position: relative; */
   transition: 0.5s ease;
   border-radius: 0;
   height: 100%;
@@ -211,7 +213,7 @@ a:active {
 
 .pcard-image {
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .pcard:hover .pcard-image-container{
@@ -223,7 +225,9 @@ a:active {
 }
 
 .overlay {
+  padding: 1rem;
   width: 100%;
+  height: 100%;
 
   transition: 0.5s ease;
   opacity: 0;
