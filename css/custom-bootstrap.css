@@ -178,6 +178,21 @@ a:active {
 /* end speakers styling */
 
 /* start team styling */
+/* .prow-major {
+  border-bottom: 1px black;
+} */
+
+.prow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.prow-head {
+  background-color: #d7dfea;
+}
 
 .pcol {
   display: flex;
@@ -185,15 +200,22 @@ a:active {
 }
 
 .pcard {
-  width: 14rem;
+  width: 25rem;
+  height: 25rem;
 }
 
-.card-img-top {
+.pcard-image-container {
   transition: 0.5s ease;
   border-radius: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-.pcard:hover .card-img-top{
+.pcard-image {
+  height: 100%;
+}
+
+.pcard:hover .pcard-image-container{
   opacity: 0.3;
 }
 
@@ -265,6 +287,11 @@ a:active {
 
 
 /* start modifying bootstrap element properties */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .btn {
   border: none;
   border-radius: 0;

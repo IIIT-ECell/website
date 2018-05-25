@@ -32,93 +32,98 @@ layout : wrapper
 		{% endfor %}
 	</div>
 </div> -->
-<div>
-	<h2 class ="text-center   p-3">Overall Head</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
+<div class="row">
 
-		{% if names.Team == "Overall Head" %}
-		
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
+	<div class="col-sm-12 col-md-3 prow prow-head">
+		<h2>Overall Heads</h2><br>
 	</div>
-</div>
-<div>
-	<h2 class ="text-center p-3">Marketing</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
+	<div class="col-sm-12 col-md-9 p-4">
+		<div class="row prow">
+				{% for names in site.data.team %}
+				{% if names.Team == "Overall Head" %}
+				<div class ="col-lg-4 col-md-6 col-sm-6 col-xs-12 pcol">
+				{% include profilecard.html %}
+				</div>
+				{% endif %}
+				{% endfor %}
+		</div>
+	</div>
 
-		{% if names.Team == "Marketing" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
-</div>
-<div>
-	<h2 class ="text-center p-3">Web Dev</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
-
-		{% if names.Team == "Web Dev" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
-</div>
-<div>
-	<h2 class ="text-center  p-3">Media and Public Relations</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
-
-		{% if names.Team == "Media and Public Relations" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
-</div>
-<div>
-	<h2 class ="text-center  p-3">Design</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
-
-		{% if names.Team == "Design" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
-</div>
-<div>
-	<h2 class ="text-center p-3">Corporate Relations</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
-
-		{% if names.Team == "Corporate Relations" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
-</div>
-<div>
-	<h2 class ="text-center p-3">Events and Operations</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
-
-		{% if names.Team == "Events and Operations" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
-	</div>
 </div>
 
-<div>
-	<h2 class ="text-center p-3">Finance</h2>
-	<div class ="col d-flex justify-content-center white-text">
-		{% for names in site.data.team %}
+<div class="row">
 
-		{% if names.Team == "Finance" %}
-		{% include profilecard.html %}
-		{% endif %}
-		{% endfor %}
+	<div class="col-sm-12 col-md-3 prow prow-head">
+		<h2>Corporate Relations</h2><br>
 	</div>
+	<div class="col-sm-12 col-md-9 p-4">
+		<div class="row prow">
+				{% for names in site.data.team %}
+				{% if names.Team == "Corporate Relations" %}
+				<div class ="col-md-4 col-sm-6 col-xs-12 pcol">
+				{% include profilecard.html %}
+				</div>
+				{% endif %}
+				{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-sm-12 col-md-3 prow prow-head">
+		<h2>Marketing</h2><br>
+	</div>
+	<div class="col-sm-12 col-md-9">
+		<div class="row prow">
+				{% for names in site.data.team %}
+				{% if names.Team == "Marketing" %}
+				<div class ="col-lg-3 col-md-4 col-sm-6 col-xs-12 pcol">
+				{% include profilecard.html %}
+				</div>
+				{% endif %}
+				{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-sm-12 col-md-3 prow prow-head">
+		<h2>Corporate Relations</h2><br>
+	</div>
+	<div class="col-sm-12 col-md-9">
+		<div class="row prow">
+				{% for names in site.data.team %}
+				{% if names.Team == "Corporate Relations" %}
+				<div class ="col-lg-3 col-md-4 col-sm-6 col-xs-12 pcol">
+				{% include profilecard.html %}
+				</div>
+				{% endif %}
+				{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+
+<div class="row">
+
+	<div class="col-sm-12 col-md-2 prow prow-head">
+		<h2>Corporate Relations</h2><br>
+	</div>
+	<div class="col-sm-12 col-md-10">
+		<div class="row prow">
+				{% for names in site.data.team %}
+				{% if names.Team == "Corporate Relations" %}
+				<div class ="col-lg-3 col-md-4 col-sm-6 col-xs-12 pcol p-0 my-2">
+				{% include profilecard.html %}
+				</div>
+				{% endif %}
+				{% endfor %}
+		</div>
+	</div>
+
 </div>
