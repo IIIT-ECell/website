@@ -178,9 +178,6 @@ a:active {
 /* end speakers styling */
 
 /* start team styling */
-/* .prow-major {
-  border-bottom: 1px black;
-} */
 
 .prow {
   display: flex;
@@ -200,11 +197,12 @@ a:active {
 }
 
 .pcard {
-  width: 25rem;
+  width: 18rem;
   height: 25rem;
 }
 
 .pcard-image-container {
+  position: relative;
   transition: 0.5s ease;
   border-radius: 0;
   height: 100%;
@@ -213,6 +211,7 @@ a:active {
 
 .pcard-image {
   height: 100%;
+  position: absolute;
 }
 
 .pcard:hover .pcard-image-container{
