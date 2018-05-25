@@ -2,7 +2,7 @@
 layout : wrapper
 ---
 {% include pagehead.html %}
-<div class="mountain m-0 py-3">
+<!-- <div class="mountain m-0 py-3">
 
 	<h2 class = "text-center p-3 white-text">Core Team</h2>
 
@@ -29,6 +29,96 @@ layout : wrapper
 				{% include profilecard.html %}
 			{% endif %}
 
+		{% endfor %}
+	</div>
+</div> -->
+<div>
+	<h2 class ="text-center   p-3">Overall Head</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Overall Head" %}
+		
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center p-3">Marketing</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Marketing" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center p-3">Web Dev</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Web Dev" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center  p-3">Media and Public Relations</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Media and Public Relations" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center  p-3">Design</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Design" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center p-3">Corporate Relations</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Corporate Relations" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<div>
+	<h2 class ="text-center p-3">Events and Operations</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Events and Operations" %}
+		{% include profilecard.html %}
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+<div>
+	<h2 class ="text-center p-3">Finance</h2>
+	<div class ="col d-flex justify-content-center white-text">
+		{% for names in site.data.team %}
+
+		{% if names.Team == "Finance" %}
+		{% include profilecard.html %}
+		{% endif %}
 		{% endfor %}
 	</div>
 </div>
