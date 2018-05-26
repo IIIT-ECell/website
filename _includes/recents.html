@@ -1,8 +1,16 @@
 <div id="recents" class="row coral p-5">
   <h1 class="col-sm-12 col-md-4">Recent Blogs</h1>
-
-  {% for post in site.posts limit:4 %}
+  {% assign limval = 0 %}
+  {% for post in site.posts %}
+    {% if limval == 2 %}
+      {% break %}
+    {% endif %}
     {% if post.categories contains 'blogs' %}
+      {% if limval == 1 %}
+        {% assign limval = 2 %}
+      {% else %}
+        {% assign limval = 1 %}
+      {% endif %}
   	<div class = "col-md-4 col-sm-12">
     	<h6><b><u><a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}</a></b></u></h6>
     	<p>{{post.date|date_to_string}}<br>
@@ -15,8 +23,13 @@
 <div id="recents1" class="row mountain white-text p-5">
   <h1 class="col-sm-12 col-md-12 pb-4">Recent Events</h1>
 
-  {% for post in site.posts limit:2 %}
+  {% assign limval = 0 %}
+  {% for post in site.posts %}
+    {% if limval == 1 %}
+      {% break %}
+    {% endif %}
     {% if post.categories contains 'events' %}
+    {% assign limval = 1 %}
   	<div class = "col-md-8 col-sm-12">
     	<h6>
         <b>
