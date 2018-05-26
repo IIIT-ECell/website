@@ -1,4 +1,24 @@
+/* html {
+  font-family: 'Lato' !important;
+} */
+
 /* start link styling */
+.clink {
+  color: #22252c;
+}
+
+.clink:link {
+  color: #22252c;
+}
+
+.clink:visited {
+  color: #22252c;
+}
+
+.clink:hover {
+  color: #3f3250;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -346,7 +366,9 @@ a:active {
 /* end contact styling */
 
 
-
+#roll {
+  font-weight: bolder;
+}
 
 
 /* start htime style */

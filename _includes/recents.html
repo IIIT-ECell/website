@@ -1,0 +1,39 @@
+<div id="recents" class="row coral p-5">
+  <h1 class="col-sm-12 col-md-4">Recent Blogs</h1>
+
+  {% for post in site.posts limit:4 %}
+    {% if post.categories contains 'blogs' %}
+  	<div class = "col-md-4 col-sm-12">
+    	<h6><b><u><a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}</a></b></u></h6>
+    	<p>{{post.date|date_to_string}}<br>
+    	{{post.content|slice : 0,250}} <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a></p></b></h6>
+  	</div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div id="recents1" class="row mountain white-text p-5">
+  <h1 class="col-sm-12 col-md-12 pb-4">Recent Events</h1>
+
+  {% for post in site.posts limit:2 %}
+    {% if post.categories contains 'events' %}
+  	<div class = "col-md-8 col-sm-12">
+    	<h6>
+        <b>
+          <u>
+            <a href="{{site.baseurl}}{{post.url}}" target="_blank">
+              {{post.title}}
+            </a>
+          </b>
+        </u>
+      </h6>
+    	<p>{{post.date|date_to_string}}<br>
+    	{{post.content|slice : 0,250}} <a href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
+      </p>
+  	</div>
+    <div class="col-md-4 col-sm-12">
+      <img class="img-fluid" src="{{site.baseurl}}/eventsimages/{{post.img}}">
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
