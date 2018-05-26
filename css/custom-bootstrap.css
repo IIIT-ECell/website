@@ -303,7 +303,7 @@ a:active {
 .pcard-footer {
   display: flex;
   justify-content: space-between;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 .picon {
@@ -469,6 +469,14 @@ pre {
 
 .wash-text {
   color: #d7dbe2;
+}
+
+.neutral {
+  background-color: #ebede8;
+}
+
+.neutral-text {
+  color: ebede8;
 }
 
 /* end palette colours*/
