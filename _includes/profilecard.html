@@ -19,17 +19,20 @@
     </ul>
     <h5 class="coral-text centhack"><i class="fa fa-phone"></i>{{ names.Mobile_Number }}</h5>
   </div>
-
-  {% if names.Core %}
-  <div class="card-footer wash pcard-footer">
+  {% if names.Team == 'Overall Head' %}
+  <div class="card-footer coral white-text pcard-footer">
   {% else %}
-  <div class="card-footer bg-light pcard-footer">
+    {% if names.Core %}
+    <div class="card-footer wash pcard-footer">
+    {% else %}
+    <div class="card-footer bg-light pcard-footer">
+    {% endif %}
   {% endif %}
     <h6>
       {{names.Name}}
     </h6>
     <h6>
-      <small class="text-muted">{{names.Team}}</small>
+      <small class="">{{names.Team}}</small>
     </h6>
   </div>
 </div>
