@@ -1,8 +1,6 @@
-<!-- TODO make a header -->
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top navy py-0">
 
-    <!-- TODO 1. Get the Icon, 2. Also behaves as home -->
     <a class="navbar-brand" href="{{site.baseurl}}/">
       {% for file in site.static_files %}
         {% if file.path contains "logo-ecell.png" %}
@@ -18,13 +16,12 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="blog" >
-          <!-- <a class="nav-link" onclick="gotoBlog()">Blog</a> TODO link  -->
           <a class="nav-link" href="{{site.baseurl}}/blogs/">Blog</a>
         </li>
         <li class="nav-item" id="about">
-          <a class="nav-link" href="{{site.baseurl}}/about/">About Us</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/about/">About Us</a>
         </li>
-        <li class="nav-item dropdown show"> <!-- TODO links -->
+        <li class="nav-item dropdown show">
           <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Initiatives</a>
 
           <div class="dropdown-menu navy" aria-labelledby="dropdownMenuLink">
@@ -42,13 +39,13 @@
           </div>
         </li>
         <li class="nav-item" id="team">
-          <a class="nav-link" href="{{site.baseurl}}/team/">Team</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/team/">Team</a>
         </li>
         <li class="nav-item" id="partners">
-          <a class="nav-link" href="{{site.baseurl}}/partners/">Partners</a> <!-- TODO link -->
+          <a class="nav-link" href="{{site.baseurl}}/partners/">Partners</a>
         </li>
         <li class="nav-item" id="contactus">
-          <a class="nav-link" onclick="gotoContact()">Contact Us</a> <!-- TODO link -->
+          <a class="nav-link" onclick="gotoContact()">Contact Us</a>
         </li>
       </ul>
 
