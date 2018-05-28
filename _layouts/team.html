@@ -25,7 +25,7 @@ layout : wrapper
 	{% endif %}
 		<div class="row prow">
 			{% for names in site.data.team %}
-				{% if names.Team == {{cat.cat}} %}
+				{% if names.Team == cat.cat %}
 					{% include profilecard.html %}
 				{% endif %}
 			{% endfor %}
