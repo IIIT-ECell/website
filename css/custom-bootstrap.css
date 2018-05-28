@@ -228,6 +228,15 @@ a:active {
   text-align: center;
 }
 
+.show {
+  justify-content: center;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* end showcase styling */
 
 
