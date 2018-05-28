@@ -1,6 +1,6 @@
 <div id="portfolio" class="navy">
   <div class="port row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
       {% for file in site.static_files %}
         {% if file.path contains "megathon.jpg" %}
         <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
@@ -10,7 +10,7 @@
       <a href="#" class="overlay-text"><h4>Megathon</h4></a>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
       {% for file in site.static_files %}
         {% if file.path contains "talks.JPG" %}
         <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
@@ -20,7 +20,7 @@
       <a class="overlay-text" href="{{site.baseurl}}/talks/"><h4>Talks</h4></a>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
       {% for file in site.static_files %}
         {% if file.path contains "workshophadoop.jpg" %}
         <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
@@ -30,7 +30,7 @@
       <a class="overlay-text" href="{{site.baseurl}}/workshops/"><h4>Workshops</h4></a>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
       {% for file in site.static_files %}
         {% if file.path contains "hackathon.jpg" %}
         <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
@@ -40,7 +40,7 @@
       <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Hackathons</h4></a>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+    <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
       {% for file in site.static_files %}
         {% if file.path contains "megathon.jpg" %}
         <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
@@ -58,7 +58,7 @@
       {% endfor %}
       <div class="overlay-show navy"></div>
       <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Alpha labs</h4></a>
-    </div>
+    </div> -->
 
   </div>
 
