@@ -2,6 +2,30 @@
 layout : page
 title : Blogs
 ---
+<style>
+.pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+
+.pagination a {    
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+
+.pagination {
+    text-align: center;
+ }
+
+
+
+</style> 
  <br>
 <div class= "row">
 
@@ -9,7 +33,7 @@ title : Blogs
 	{% if post.categories contains "blogs" %}
 	<div class ="col-md-6 sm-6">
 		<b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
-		<h4><i>Read{{post.subtitle}}</i></h4>
+		<h5><i>{{post.author}}</i></h5>
 		<h6>Posted on {{post.date|date_to_string}}</h6>
 		<p>{{post.content|slice : 0,250}} ...<b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">[Read more]</a></b></p>
 		<br>
@@ -19,8 +43,8 @@ title : Blogs
 	{% endfor %} 
 
 </div>
-
-<!-- <div class="pagination row">
+{% if paginator.total_pages > 1 %}
+ <div class="pagination row">
   <div class="col-md-4 col-xs-4 col-sm-4">
     {% if paginator.previous_page %}
     
@@ -41,30 +65,5 @@ title : Blogs
     {% endif %}
   </div>
 </div>
- -->
+ {% endif %}
  
- {% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
