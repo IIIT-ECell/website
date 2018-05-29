@@ -18,28 +18,34 @@ layout: page
 </div>
 <hr>
 <h1 class="text-center">OUR PARTNERS</h1>
-<div class="row text-center">
-<!-- {% for file in site.static_files %}
-	{% if file.basename == 'ecell-iimb' %}
-		<div class="col-md-4 col-xs-4 col-sm-4">
-			<a href="http://spidi2.iimb.ernet.in/~eni/" target="_blank">
-				<img src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}" class="img-fluid ilink p-3">
-			</a>
-		</div>
-	{% elsif file.path contains '/partners/' %}
-		<div class="col-md-4 col-xs-4 col-sm-4">
-		<a href="https://{{file.basename}}" target="_blank">
-			<img src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}" class="img-fluid ilink p-3">
-		</a>
-		</div>
-	{% endif %}
-	{% endfor %} -->
+<br>
 
+<div class="row text-center">
 	{% for names in site.data.partners %}
+	{% if names.current %}
 	<div class="col-md-4 col-xs-4 col-sm-4">
 	<a href="{{names.url}}"" target="_blank">
 			<img src="../assets/partners/{{names.pic}}" alt="{{names.partner}}" class="img-fluid ilink p-3">
 		</a>
 	</div>
+	{% endif %}
+	{% endfor %}
+</div>
+
+<hr>
+<h1 class="text-center">PAST SPONSORS</h1>
+<br>
+
+<div class="row text-center">
+	{% for names in site.data.partners %}
+	{% if names.current %}
+	{% continue %}
+	{% else %}
+	<div class="col-md-4 col-xs-4 col-sm-4">
+	<a href="{{names.url}}"" target="_blank">
+			<img src="../assets/partners/{{names.pic}}" alt="{{names.partner}}" class="img-fluid ilink p-3">
+		</a>
+	</div>
+	{% endif %}
 	{% endfor %}
 </div>
