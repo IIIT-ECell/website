@@ -14,17 +14,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 # Zubair's note - we're keeping this text. Might be useful for fachhas.
-title: E-Cell a cup naamde
+title: E-Cell, IIIT Hyderabad
 email: ecell[at]iiit[dot]ac[dot]in
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the work-in-progress site for the IIIT E-Cell website from 2018-
-  If you're here, it's probably through github. If not and you can see this
-  text in the actual website, please inform Zubair Abid, Pulkit Gera, or
-  Abhigyan Ghosh.
+  Turning ideas into reality is the sorcery that is best left to entrepreneurs.
+  And we love helping out in spreading this art, because we believe that we need
+  to realise and utilise the potential of the youth to reach new levels and open
+  up new possibilities. For this we conduct numerous workshops, seminars, events
+  and interactive sessions with eminent entrepreneurs, thus, providing the students
+  exposure to the entrepreneurial world along with a platform to work on the live
+  projects from start-ups.
 baseurl: "/ECell_build1" # the subpath of your site, e.g. /blog
-url: "https://zubairabid.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: mylittlepony
-github_username:  mylittlepony
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ecell_iiithyd
 paginate: 5
 paginate_path: "/blogs/page:num/"
 # Build settings
