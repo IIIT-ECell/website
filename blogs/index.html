@@ -9,7 +9,7 @@ title : Blogs
 	{% if post.categories contains "blogs" %}
 	<div class ="col-md-6 sm-6">
 		<b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
-		<h4><i>Read{{post.subtitle}}</i></h4>
+		<h5><i>{{post.author}}</i></h5>
 		<h6>Posted on {{post.date|date_to_string}}</h6>
 		<p>{{post.content|slice : 0,250}} ...<b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">[Read more]</a></b></p>
 		<br>

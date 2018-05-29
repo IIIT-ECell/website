@@ -1,0 +1,18 @@
+[DEFAULT]
+# The verilog file containing the top module
+top-file: 
+
+# The name of the top module
+top-module: 
+
+# The target clock frequency (mhz) of the design
+design-clock-frequency: 10
+
+# Default verilog simulator
+verilog-simulator: cvc
+
+# If the DUT uses the memory
+#sodimm-style:
+# Indicate that the hardware uses readback
+xilinx-readback: true
+
