@@ -279,9 +279,6 @@ a:active {
 /* end speakers styling */
 
 /* start team styling */
-.prow-major {
-  /* border-bottom: 1px solid #d7dfea; */
-}
 
 .prow {
   display: flex;
@@ -490,14 +487,6 @@ pre {
 
 .mountain-text {
   color: #3f3250;
-}
-
-.scrub {
-  background-color: #c0b3a0;
-}
-
-.scrub-text {
-  color: #c0b3a0;
 }
 
 .wash {
