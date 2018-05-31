@@ -169,7 +169,7 @@ a:active {
 }
 
 .cover .container .row h1{
-  font-weight: lighter;
+  font-weight: 100;
   font-size: 16vh;
   color: white;
   text-transform: uppercase;
@@ -409,6 +409,15 @@ a:active {
 /* end contact styling */
 
 /* start modifying bootstrap element properties */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 .card {
   /* min-height: 10rem; */
