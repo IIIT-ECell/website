@@ -1,7 +1,3 @@
-.l-head {
-  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
 .s-image-container {
   width: 100%;
   overflow: hidden;
@@ -414,6 +410,19 @@ a:active {
 
 /* start modifying bootstrap element properties */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
+.l-head {
+  font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.ser {
+  font-family: "PT Serif", "Times New Roman";
+}
+
+.ser-body {
+  font-size: 1.2em;
+}
 
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

@@ -1,5 +1,7 @@
 <div id="recents" class="row coral p-5">
-  <a class="clink col-sm-12 col-md-4" href="{{site.baseurl}}/blogs/" target="_blank"><h1>Recent Blogs</h1></a>
+  <a class="clink col-sm-12" href="{{site.baseurl}}/blogs/" target="_blank">
+    <h1>Recent Blogs</h1>
+  </a>
   {% assign limval = 0 %}
   {% for post in site.posts %}
     {% if limval == 2 %}
@@ -11,10 +13,23 @@
       {% else %}
         {% assign limval = 1 %}
       {% endif %}
-  	<div class = "col-md-4 col-sm-12">
-    	<h6><b><u><a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}</a></b></u></h6>
-    	<p>{{post.date|date_to_string}} by {{post.author}}<br>
-    	{{post.content|slice : 0,250}} <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a></p></b></h6>
+    <div class="col-md-4 col-sm-12 my-2 e-img-container">
+      <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
+    </div>
+  	<div class = "col-md-8 col-sm-12">
+    	<h6>
+        <b>
+          <u>
+            <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
+            </a>
+          </b>
+        </u>
+      </h6>
+    	<p>
+        {{post.date|date_to_string}} by {{post.author}}
+        <br>
+    	  {{post.content|slice : 0,250}} <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
+      </p>
   	</div>
     {% endif %}
   {% endfor %}
