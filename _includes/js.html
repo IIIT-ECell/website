@@ -16,8 +16,6 @@
 		{
 			var pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
-			console.log(pageUrl);
-			console.log("{{site.baseurl}}/#contact");
 			if(pageUrl == "{{site.baseurl}}/#contact")
 				document.getElementById("contactus").classList.add("active");
 			else if(pageUrl == "{{site.baseurl}}/#blog")

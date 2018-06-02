@@ -538,4 +538,7 @@ pre {
   color: ebede8;
 }
 
+.transparent {
+  background-color: transparent;
+}
 /* end palette colours*/
