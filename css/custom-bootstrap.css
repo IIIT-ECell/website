@@ -469,6 +469,8 @@ pre {
 
 .navbar {
   border-radius: 0;
+
+  transition: 0.5s ease;
 }
 
 .collapse.navbar-collapse {
@@ -538,4 +540,7 @@ pre {
   color: ebede8;
 }
 
+.transparent {
+  background-color: transparent;
+}
 /* end palette colours*/

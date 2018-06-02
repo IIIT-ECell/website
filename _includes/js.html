@@ -4,6 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="{{ "/js/animations.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/navscroll.js" | prepend: site.baseurl }}"></script>
 
 
 <script type="text/javascript">
@@ -16,8 +17,6 @@
 		{
 			var pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
-			console.log(pageUrl);
-			console.log("{{site.baseurl}}/#contact");
 			if(pageUrl == "{{site.baseurl}}/#contact")
 				document.getElementById("contactus").classList.add("active");
 			else if(pageUrl == "{{site.baseurl}}/#blog")
