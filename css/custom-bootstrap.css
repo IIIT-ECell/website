@@ -469,6 +469,8 @@ pre {
 
 .navbar {
   border-radius: 0;
+
+  transition: 0.5s ease;
 }
 
 .collapse.navbar-collapse {
