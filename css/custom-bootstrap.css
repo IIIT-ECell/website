@@ -380,6 +380,12 @@ a:active {
 
 #contact {
   background-color: #3f3250;
+  /* background-image: url("http://www.open.edu/openlearn/ocw/pluginfile.php/1048644/mod_resource/content/0/a174_1_cover_image_1_edited.jpg"); */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: white;
   text-transform: uppercase;
 }
