@@ -1,0 +1,38 @@
+<div class="card pcard m-3 black">
+  {% for file in site.static_files %}
+    {% if file.name == names.Photo %}
+    <div class="pcard-image-container">
+      <img class="pcard-image" src="{{site.baseurl}}{{file.path}}" alt="{{file.name}}">
+    </div>
+    {% endif %}
+  {% endfor %}
+  <div class="overlay">
+    <p class="pt-3 white-text centhack centhack-t">{{names.About}}</p>
+    <ul class="list-inline centhack">
+      <li class="list-inline-item p-2"><a class="faficon" href="{{names.Facebook}}" target="_blank"><h5 class="picon"><i class="fa fa-facebook"></i></h5></a></li>
+      {% if names.LinkedIn %}
+      <li class="list-inline-item p-2"><a class="faficon" href="{{names.LinkedIn}}" target="_blank"><h5 class="picon"><i class="fa fa-linkedin"></i></h5></a></li>
+      {% else %}
+      <li class="list-inline-item p-2"><h5><i class="fa fa-linkedin"></i></h5></li>
+      {% endif %}
+      <li class="list-inline-item p-2"><a class="faficon" href="mailto:{{names.Email_Id}}" target="_blank"><h5 class="picon"><i class="fa fa-envelope"></i></h5></a></li>
+    </ul>
+    <h5 class="coral-text centhack"><i class="fa fa-phone"> </i>{{ names.Mobile_Number }}</h5>
+  </div>
+  {% if names.Team == 'Overall Head' %}
+  <div class="card-footer coral white-text pcard-footer">
+  {% else %}
+    {% if names.Core %}
+    <div class="card-footer wash pcard-footer">
+    {% else %}
+    <div class="card-footer bg-light pcard-footer">
+    {% endif %}
+  {% endif %}
+    <h6>
+      {{names.Name}}
+    </h6>
+    <h6>
+      <small class="">{{names.Team}}</small>
+    </h6>
+  </div>
+</div>

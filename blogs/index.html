@@ -1,6 +1,9 @@
 ---
 layout : page
 title : Blogs
+pagination: 
+  enabled: true
+  category: blogs
 ---
 <!-- This page is not using layout/md format otherwise pagination will not work on this page. Pagination will only work on an index.html page -->
 <style>
@@ -31,7 +34,7 @@ title : Blogs
 <div class= "row">
 
  {% for post in paginator.posts %}
-	{% if post.categories contains "blogs" %}
+	
 	<div class ="col-md-6 sm-6">
 		<img class="img-fluid" src="images/{{post.img}}" alt="{{post.title}}">
     </div>
@@ -44,7 +47,7 @@ title : Blogs
     <br>
 		<hr>
 	</div>
-	{% endif %}
+	
 	{% endfor %} 
 
 </div>
