@@ -3,7 +3,7 @@ layout : blog
 title : To Dropout or To Not Dropout
 author: Atirek Kumar
 email: atirek.kumar@research.iiit.ac.in
-permalink : /blogs/:categories/:title
+permalink : /blogs/:categories/:title:output_ext
 paginate: true
 categories : blogs
 img : dropper.jpg
