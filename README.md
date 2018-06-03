@@ -11,6 +11,16 @@ Built with Jekyll and Bootstrap 4
 3. cd into the repo folder and run `bundle exec jekyll serve`. See [jekyll docs](https://jekyllrb.com/docs/usage/) for more details.
 4. Navigate to `localhost:4000/` (by default)
 
+## Deployment Method (only for admins)
+
+As of now, we're employing a very rudimentary deployment system, essentially scp-ing the built site into the server.
+
+The basic steps are highlighted hence:
+1. Build the site
+2. scp all contents of site into the site/ directory of the server home
+
+Suggestions welcome
+
 ## Contribution guideline
 
 ### Git Workflow
@@ -54,3 +64,4 @@ $ git checkout master // return to the master branch
 ```
 
 Main changes are incorporated from branches into master, then into gh-pages. Ideally.
+
