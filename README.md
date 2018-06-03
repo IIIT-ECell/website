@@ -2,6 +2,15 @@
 
 Built with Jekyll and Bootstrap 4
 
+## Testing locally
+
+*Note: we used github pages during site construction, that is being discontinued henceforth (since deployment to permanent server) due to issues with baseurl and _config.yml*
+
+1. [Install jekyll](https://jekyllrb.com/docs/installation/) and associated dependencies, like bundler, Ruby, etc.
+2. Fork and clone the repository. For solely local testing, just cloning will do.
+3. cd into the repo folder and run `bundle exec jekyll serve`. See [jekyll docs](https://jekyllrb.com/docs/usage/) for more details.
+4. Navigate to `localhost:4000/` (by default)
+
 ## Contribution guideline
 
 ### Git Workflow
