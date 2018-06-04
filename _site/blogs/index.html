@@ -6,10 +6,10 @@
 	<meta charset="utf-8"> 
 	<!-- facebook Open Graph Metadatas -->
 <meta property="fb:app_id"       content="142981703176476" />
-<meta property="og:url" content="http://localhost:4000//blogs/" />
+<meta property="og:url" content="http://localhost:4000//blogs/index.html" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Blogs" />
-<meta property="og:description" content=" {% for post in paginator.posts %}	{% if post.categories contains "blogs" %}			            {{post.title}}		{{post.author}}		Posted on {{post.date|date_to_string}}		{{post.content|slice : 0,250}} ...[Read more]		    				{% endif %}	{% endfor %} {% if paginator.total_pages &gt; 1 %}      {% if pagi..." />
+<meta property="og:description" content=" {% for post in paginator.posts %}				            {{post.title}}		{{post.author}}		Posted on {{post.date|date_to_string}}		{{post.content|slice : 0,250}} ...[Read more]		    					{% endfor %} {% if paginator.total_pages &gt; 1 %}      {% if paginator.previous_page %}        Previous post    {% el..." />
 <meta property="og:image" content="http://localhost:4000/" />
 
 
@@ -282,21 +282,6 @@
  
 	
 	<div class ="col-md-6 sm-6">
-		<img class="img-fluid" src="images/elon.png" alt="The Story of Elon Musk - How the Man is Working on Changing the World. Literally.">
-    </div>
-    <div class ="col-md-6 sm-6">
-    <b><h1><a href = "/blogs/blogs/elon-musk.html" target ="_blank">The Story of Elon Musk - How the Man is Working on Changing the World. Literally.</a></h1></b>
-		<h5><i>Aditya Morolia</i></h5>
-		<h6>Posted on 28 May 2018</h6>
-		<p><p>Let’s talk about Iron Man. We all love him. A genius, eccentric, billionaire engineer, with a desire to change the world. But if you think such a person is possible only in comic books, you probably haven’t heard of Elon Musk. This article is a br ...<b><a href ="/blogs/blogs/elon-musk.html" target ="_blank">[Read more]</a></b></p>
-		<br>
-    <br>
-		<hr>
-	</div>
-	
-	
-	
-	<div class ="col-md-6 sm-6">
 		<img class="img-fluid" src="images/dropper.jpg" alt="To Dropout or To Not Dropout">
     </div>
     <div class ="col-md-6 sm-6">
@@ -311,30 +296,23 @@
 	
 	
 	
-	
-	
-	
+	<div class ="col-md-6 sm-6">
+		<img class="img-fluid" src="images/elon.png" alt="The Story of Elon Musk - How the Man is Working on Changing the World. Literally.">
+    </div>
+    <div class ="col-md-6 sm-6">
+    <b><h1><a href = "/blogs/blogs/elon-musk.html" target ="_blank">The Story of Elon Musk - How the Man is Working on Changing the World. Literally.</a></h1></b>
+		<h5><i>Aditya Morolia</i></h5>
+		<h6>Posted on 28 May 2018</h6>
+		<p><p>Let’s talk about Iron Man. We all love him. A genius, eccentric, billionaire engineer, with a desire to change the world. But if you think such a person is possible only in comic books, you probably haven’t heard of Elon Musk. This article is a br ...<b><a href ="/blogs/blogs/elon-musk.html" target ="_blank">[Read more]</a></b></p>
+		<br>
+    <br>
+		<hr>
+	</div>
 	
 	 
 
 </div>
 
- <div class="pagination row">
-  <div class="col-md-4 col-xs-4 col-sm-4">
-    
-    <h2><i class="fa fa-angle-left"></i></h2>Previous Page
-    
-  </div>
-  <div class="col-md-4 col-xs-4 col-sm-4">
-    <span class="page_number ">Page: 1</span>
-  </div>
-  <div class="col-md-4 col-xs-4 col-sm-4">
-    
-    <a href="/blogs/page2/"><h2><i class="fa fa-angle-right"></i></h2>Next Page</a>
-    
-  </div>
-</div>
- 
  
 
 </div>
