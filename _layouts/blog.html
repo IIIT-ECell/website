@@ -9,12 +9,8 @@ layout: wrapper
 	{% include bloghead.html %}
 	<!-- TODO the post body goes here -->
   <br>
-  <div class="row">
-
-    <img class="img-fluid" src="../images/{{page.img}}" alt="{{page.title}}">
-
-  </div>
-  <br>
+  <img class="img-fluid mb-4" src="../images/{{page.img}}" alt="{{page.title}}">
+	<br>
   <div class="ser ser-body">{{page.content}}</div>
 	{% include blogfoot.html %}
 </div>
