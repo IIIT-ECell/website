@@ -1,6 +1,8 @@
 let win = $(window);
 let nav = $('.navbar');
 let cov = $('.cover');
+let jump = $('#jump');
+let jumpicon = $('#jumpicon');
 
 let shiftY = cov.height() - nav.height();
 
@@ -21,6 +23,15 @@ function checkScroll() {
   else {
     nav.addClass('transparent');
   }
+
+  if(win.scrollTop() > shiftY/2) {
+    jump.removeClass('transparent');
+    jumpicon.removeClass('transparent');
+  }
+  else {
+    jump.addClass('transparent');
+    jumpicon.addClass('transparent');
+  }
 }
 
 checkScroll();
@@ -33,3 +44,9 @@ if(cov.length > 0) {
     }
   });
 }
+
+jump.click(function() { // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0 // Scroll to top of body
+    }, 500);
+});
