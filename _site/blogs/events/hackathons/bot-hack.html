@@ -227,7 +227,7 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="home">
-          <a class="nav-link" href="">Home</a>
+          <a class="nav-link" onclick="gotoHome()">Home</a>
         </li>
         <li class="nav-item" id="blog" >
           <a class="nav-link" href="/blogs/">Blog</a>
@@ -589,16 +589,22 @@
 	{
 		var pagename = "BotHack";
 		document.getElementById("contactus").classList.remove("active");
-		document.getElementById("blog").classList.remove("active");
+		document.getElementById("home").classList.remove("active");
 		if(pagename =="Index")
 		{
 			var pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
+			console.log(pageUrl);
 			if(pageUrl == "/#contact")
+			{
 				document.getElementById("contactus").classList.add("active");
-			else if(pageUrl == "/#blog")
-				document.getElementById("blog").classList.add("active");
-
+				document.getElementById("home").classList.remove("active");
+			}
+			else if(pageUrl == "/")
+			{
+				document.getElementById("home").classList.add("active");
+				document.getElementById("contactus").classList.remove("active");
+			}
 		}
 		else
 		if(pagename=="The Crew")
@@ -612,16 +618,16 @@
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
 	};
-	function gotoBlog()
+	function gotoHome()
 	{
-		window.location.hash="blog";
-		window.location.pathname="/"
+		window.location.hash="";
+		window.location.pathname="/";
 		checkActiveNav();
 	}
 	function gotoContact()
 	{
 		window.location.hash="contact";
-		window.location.pathname="/"
+		window.location.pathname="/";
 		checkActiveNav();
 	}
 	$(document).ready(checkActiveNav);
