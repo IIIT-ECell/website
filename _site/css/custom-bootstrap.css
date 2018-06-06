@@ -1,13 +1,25 @@
 .s-image-container {
-  height: 75vh;
+  height: 50vh;
 }
 
 .s-image {
+  max-height: 50vh;
+  height:auto;
 
-  width: 100%;
 /*
   max-height: 70vh;
 */
+}
+
+.s-quote-container{
+  height:25vh;
+}
+
+@media(max-width: 641px)
+{
+  .s-quote-container{
+    height:30vh;
+  }
 }
 
 .e-img-container {

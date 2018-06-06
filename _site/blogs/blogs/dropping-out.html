@@ -588,6 +588,14 @@ That’s a pretty low number I’d say. There are certain reasons for that. Coll
 
 
 <script type="text/javascript">
+	$(document).ready(function() 
+	{
+  	//Set the carousel options
+  	$('#quote-carousel').carousel({
+    	pause: true,
+    	interval: 4000,
+  		});
+	});
 	function checkActiveNav()
 	{
 		var pagename = "To Dropout or To Not Dropout";
