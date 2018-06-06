@@ -1,15 +1,10 @@
 .s-image-container {
-/*
-  width: 100%;
-*/
-  overflow: hidden;
+  height: 75vh;
 }
 
 .s-image {
 
   width: 100%;
-
-  height: auto;
 /*
   max-height: 70vh;
 */
