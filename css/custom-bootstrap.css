@@ -4,7 +4,6 @@
 
 .s-image {
   max-height: 50vh;
-  height:auto;
 
 /*
   max-height: 70vh;
@@ -15,13 +14,19 @@
   height:25vh;
 }
 
-@media(max-width: 641px)
+@media(max-width: 640px)
 {
   .s-quote-container{
-    height:30vh;
+    height:25vh;
   }
 }
 
+@media (min-width: 768px){
+  .s-image{
+    width:40vw;
+    height:40vh;
+  }
+}
 .e-img-container {
   height: 30vh;
   width: 100%;
