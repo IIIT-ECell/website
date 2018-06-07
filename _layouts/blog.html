@@ -8,9 +8,13 @@ layout: wrapper
 
 	{% include bloghead.html %}
 	<!-- TODO the post body goes here -->
-  <br>
-  <img class="img-fluid mb-4" src="../images/{{page.img}}" alt="{{page.title}}">
+  	<br>
+  	{% if page.categories contains "blogs" %}
+  	<img class="img-fluid mb-4" src="../images/{{page.img}}" alt="{{page.title}}">
+  	{% else %}
+  	<img class="img-fluid mb-4" src="/assets/eventsimages/{{page.img}}" alt="{{page.title}}">
+  	{% endif %}
 	<br>
-  <div class="ser ser-body">{{page.content}}</div>
+  	<div class="ser ser-body">{{page.content}}</div>
 	{% include blogfoot.html %}
 </div>

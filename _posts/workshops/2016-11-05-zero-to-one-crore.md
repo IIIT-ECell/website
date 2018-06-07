@@ -3,6 +3,8 @@ layout : blog
 title : Zero To One Crore
 img : zerotoone.png
 categories : events workshops 
+permalink : /:categories/:title
+
 ---
 
  How to make your venture profitable? How to scale your product to reach a large audience? Learn answers to these and more questions at the Zero To One Crore Workshop by Ishwar Jha, a well-renowned entrepreneur with years of experience in successfully scaling multiple ventures across various sectors. E-Cell, IIIT Hyderabad and IIIT Hyderabad Foundation cordially invite all early stage entrepreneurs and enthusiasts to this workshop followed by lunch.  

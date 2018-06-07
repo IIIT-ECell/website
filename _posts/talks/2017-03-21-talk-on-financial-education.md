@@ -3,6 +3,8 @@ layout : blog
 title : Talk on Financial Education 
 categories : events talk_session
 img : gyandhan.jpg 
+permalink : /:categories/:title
+
 ---
 
 E-Cell, IIIT Hyderabad in association with GyanDhan is organising a session on 'Financing Higher Education' and an expert lecture on Entrepreneurship. The session will focus on securing finance - scoring assistantships, getting loans and scholarships, and will also touch the admission process. On the entrepreneurship front, the session will focus on the following points:
