@@ -3,7 +3,7 @@ layout : blog
 title : Zero To One Crore
 img : zerotoone.png
 categories : events workshops 
-permalink : /:categories/:title
+permalink : /:categories/:title.html
 
 ---
 

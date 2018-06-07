@@ -4,7 +4,7 @@ title : Internship Fair
 categories : events workshops 
 img : internshipfair.png
 link : https://docs.google.com/spreadsheets/d/19PpjuhyMzFCXylJJwLXfZKMsRcuD2zAkrSdJR2uYMBA/edit#gid=0
-permalink : /:categories/:title
+permalink : /:categories/:title.html
 
 ---
 

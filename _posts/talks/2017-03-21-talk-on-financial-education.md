@@ -3,7 +3,7 @@ layout : blog
 title : Talk on Financial Education 
 categories : events talk_session
 img : gyandhan.jpg 
-permalink : /:categories/:title
+permalink : /:categories/:title.html
 
 ---
 
