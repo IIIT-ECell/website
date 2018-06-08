@@ -648,13 +648,13 @@ Board of Adviser AIESEC India and Writer of the book “Dream With Your Eyes Ope
 	function checkActiveNav()
 	{
 		var pagename = "Talk Sessions";
+		console.log(pagename);
 		document.getElementById("contactus").classList.remove("active");
 		document.getElementById("home").classList.remove("active");
 		if(pagename =="Index")
 		{
 			var pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
-			console.log(pageUrl);
 			if(pageUrl == "/#contact")
 			{
 				document.getElementById("contactus").classList.add("active");
@@ -669,7 +669,7 @@ Board of Adviser AIESEC India and Writer of the book “Dream With Your Eyes Ope
 		else
 		if(pagename=="The Crew")
 			document.getElementById("team").classList.add("active");
-		if(pagename =="About")
+		if(pagename =="About Us")
 			document.getElementById("about").classList.add("active");
 		else
 		if(pagename =="Blogs")

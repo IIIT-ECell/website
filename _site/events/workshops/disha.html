@@ -595,13 +595,13 @@ Last date to apply : April 30, 2017</p>
 	function checkActiveNav()
 	{
 		var pagename = "Disha";
+		console.log(pagename);
 		document.getElementById("contactus").classList.remove("active");
 		document.getElementById("home").classList.remove("active");
 		if(pagename =="Index")
 		{
 			var pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
-			console.log(pageUrl);
 			if(pageUrl == "/#contact")
 			{
 				document.getElementById("contactus").classList.add("active");
@@ -616,7 +616,7 @@ Last date to apply : April 30, 2017</p>
 		else
 		if(pagename=="The Crew")
 			document.getElementById("team").classList.add("active");
-		if(pagename =="About")
+		if(pagename =="About Us")
 			document.getElementById("about").classList.add("active");
 		else
 		if(pagename =="Blogs")
