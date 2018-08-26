@@ -11,7 +11,7 @@ module Jekyll
             if index < posts.length - 1
               next_in_category = posts[index + 1]
             end
-          	if index > 0
+            if index > 0
               previous_in_category = posts[index - 1]
             end
           end
