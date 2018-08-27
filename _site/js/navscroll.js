@@ -1,4 +1,5 @@
 var $win = $(window),
+    // native DOM-specific lookups are faster than jQuery selector lookups
     $nav = $(document.getElementsByClassName("navbar")[0]),
     $cov = $(document.getElementsByClassName("cover")[0]),
     $jump = $(document.getElementById("jump")),
@@ -6,14 +7,7 @@ var $win = $(window),
     coverPageHeight = $cov.height(),
     headingTopPosition = coverPageHeight / 2,
     // make navbar opaque just before user scrolls past heading
-    navBarTransparentPixelLimit = headingTopPosition * 0.4,
-    scrollHandler = {
-        allow: true,
-        reallow: function() {
-            scrollHandler.allow = true;
-        },
-        delay: 200
-    };
+    navBarTransparentPixelLimit = headingTopPosition * 0.3;
 
 function throttle(func, time){
     var timeout, hadCalledInBetween;
@@ -37,6 +31,7 @@ function throttle(func, time){
 
 function checkScroll() {
     var transparentClass = "transparent",
+        hiddenClass = "hiddenJumpIcon",
         scrollTop = $win.scrollTop();
     
     if(scrollTop > navBarTransparentPixelLimit) {
@@ -46,26 +41,20 @@ function checkScroll() {
     }
 
     if(scrollTop > coverPageHeight) {
-        $jump.removeClass(transparentClass);
-        $jumpicon.removeClass(transparentClass);
+        $jump.removeClass(hiddenClass);
+        $jumpicon.removeClass(hiddenClass);
     }
     else {
-        $jump.addClass(transparentClass);
-        $jumpicon.addClass(transparentClass);
+        $jump.addClass(hiddenClass);
+        $jumpicon.addClass(hiddenClass);
     }
 }
 
 checkScroll();
 
-// working demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
+// demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
 if($cov.length > 0) {
-    $win.on("scroll load resize", throttle(function(){
-        if(scrollHandler.allow) {
-            checkScroll();
-            scrollHandler.allow = false;
-            setTimeout(scrollHandler.reallow, scrollHandler.delay);
-        }
-    }, 100));
+    $win.on("scroll load resize", throttle(checkScroll, 100));
 }
 
 $jump.click(function() {

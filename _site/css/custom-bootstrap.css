@@ -44,11 +44,6 @@
   height: auto;
 }
 
-/* start 404 styling */
-.p404 {
-
-}
-
 .p404 h1 {
   display: flex;
   justify-content: center;
@@ -625,5 +620,10 @@ pre {
 .transparent {
   background-color: transparent !important;
   color: transparent !important;
+}
+
+.hiddenJumpIcon{
+  height: 0;
+  opacity: 0;
 }
 /* end palette colours*/

@@ -4,7 +4,7 @@
 
 // START: Animating the "Reach and stats" section
 
-var elementPosition = document.getElementById("count-1").offset().top,
+var elementPosition = $(document.getElementById("count-1")).offset().top,
     screenHeight = $(window).height(),
     activationOffset = 0.8, // determines how far up the the page the element needs to be before triggering the function
     activationPoint = elementPosition - (screenHeight * activationOffset),

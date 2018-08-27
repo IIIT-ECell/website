@@ -7,7 +7,7 @@ var $win = $(window),
     coverPageHeight = $cov.height(),
     headingTopPosition = coverPageHeight / 2,
     // make navbar opaque just before user scrolls past heading
-    navBarTransparentPixelLimit = headingTopPosition * 0.4;
+    navBarTransparentPixelLimit = headingTopPosition * 0.3;
 
 function throttle(func, time){
     var timeout, hadCalledInBetween;
@@ -31,6 +31,7 @@ function throttle(func, time){
 
 function checkScroll() {
     var transparentClass = "transparent",
+        hiddenClass = "hiddenJumpIcon",
         scrollTop = $win.scrollTop();
     
     if(scrollTop > navBarTransparentPixelLimit) {
@@ -40,12 +41,12 @@ function checkScroll() {
     }
 
     if(scrollTop > coverPageHeight) {
-        $jump.removeClass(transparentClass);
-        $jumpicon.removeClass(transparentClass);
+        $jump.removeClass(hiddenClass);
+        $jumpicon.removeClass(hiddenClass);
     }
     else {
-        $jump.addClass(transparentClass);
-        $jumpicon.addClass(transparentClass);
+        $jump.addClass(hiddenClass);
+        $jumpicon.addClass(hiddenClass);
     }
 }
 
