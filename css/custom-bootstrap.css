@@ -551,8 +551,11 @@ pre {
   transition: 0.5s ease;
 }
 
-.collapse.navbar-collapse {
-  height: 100%;
+@media(max-width: 767px){
+  .collapse.navbar-collapse {
+    height: 100%;
+    background-color: #22252c;
+  }
 }
 
 .nav-item{
@@ -618,13 +621,21 @@ pre {
   color: ebede8;
 }
 
-.transparent {
-  background-color: transparent !important;
-  color: transparent !important;
+@media (min-width: 767px){
+  .transparent {
+    background-color: transparent !important;
+    color: transparent !important;
+  }
 }
 
 .hiddenJumpIcon{
   height: 0;
   opacity: 0;
+}
+
+@media (max-width: 767px){
+  .navbar{
+    background-color: #22252c !important;
+  }
 }
 /* end palette colours*/
