@@ -6,14 +6,7 @@ var $win = $(window),
     coverPageHeight = $cov.height(),
     headingTopPosition = coverPageHeight / 2,
     // make navbar opaque just before user scrolls past heading
-    navBarTransparentPixelLimit = headingTopPosition * 0.4,
-    scrollHandler = {
-        allow: true,
-        reallow: function() {
-            scrollHandler.allow = true;
-        },
-        delay: 200
-    };
+    navBarTransparentPixelLimit = headingTopPosition * 0.4;
 
 function throttle(func, time){
     var timeout, hadCalledInBetween;
@@ -59,13 +52,7 @@ checkScroll();
 
 // working demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
 if($cov.length > 0) {
-    $win.on("scroll load resize", throttle(function(){
-        if(scrollHandler.allow) {
-            checkScroll();
-            scrollHandler.allow = false;
-            setTimeout(scrollHandler.reallow, scrollHandler.delay);
-        }
-    }, 100));
+    $win.on("scroll load resize", throttle(checkScroll, 100));
 }
 
 $jump.click(function() {
