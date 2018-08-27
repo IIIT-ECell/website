@@ -229,7 +229,7 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="home">
-          <a class="nav-link" onclick="gotoHome()">Home</a>
+          <a class="nav-link" href="/#homecover">Home</a>
         </li>
         <li class="nav-item" id="blog" >
           <a class="nav-link" href="/blogs/">Blog</a>
@@ -261,7 +261,7 @@
           <a class="nav-link" href="/partners/">Partners</a>
         </li>
         <li class="nav-item" id="contactus">
-          <a class="nav-link" onclick="gotoContact()">Contact Us</a>
+          <a class="nav-link" href="/#contact">Contact Us</a>
         </li>
       </ul>
 
@@ -625,18 +625,7 @@ The half-day workshop will prepare entrepreneurs who’re thinking of launching 
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
 	};
-	function gotoHome()
-	{
-		window.location.hash="";
-		window.location.pathname="/";
-		checkActiveNav();
-	}
-	function gotoContact()
-	{
-		window.location.hash="contact";
-		window.location.pathname="/";
-		checkActiveNav();
-	}
+	
 	$(document).ready(checkActiveNav);
 </script>
 

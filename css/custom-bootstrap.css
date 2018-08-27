@@ -465,6 +465,7 @@ a:active {
 
   color: white;
   text-transform: uppercase;
+  padding-top: 80px !important;
 }
 
 #contact .container {

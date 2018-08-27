@@ -41,17 +41,6 @@
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
 	};
-	function gotoHome()
-	{
-		window.location.hash="";
-		window.location.pathname="{{site.baseurl}}/";
-		checkActiveNav();
-	}
-	function gotoContact()
-	{
-		window.location.hash="contact";
-		window.location.pathname="{{site.baseurl}}/";
-		checkActiveNav();
-	}
+	
 	$(document).ready(checkActiveNav);
 </script>

@@ -229,7 +229,7 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="home">
-          <a class="nav-link" onclick="gotoHome()">Home</a>
+          <a class="nav-link" href="/#homecover">Home</a>
         </li>
         <li class="nav-item" id="blog" >
           <a class="nav-link" href="/blogs/">Blog</a>
@@ -261,7 +261,7 @@
           <a class="nav-link" href="/partners/">Partners</a>
         </li>
         <li class="nav-item" id="contactus">
-          <a class="nav-link" onclick="gotoContact()">Contact Us</a>
+          <a class="nav-link" href="/#contact">Contact Us</a>
         </li>
       </ul>
 
@@ -273,7 +273,7 @@
   <div class="cover">
   <div class="coverlay black">
   </div>
-  <div class="container overlay-text">
+  <div class="container overlay-text" id="homecover">
     <div class="row p-5">
       <div class="col-sm-12">
         <h1 class="p-1 m-2 l-head">This is <span id="roll" class="coral-text">E-Cell</span></h1>
@@ -2027,18 +2027,7 @@ This 2 day event will be packed with perspective building in <a href="/events/wo
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
 	};
-	function gotoHome()
-	{
-		window.location.hash="";
-		window.location.pathname="/";
-		checkActiveNav();
-	}
-	function gotoContact()
-	{
-		window.location.hash="contact";
-		window.location.pathname="/";
-		checkActiveNav();
-	}
+	
 	$(document).ready(checkActiveNav);
 </script>
 
