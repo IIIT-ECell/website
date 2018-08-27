@@ -1,4 +1,5 @@
 var $win = $(window),
+    // native DOM-specific lookups are faster than jQuery selector lookups
     $nav = $(document.getElementsByClassName("navbar")[0]),
     $cov = $(document.getElementsByClassName("cover")[0]),
     $jump = $(document.getElementById("jump")),
