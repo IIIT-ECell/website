@@ -50,7 +50,7 @@ function checkScroll() {
 
 checkScroll();
 
-// working demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
+// demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
 if($cov.length > 0) {
     $win.on("scroll load resize", throttle(checkScroll, 100));
 }
