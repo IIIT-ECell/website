@@ -1,4 +1,4 @@
-<div id="recents" class="row coral p-5">
+<div id="recents" class="row neutral p-5">
   <a class="clink col-sm-12" href="{{site.baseurl}}/blogs/" target="_blank">
     <!-- this class makes both "Recent Blogs" and "Recent Events" look the same -->
     <h1 class="pb-4">Recent Blogs</h1>
@@ -17,17 +17,13 @@
     <div class="col-md-4 col-sm-12 my-2 e-img-container">
       <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
     </div>
-  	<div class="col-md-8 col-sm-12">
-    	<h6>
+  	<div class = "col-md-8 col-sm-12">
+    	<h3>
         <b>
-          <u>
-            <!-- To make the text start after the image, looks better -->
-            <br>
-            <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
-            </a>
-          </b>
-        </u>
-      </h6>
+          <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
+          </a>
+        </b>
+      </h3>
     	<p>
         {{post.date|date_to_string}} by {{post.author}}
         <br>
@@ -53,17 +49,13 @@
         {% assign limval = 1 %}
       {% endif %}
   	<div class = "col-md-8 col-sm-12 py-2">
-    	<h6>
+    	<h3>
         <b>
-          <u>
-            <!-- To make the text start after the image, looks better -->
-            <br>
-            <a href="{{site.baseurl}}{{post.url}}" target="_blank">
-              {{post.title}}
-            </a>
-          </b>
-        </u>
-      </h6>
+          <a href="{{site.baseurl}}{{post.url}}" target="_blank">
+            {{post.title}}
+          </a>
+        </b>
+      </h3>
     	<p>{{post.date|date_to_string}}<br>
     	{{post.content|slice : 0,250}} <a href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
       </p>
