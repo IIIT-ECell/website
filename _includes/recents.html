@@ -1,4 +1,4 @@
-<div id="recents" class="row coral p-5">
+<div id="recents" class="row neutral p-5">
   <a class="clink col-sm-12" href="{{site.baseurl}}/blogs/" target="_blank">
     <h1>Recent Blogs</h1>
   </a>
@@ -17,14 +17,12 @@
       <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
     </div>
   	<div class = "col-md-8 col-sm-12">
-    	<h6>
+    	<h3>
         <b>
-          <u>
-            <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
-            </a>
-          </b>
-        </u>
-      </h6>
+          <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
+          </a>
+        </b>
+      </h3>
     	<p>
         {{post.date|date_to_string}} by {{post.author}}
         <br>
@@ -50,15 +48,13 @@
         {% assign limval = 1 %}
       {% endif %}
   	<div class = "col-md-8 col-sm-12 py-2">
-    	<h6>
+    	<h3>
         <b>
-          <u>
-            <a href="{{site.baseurl}}{{post.url}}" target="_blank">
-              {{post.title}}
-            </a>
-          </b>
-        </u>
-      </h6>
+          <a href="{{site.baseurl}}{{post.url}}" target="_blank">
+            {{post.title}}
+          </a>
+        </b>
+      </h3>
     	<p>{{post.date|date_to_string}}<br>
     	{{post.content|slice : 0,250}} <a href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
       </p>
