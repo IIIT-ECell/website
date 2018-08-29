@@ -1,6 +1,7 @@
 <div id="recents" class="row coral p-5">
   <a class="clink col-sm-12" href="{{site.baseurl}}/blogs/" target="_blank">
-    <h1>Recent Blogs</h1>
+    <!-- this class makes both "Recent Blogs" and "Recent Events" look the same -->
+    <h1 class="pb-4">Recent Blogs</h1>
   </a>
   {% assign limval = 0 %}
   {% for post in site.posts %}
@@ -16,10 +17,12 @@
     <div class="col-md-4 col-sm-12 my-2 e-img-container">
       <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
     </div>
-  	<div class = "col-md-8 col-sm-12">
+  	<div class="col-md-8 col-sm-12">
     	<h6>
         <b>
           <u>
+            <!-- To make the text start after the image, looks better -->
+            <br>
             <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
             </a>
           </b>
@@ -53,6 +56,8 @@
     	<h6>
         <b>
           <u>
+            <!-- To make the text start after the image, looks better -->
+            <br>
             <a href="{{site.baseurl}}{{post.url}}" target="_blank">
               {{post.title}}
             </a>
