@@ -560,6 +560,7 @@ pre {
     .collapse.navbar-collapse {
         height: 100%;
         background-color: #22252c;
+        padding-bottom: 10px;
     }
 }
 
@@ -646,9 +647,17 @@ pre {
     opacity: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar {
         background-color: #22252c !important;
+    }
+
+    .prow-head {
+        padding: 20px;
+    }
+
+    .prow-head h2 {
+        margin: 0;
     }
 }
 /* end palette colours*/
