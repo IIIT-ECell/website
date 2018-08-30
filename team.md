@@ -1,5 +1,5 @@
 ---
 layout: team
-title: The Crew
-permalink: /team/ 
+title: The Team
+permalink: /team/
 ---
