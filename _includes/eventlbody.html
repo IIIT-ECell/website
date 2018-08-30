@@ -7,7 +7,7 @@
     <b>{{post.date|date_to_string}}</b>
     {{post.content}}
     {% if post.link %}
-    <center><a class="btn btn-light wide coral white-text" href="{{post.link | uri_escape}}" target=_blank role="button">Link</a></center>
+    <center><a class="btn btn-light wide coral white-text" href="{{post.link | uri_escape}}" target=_blank role="button" style="position: absolute;bottom: 0;left: 0;">Link</a></center>
     {% endif %}
   </div>
 </div>
