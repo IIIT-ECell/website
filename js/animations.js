@@ -4,10 +4,13 @@
 
 // START: Animating the "Reach and stats" section
 
-var elementPosition = $(document.getElementById("count-1")).offset().top,
+var animatedTextElm = $(document.getElementById("count-1")),
+    animatedTextPosition = animatedTextElm.length
+        ? animatedTextElm.offset().top
+        : Number.MAX_VALUE,
     screenHeight = $(window).height(),
     activationOffset = 0.8, // determines how far up the the page the element needs to be before triggering the function
-    activationPoint = elementPosition - (screenHeight * activationOffset),
+    activationPoint = animatedTextPosition - screenHeight * activationOffset,
     maxScrollHeight = $(document.body).height() - screenHeight - 5; // -5 for a little bit of buffer
 
 // Does something when user scrolls to it OR
@@ -15,25 +18,30 @@ var elementPosition = $(document.getElementById("count-1")).offset().top,
 $(window).on("scroll", function() {
     var yScrollPos = window.pageYOffset,
         elementInView = yScrollPos > activationPoint,
-        hasReachedBottomOfPage = maxScrollHeight <= yScrollPos && !elementInView;
+        hasReachedBottomOfPage =
+            maxScrollHeight <= yScrollPos && !elementInView,
+        $animatedNumbers = $(".numeric");
 
-    if(elementInView || hasReachedBottomOfPage) {
-        $(".numeric").each(function() {
+    if ((elementInView || hasReachedBottomOfPage) && $animatedNumbers.length) {
+        $animatedNumbers.each(function() {
             var $this = $(this),
                 countTo = this.getAttribute("count");
 
-            $({ countNum: $this.text()}).animate({
-                countNum: countTo
-            }, {
-                duration: 1000,
-                easing: "linear",
-                step: function() {
-                    $this.text(Math.floor(this.countNum));
+            $({ countNum: $this.text() }).animate(
+                {
+                    countNum: countTo
                 },
-                complete: function() {
-                    $this.text(this.countNum);
+                {
+                    duration: 1000,
+                    easing: "linear",
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
                 }
-            });
+            );
         });
     }
 });
