@@ -114,54 +114,73 @@
 
       <style type="text/css">
 .typewriter {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
 }	
-@keyframes caret {
-  50% {
-    border-color: transparent;
+  @keyframes caret {
+      50% {
+          border-color: transparent;
+      }
   }
-}
 
 </style>
 <div class="col-sm-12 typewritter">
-        <br>
-        <h2 class="l-head headline" id="animatedText"></h2>
-        <h2></h2>
+    <br>
+    <h2 class="l-head headline" id="animatedText"></h2>
+    <h2></h2>
 </div>
 
 <script type="text/javascript">
 
     // **** IMPORTANT **** //
-    //  For any text that is further added to this list, please pad the text with spaces on both sides
-    let text = [ " Making Ideas Happen. ", " You will never learn anything by doing it right. ", " Create your own future. "];
-    let i = 0, typeDelay = 100, clearDelay = 60, toPrint = 0, called = false;
+    //  If want to show cursor at the end, add a space to the beginning
+    //  TODO: make the italics on right better, i.e. edit function to help with html tags.. probably jump a few chars?
+
+    let text = [ " Making Ideas Happen.", "You will never learn anything by doing it <i>right</i>.", "Create your own future."];
+    let i = 0, typeDelay = 100, clearDelay, toPrint = 0, called = false, untypeDelay, typeIt;
     let txt, typeText;
     let para = document.getElementById("animatedText");
 
     function type() {
+        if(called)
+            clearTimeout(typeIt);
         called = true;
         typeText = text[toPrint];
         //  typeDelay = 3500 / typeText.length;
         i++;
         txt = typeText.substring(0, i);
+        if(txt[txt.length - 1] == '<') {
+            while(txt[txt.length - 1] != '>') {
+                i++;
+                txt = typeText.substring(0, i);
+            }
+            i++;
+            txt = typeText.substring(0, i);
+        }
         if(i % 2)
             txt += "|";
         para.innerHTML = txt;
         typeIt = setTimeout("type()", typeDelay);
         if(i == typeText.length) {
-            //  TODO: make this better?
-            for(k = 0; k < 900000000; k++);
             clearTimeout(typeIt);
-            unType();
+            untypeDelay = setTimeout("unType()", 2000);
         }
     }
 
     function unType() {
+        clearTimeout(untypeDelay);
         typeText = text[toPrint];
         clearDelay = 1000 / typeText.length;
         i--;
         txt = typeText.substring(0, i);
+        if(txt[txt.length - 1] == '>') {
+            while(txt[txt.length - 1] != '<') {
+                i--;
+                txt = typeText.substring(0, i);
+            }
+            i--;
+            txt = typeText.substring(0, i);
+        }
         if(i % 2)
             txt += "|";
         para.innerHTML = txt;
