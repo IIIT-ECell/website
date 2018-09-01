@@ -113,10 +113,6 @@ a:active {
     color: #22252c;
 }
 
-.container.content a:visited {
-    color: #3f3250;
-}
-
 .container.content a:focus {
     color: #e14658;
 }

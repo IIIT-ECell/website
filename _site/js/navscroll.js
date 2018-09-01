@@ -54,6 +54,7 @@ if ($cov.length > 0) {
     checkScroll();
     $win.on("scroll load resize", throttle(checkScroll, 100));
 } else {
+    // make navbar permanently opaque on non-Home pages
     $nav.removeClass(transparentNavbarClass);
 }
 

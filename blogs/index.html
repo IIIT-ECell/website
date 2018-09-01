@@ -6,6 +6,34 @@ pagination:
   category: blogs
 ---
 <!-- This page is not using layout/md format otherwise pagination will not work on this page. Pagination will only work on an index.html page -->
+<script>
+  /* manually slice out the first 250 characters to retain
+	   complete words in the post content
+	*/
+  function manualSlice(){
+    var postContents = document.getElementsByClassName("post-content"),
+      minSubstringLength = 250;
+
+    if(!postContents) return;
+    clearInterval(manualSliceInterval);
+
+    Array.prototype.forEach.call(postContents, function(postContent){
+      var allWords = postContent.innerHTML.split(/ /g), substringedPost = "", word;
+
+      for(var i = 0, len = allWords.length; i < len; i++){
+        word = allWords[i];
+        if(substringedPost.length > minSubstringLength) break;
+
+        substringedPost += word + " ";
+      }
+
+      postContent.innerHTML = substringedPost.replace(/ $/, "") + "...";
+    });
+  }
+
+  var manualSliceInterval = setInterval(manualSlice, 100);
+  
+</script>
 <style>
 .pagination a, .pagination span {
     padding: 7px 18px;
@@ -27,7 +55,17 @@ pagination:
     text-align: center;
  }
 
+@media (max-width: 767px){
+    .post-data{
+        margin-top: 20px;
+    }
+}
 
+.post-data hr{
+    height: 1px;
+    background-color: black;    
+    border: none;
+}
 
 </style> 
  <br>
@@ -35,14 +73,15 @@ pagination:
 
  {% for post in paginator.posts %}
 	
-	<div class ="col-md-6 sm-6">
+	<div class ="col-md-6 sm-6 post-image">
 		<img class="img-fluid" src="images/{{post.img}}" alt="{{post.title}}">
-    </div>
-    <div class ="col-md-6 sm-6">
+  </div>
+  <div class ="col-md-6 sm-6 post-data">
     <b><h1><a href = "{{site.baseurl}}{{post.url}}" target ="_blank">{{post.title}}</a></h1></b>
-		<h5><i>{{post.author}}</i></h5>
-		<h6>Posted on {{post.date|date_to_string}}</h6>
-		<p>{{post.content|slice : 0,250}} ...<b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">[Read more]</a></b></p>
+		<h5>{{post.author}}</h5>
+		<h6>{{post.date|date_to_string}}</h6>
+    <div class="post-content">{{post.content}}</div>
+    <b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">Read more</a></b>
 		<br>
     <br>
 		<hr>
@@ -74,4 +113,3 @@ pagination:
   </div>
 </div>
  {% endif %}
- 
