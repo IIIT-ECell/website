@@ -18,48 +18,51 @@
 
 <script type="text/javascript">
 
+    // **** IMPORTANT **** //
+    //  For any text that is further added to this list, please pad the text with spaces on both sides
     let text = [ " Making Ideas Happen. ", " You will never learn anything by doing it right. ", " Create your own future. "];
-    let i = 0, del = 100, clearDel = 60, toPrint = 0, called = false;
+    let i = 0, typeDelay = 100, clearDelay = 60, toPrint = 0, called = false;
     let txt, typeText;
     let para = document.getElementById("animatedText");
 
     function type() {
         called = true;
         typeText = text[toPrint];
-        del = 3500 / typeText.length;
+        //  typeDelay = 3500 / typeText.length;
         i++;
         txt = typeText.substring(0, i);
         if(i % 2)
             txt += "|";
         para.innerHTML = txt;
-        typeIt = setTimeout("type()", del);
+        typeIt = setTimeout("type()", typeDelay);
         if(i == typeText.length) {
-            for(k = 0; k < 500000000; k++);
+            //  TODO: make this better?
+            for(k = 0; k < 900000000; k++);
             clearTimeout(typeIt);
-            unType(toPrint);
+            unType();
         }
     }
 
     function unType() {
         typeText = text[toPrint];
-        clearDel = 1000 / typeText.length;
+        clearDelay = 1000 / typeText.length;
         i--;
         txt = typeText.substring(0, i);
         if(i % 2)
             txt += "|";
         para.innerHTML = txt;
-        clearIt = setTimeout("unType()", clearDel);
+        clearIt = setTimeout("unType()", clearDelay);
         if(i == 0) {
             i = 1;
             clearTimeout(clearIt);
             toPrint++;
             if(toPrint == text.length)
                 toPrint = 0;
-            type(toPrint);
+            type();
         }
     }
 
     if(called === false) {
-        type(toPrint);
+        type();
     }
 </script>
