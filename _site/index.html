@@ -163,7 +163,7 @@
         typeIt = setTimeout("type()", typeDelay);
         if(i == typeText.length) {
             clearTimeout(typeIt);
-            untypeDelay = setTimeout("unType()", 2000);
+            untypeDelay = setTimeout("unType()", 3000);
         }
     }
 
@@ -195,7 +195,7 @@
         }
     }
 
-    if(called === false) {
+    if(!called) {
         type();
     }
 </script>
