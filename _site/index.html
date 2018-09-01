@@ -116,7 +116,7 @@
 .typewriter {
     border-right: .05em solid;
     animation: caret 1s steps(1) infinite;
-}	
+}
   @keyframes caret {
       50% {
           border-color: transparent;
@@ -126,7 +126,7 @@
 </style>
 <div class="col-sm-12 typewritter">
     <br>
-    <h2 class="l-head headline" id="animatedText"></h2>
+    <h2 class="l-head headline" id="animatedText"> </h2>
     <h2></h2>
 </div>
 
@@ -134,7 +134,6 @@
 
     // **** IMPORTANT **** //
     //  If want to show cursor at the end, add a space to the beginning
-    //  TODO: make the italics on right better, i.e. edit function to help with html tags.. probably jump a few chars?
 
     let text = [ " Making Ideas Happen.", "You will never learn anything by doing it <i>right</i>.", "Create your own future."];
     let i = 0, typeDelay = 100, clearDelay, toPrint = 0, called = false, untypeDelay, typeIt;
@@ -146,6 +145,7 @@
             clearTimeout(typeIt);
         called = true;
         typeText = text[toPrint];
+        //  To make all typing happen within provided no of seconds
         //  typeDelay = 3500 / typeText.length;
         i++;
         txt = typeText.substring(0, i);
@@ -163,14 +163,15 @@
         typeIt = setTimeout("type()", typeDelay);
         if(i == typeText.length) {
             clearTimeout(typeIt);
-            untypeDelay = setTimeout("unType()", 3000);
+            untypeDelay = setTimeout("unType()", 2000);
+            return;
         }
     }
 
     function unType() {
         clearTimeout(untypeDelay);
         typeText = text[toPrint];
-        clearDelay = 1000 / typeText.length;
+        clearDelay = 1500 / typeText.length;
         i--;
         txt = typeText.substring(0, i);
         if(txt[txt.length - 1] == '>') {
@@ -187,17 +188,20 @@
         clearIt = setTimeout("unType()", clearDelay);
         if(i == 0) {
             i = 1;
+            para.innerHTML = "<br>";
             clearTimeout(clearIt);
             toPrint++;
             if(toPrint == text.length)
                 toPrint = 0;
-            type();
+            typeIt = setTimeout("type()", 750);
+            return;
         }
     }
 
-    if(!called) {
+    if(called === false) {
         type();
     }
+
 </script>
 
     </div>
