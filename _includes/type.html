@@ -8,94 +8,58 @@
     border-color: transparent;
   }
 }
-.blink {
-  color : white;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
+
 </style>
 <div class="col-sm-12 typewritter">
         <br>
-        <h2 class="l-head headline" id = "subtitle">Making ideas happen.</h2><h2><span class="blink">|</span></h2>
+        <h2 class="l-head headline" id="animatedText"></h2>
         <h2></h2>
 </div>
+
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',function(event){
 
-  var dataText = [ "Making Ideas Happen.", "You will never learn anything by doing it right.","Create your own future."];
+    let text = [ " Making Ideas Happen. ", " You will never learn anything by doing it right. ", " Create your own future. "];
+    let i = 0, del = 100, clearDel = 60, toPrint = 0, called = false;
+    let txt, typeText;
+    let para = document.getElementById("animatedText");
 
-
-
-function typeWriter(text, i, fnCallback) {
-	 
-	  
-
-    if (i < (text.length)) {
-     
-     document.querySelector(".headline").innerHTML = text.substring(0, i+1) /*'<span class="typewriter" aria-hidden="true"></span>';*/
-
-
-      setTimeout(function() {
-        typeWriter(text, i + 1, fnCallback)
-      }, 100);
+    function type() {
+        called = true;
+        typeText = text[toPrint];
+        del = 3500 / typeText.length;
+        i++;
+        txt = typeText.substring(0, i);
+        if(i % 2)
+            txt += "|";
+        para.innerHTML = txt;
+        typeIt = setTimeout("type()", del);
+        if(i == typeText.length) {
+            for(k = 0; k < 500000000; k++);
+            clearTimeout(typeIt);
+            unType(toPrint);
+        }
     }
 
-    else if (typeof fnCallback == 'function') {
-
-      setTimeout(fnCallback, 4000);
+    function unType() {
+        typeText = text[toPrint];
+        clearDel = 1000 / typeText.length;
+        i--;
+        txt = typeText.substring(0, i);
+        if(i % 2)
+            txt += "|";
+        para.innerHTML = txt;
+        clearIt = setTimeout("unType()", clearDel);
+        if(i == 0) {
+            i = 1;
+            clearTimeout(clearIt);
+            toPrint++;
+            if(toPrint == text.length)
+                toPrint = 0;
+            type(toPrint);
+        }
     }
-  }
 
-   function StartTextAnimation(i) {
-     if (typeof dataText[i] == 'undefined'){
-		
-    
-          StartTextAnimation(0);
-     
-     }
-
-    if (i < dataText[i].length) {
-   
-     typeWriter(dataText[i], 0, function(){
-		 
-		 function clearText() {
-			 setTimeout(function(){
-			      var foo = $(".headline").html().replace('<span class="typewriter" aria-hidden="true"></span>',"");
-				 if(foo.charAt(foo.length-1)===">") {
-				 				      var newX= foo.substring(0,foo.length-4);
-				 } else {
-			      var newX= foo.substring(0,foo.length-1);						
-						}
-				 $(".headline").html(newX/*+'<span class="typewriter" aria-hidden="true"></span>'*/)
-				 if(newX.length>0) {				 
-					 clearText();
-				 } else {
-
-       				  StartTextAnimation(i + 1);
-				 }
-		  },50);
-		 }
-		  setTimeout(function() {
-          clearText();
-        }, 400);
-		 
-		
-     });
-    } else {
-	}
-  }
-
-  StartTextAnimation(0);
-
-});
+    if(called === false) {
+        type(toPrint);
+    }
 </script>
