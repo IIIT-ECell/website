@@ -7,58 +7,61 @@ var $win = $(window),
     coverPageHeight = $cov.height(),
     headingTopPosition = coverPageHeight / 2,
     // make navbar opaque just before user scrolls past heading
-    navBarTransparentPixelLimit = headingTopPosition * 0.3;
+    navBarTransparentPixelLimit = headingTopPosition * 0.3,
+    transparentNavbarClass = "transparent";
 
-function throttle(func, time){
+function throttle(func, time) {
     var timeout, hadCalledInBetween;
 
-    return function(){
-        if(!timeout){
+    return function() {
+        if (!timeout) {
             func.apply(this, arguments);
 
-            timeout = setTimeout(function(){
-                if(hadCalledInBetween){
+            timeout = setTimeout(function() {
+                if (hadCalledInBetween) {
                     func.apply(this, arguments);
                     hadCalledInBetween = false;
                 }
                 timeout = null;
             }, time);
-        }else{
+        } else {
             hadCalledInBetween = true;
         }
     };
 }
 
 function checkScroll() {
-    var transparentClass = "transparent",
-        hiddenClass = "hiddenJumpIcon",
+    var hiddenClass = "hiddenJumpIcon",
         scrollTop = $win.scrollTop();
-    
-    if(scrollTop > navBarTransparentPixelLimit) {
-        $nav.removeClass(transparentClass);
+
+    if (scrollTop > navBarTransparentPixelLimit) {
+        $nav.removeClass(transparentNavbarClass);
     } else {
-        $nav.addClass(transparentClass);
+        $nav.addClass(transparentNavbarClass);
     }
 
-    if(scrollTop > coverPageHeight) {
+    if (scrollTop > coverPageHeight) {
         $jump.removeClass(hiddenClass);
         $jumpicon.removeClass(hiddenClass);
-    }
-    else {
+    } else {
         $jump.addClass(hiddenClass);
         $jumpicon.addClass(hiddenClass);
     }
 }
 
-checkScroll();
-
 // demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
-if($cov.length > 0) {
+if ($cov.length > 0) {
+    checkScroll();
     $win.on("scroll load resize", throttle(checkScroll, 100));
+} else {
+    $nav.removeClass(transparentNavbarClass);
 }
 
 $jump.click(function() {
-    $("body, html").animate({
-        scrollTop : 0
-    }, 500);
+    $("body, html").animate(
+        {
+            scrollTop: 0
+        },
+        500
+    );
 });
