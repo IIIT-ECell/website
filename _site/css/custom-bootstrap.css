@@ -504,12 +504,24 @@ a:active {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.ser {
-    font-family: "PT Serif", "Times New Roman";
+.blog-post {
+    width: 70%;
+    margin-top: 55px !important;
 }
 
-.ser-body {
+.blog-heading {
+    font-size: 8vh !important;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.blog-content {
     font-size: 1.2em;
+}
+
+.blog-splash-image {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 body {
@@ -557,6 +569,14 @@ pre {
         height: 100%;
         background-color: #22252c;
         padding-bottom: 10px;
+    }
+
+    .blog-post {
+        width: 80%;
+    }
+
+    .blog-splash-image {
+        width: 85%;
     }
 }
 
