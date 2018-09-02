@@ -1,11 +1,11 @@
 ---
-layout : blog
-title : To Dropout or To Not Dropout
+layout: blog
+title: To Dropout or To Not Dropout
 author: Atirek Kumar
 email: atirek.kumar@research.iiit.ac.in
-permalink : /blogs/:categories/:title:output_ext
-categories : blogs
-img : dropper.jpg
+permalink: /blogs/:categories/:title:output_ext
+categories: blogs
+img: dropper.jpg
 ---
 
 A guy who is fed up with the college education system and has this really original and genius idea decides to dropout of college and implement that original and genius idea. Years later he has proved everyone wrong and is the Founder of some big company whose products and services almost everyone around the globe uses. It all just sounds so legendary and perfect, right? It is a movie script waiting to happen for which Leonardo DiCaprio will win another Oscar. But maybe that’s not how it works in the real world. Atleast not for everyone.
@@ -21,4 +21,4 @@ Dropping out can be pretty risky- abandoning the safety net provided by college.
 
 So dropout billionaires aren’t that common. Neither are dropout entrepreneurs. The truth is just that the glory of few entrepreneur dropouts is highlighted. Honestly, their stories are pretty inspiring and impressive. There is no denying that. But there are many other stories out there like those of Chad Hurley, Fred Smith and Jeff Bezos that should be looked at.
 
-  [study]: https://theconversation.com/the-myth-of-the-college-dropout-75760
+[study]: https://theconversation.com/the-myth-of-the-college-dropout-75760
