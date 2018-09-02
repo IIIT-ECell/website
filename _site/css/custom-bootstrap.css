@@ -248,7 +248,7 @@ a:active {
 
 /* misc - recategorize */
 .category {
-    padding: 0.3rem;
+    padding: 0.5rem;
     background-color: #d7dfea;
 }
 /*  */
@@ -505,12 +505,13 @@ a:active {
 }
 
 .blog-post {
-    width: 70%;
-    margin-top: 55px !important;
+    width: 80%;
+    max-width: 786px;
+    margin-top: 65px !important;
 }
 
 .blog-heading {
-    font-size: 8vh !important;
+    font-size: 42px !important;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -522,6 +523,10 @@ a:active {
     width: 60%;
     margin: auto;
     margin-bottom: 10px;
+}
+
+.blog-metadata {
+    font-size: 17px;
 }
 
 body {
@@ -577,6 +582,14 @@ pre {
 
     .blog-splash-image {
         width: 85%;
+    }
+
+    .blog-heading {
+        font-size: 35px !important;
+    }
+
+    .blog-metadata {
+        font-size: 20px !important;
     }
 }
 

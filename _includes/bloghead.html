@@ -1,9 +1,12 @@
 <h1 class="blog-heading">{{page.title}}</h1>
 <div>  
-  {% for cat in page.categories %}
-  <span class="category">{{cat}}</span>
-  {% endfor %}
+<p class="blog-metadata">
+  <a href="mailto:{{page.email}}">{{page.author}}</a><br>
+  {{page.date|date_to_string}}
 </p>
-<p><a href="mailto:{{page.email}}">{{page.author}}</a></p>
-<p>{{page.date|date_to_string}}</p>
+<p>
+    {% for cat in page.categories %}
+    <span class="category">{{cat}}</span>
+    {% endfor %}
+  </p>
 </div>
