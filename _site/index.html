@@ -114,105 +114,96 @@
 
       <style type="text/css">
 .typewriter {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}	
-@keyframes caret {
-  50% {
-    border-color: transparent;
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+  @keyframes caret {
+      50% {
+          border-color: transparent;
+      }
   }
-}
-.blink {
-  color : white;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
+
 </style>
 <div class="col-sm-12 typewritter">
-        <br>
-        <h2 class="l-head headline" id = "subtitle">Making ideas happen.</h2><h2><span class="blink">|</span></h2>
-        <h2></h2>
+    <br>
+    <h2 class="l-head headline" id="animatedText"> </h2>
+    <h2></h2>
 </div>
+
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',function(event){
 
-  var dataText = [ "Making Ideas Happen.", "You will never learn anything by doing it right.","Create your own future."];
+    // **** IMPORTANT **** //
+    //  If want to show cursor at the end, add a space to the beginning
 
+    let text = [ " Making Ideas Happen.", "You will never learn anything by doing it <i>right</i>.", "Create your own future."];
+    let i = 0, typeDelay = 100, clearDelay, toPrint = 0, called = false, untypeDelay, typeIt;
+    let txt, typeText;
+    let para = document.getElementById("animatedText");
 
-
-function typeWriter(text, i, fnCallback) {
-	 
-	  
-
-    if (i < (text.length)) {
-     
-     document.querySelector(".headline").innerHTML = text.substring(0, i+1) /*'<span class="typewriter" aria-hidden="true"></span>';*/
-
-
-      setTimeout(function() {
-        typeWriter(text, i + 1, fnCallback)
-      }, 100);
+    function type() {
+        if(called)
+            clearTimeout(typeIt);
+        called = true;
+        typeText = text[toPrint];
+        //  To make all typing happen within provided no of seconds
+        //  typeDelay = 3500 / typeText.length;
+        i++;
+        txt = typeText.substring(0, i);
+        if(txt[txt.length - 1] == '<') {
+            while(txt[txt.length - 1] != '>') {
+                i++;
+                txt = typeText.substring(0, i);
+            }
+            i++;
+            txt = typeText.substring(0, i);
+        }
+        if(i % 2)
+            txt += "|";
+        para.innerHTML = txt;
+        typeIt = setTimeout("type()", typeDelay);
+        if(i == typeText.length) {
+            clearTimeout(typeIt);
+            untypeDelay = setTimeout("unType()", 4000);
+            return;
+        }
     }
 
-    else if (typeof fnCallback == 'function') {
-
-      setTimeout(fnCallback, 4000);
+    function unType() {
+        clearTimeout(untypeDelay);
+        typeText = text[toPrint];
+        clearDelay = 1500 / typeText.length;
+        i--;
+        txt = typeText.substring(0, i);
+        if(txt[txt.length - 1] == '>') {
+            while(txt[txt.length - 1] != '<') {
+                i--;
+                txt = typeText.substring(0, i);
+            }
+            i--;
+            txt = typeText.substring(0, i);
+        }
+        if(i % 2)
+            txt += "|";
+        para.innerHTML = txt;
+        clearIt = setTimeout("unType()", clearDelay);
+        if(i == 0) {
+            i = 1;
+            para.innerHTML = "<br>";
+            clearTimeout(clearIt);
+            toPrint++;
+            if(toPrint == text.length)
+                toPrint = 0;
+            typeIt = setTimeout("type()", 500);
+            return;
+        }
     }
-  }
 
-   function StartTextAnimation(i) {
-     if (typeof dataText[i] == 'undefined'){
-		
-    
-          StartTextAnimation(0);
-     
-     }
+    if(called === false) {
+        type();
+    }
 
-    if (i < dataText[i].length) {
-   
-     typeWriter(dataText[i], 0, function(){
-		 
-		 function clearText() {
-			 setTimeout(function(){
-			      var foo = $(".headline").html().replace('<span class="typewriter" aria-hidden="true"></span>',"");
-				 if(foo.charAt(foo.length-1)===">") {
-				 				      var newX= foo.substring(0,foo.length-4);
-				 } else {
-			      var newX= foo.substring(0,foo.length-1);						
-						}
-				 $(".headline").html(newX/*+'<span class="typewriter" aria-hidden="true"></span>'*/)
-				 if(newX.length>0) {				 
-					 clearText();
-				 } else {
-
-       				  StartTextAnimation(i + 1);
-				 }
-		  },50);
-		 }
-		  setTimeout(function() {
-          clearText();
-        }, 400);
-		 
-		
-     });
-    } else {
-	}
-  }
-
-  StartTextAnimation(0);
-
-});
 </script>
+
     </div>
   </div>
 </div>
@@ -402,7 +393,7 @@ function typeWriter(text, i, fnCallback) {
         
       
       <a href="http://megathon.tech/" class="overlay-show" target="_blank">
-        <h4>Megathon</h4>
+        <h4 class="showcase-text">Megathon</h4>
       </a>
     </div>
 
@@ -581,7 +572,7 @@ function typeWriter(text, i, fnCallback) {
         
       
       <a class="overlay-show" href="/talks/">
-        <h4>Talks</h4>
+        <h4 class="showcase-text">Talks</h4>
       </a>
     </div>
 
@@ -760,7 +751,7 @@ function typeWriter(text, i, fnCallback) {
         
       
       <a class="overlay-show" href="/workshops/">
-        <h4>Workshops</h4>
+        <h4 class="showcase-text">Workshops</h4>
       </a>
     </div>
 
@@ -939,7 +930,7 @@ function typeWriter(text, i, fnCallback) {
         
       
       <a class="overlay-show" href="/hackathons/">
-        <h4>Hackathons</h4>
+        <h4 class="showcase-text">Hackathons</h4>
       </a>
     </div>
 
@@ -1341,99 +1332,146 @@ function typeWriter(text, i, fnCallback) {
     <!-- this class makes both "Recent Blogs" and "Recent Events" look the same -->
     <h1 class="pb-4">Recent Blogs</h1>
   </a>
+  
+  
+    
+  
+    
+
+  <div class="container-fix">
+
+    <div class="row video-fix">
+      <div class="e-img-container">
+        <img class="e-img mx-auto" src="/blogs/images/elon.png">
+      </div>
+    </div>
       
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="/blogs/images/elon.png">
-  </div>
-  <div class="col-md-8 col-sm-12">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a class="clink" href="/blogs/blogs/elon-musk.html" target="_blank">The Story of Elon Musk - How the Man is Working on Changing the World. Literally.
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>
+    <div class="row heading-fix">
+      <h4> <b>
+          <a class="clink" href="/blogs/blogs/elon-musk.html" target="_blank">The Story of Elon Musk - How the Man is Working on Changing the World. Literally.</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix">
+      <p>
       28 May 2018 by Aditya Morolia
-      <br> <p>Let’s talk about Iron Man. We all love him. A genius, eccentric, billionaire engineer, with a desire to change the world. But if you think such a person is possible only in comic books, you probably haven’t heard of Elon Musk. This article is a br
       <br>
-      <a class="clink" href="/blogs/blogs/elon-musk.html" target="_blank">... [Read more]</a>
-    </p>
+      <p>Let’s talk about Iron Man. We all love him. A genius, eccentric, billionaire engineer, with a desire to change the world. But if you think such a person is possible only in comic books, you probably haven’t heard of Elon Musk. This article is a br <a class="clink" href="/blogs/blogs/elon-musk.html" target="_blank">... [Read more]</a>
+      </p>
+    </div>
+
   </div>
+
+    
+  
+    
+  
+    
+
+  <div class="container-fix">
+
+    <div class="row video-fix">
+      <div class="e-img-container">
+        <img class="e-img mx-auto" src="/blogs/images/dropper.jpg">
+      </div>
+    </div>
       
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="/blogs/images/dropper.jpg">
-  </div>
-  <div class="col-md-8 col-sm-12">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a class="clink" href="/blogs/blogs/dropping-out.html" target="_blank">To Dropout or To Not Dropout
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>
+    <div class="row heading-fix">
+      <h4> <b>
+          <a class="clink" href="/blogs/blogs/dropping-out.html" target="_blank">To Dropout or To Not Dropout</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix">
+      <p>
       28 May 2018 by Atirek Kumar
-      <br> <p>A guy who is fed up with the college education system and has this really original and genius idea decides to dropout of college and implement that original and genius idea. Years later he has proved everyone wrong and is the Founder of some big c
       <br>
-      <a class="clink" href="/blogs/blogs/dropping-out.html" target="_blank">... [Read more]</a>
-    </p>
+      <p>A guy who is fed up with the college education system and has this really original and genius idea decides to dropout of college and implement that original and genius idea. Years later he has proved everyone wrong and is the Founder of some big c <a class="clink" href="/blogs/blogs/dropping-out.html" target="_blank">... [Read more]</a>
+      </p>
+    </div>
+
   </div>
-     
+
+    
+  
+    
+      
 </div>
 
 <div id="recents1" class="row mountain white-text p-5" style="overflow:hidden;">
   <h1 class="col-sm-12 col-md-12 pb-4">Recent Events</h1>
 
-            
-  <div class="col-md-8 col-sm-12 py-2">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a href="/events/workshops/summit.html" target="_blank">
-            Entrepreneurship Summit
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>19 May 2018<br> <p>E-Cell IIIT Hyderabad is partnering with Entrepreneur India for the 15th annual Entrepreneur Start-up Summit, 2018 scheduled on May 19-20 2018 at HITEX Exhibition Centre, Hyderabad<br />
-This 2 day event will be packed with perspective building in <br><a href="/events/workshops/summit.html" target="_blank">...
-        [Read more]</a>
-    </p>
-  </div>
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="/assets/eventsimages/entrepreneur.jpeg">
-  </div>
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
       
-  <div class="col-md-8 col-sm-12 py-2">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a href="/events/hackathons/megathon.html" target="_blank">
-            Megathon
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>23 Sep 2017<br> <p>Hosted jointly by E-Cell IIT-Hyderabad and E-Cell IIIT-Hyderabad, Megathon is a 24-hour hackathon for all aspiring student entrepreneurs in Hyderabad. Ideas can solve a real life problem, social issue or any other aspect from the given themes for  <br><a href="/events/hackathons/megathon.html" target="_blank">...
-        [Read more]</a>
-    </p>
+
+  <div class="container-fix">
+
+    <div class="row video-fix-rev">
+      <div class="e-img-container">
+          <img class="e-img mx-auto" src="/assets/eventsimages/entrepreneur.jpeg">
+      </div>
+    </div>
+      
+    <div class="row heading-fix-rev">
+      <h4> <b>
+          <a class="clink-rev" href="/events/workshops/summit.html" target="_blank">Entrepreneurship Summit</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix-rev">
+      <p>
+      19 May 2018
+      <br>
+      <p>E-Cell IIIT Hyderabad is partnering with Entrepreneur India for the 15th annual Entrepreneur Start-up Summit, 2018 scheduled on May 19-20 2018 at HITEX Exhibition Centre, Hyderabad<br />
+This 2 day event will be packed with perspective building in <a class="clink-rev" href="/events/workshops/summit.html" target="_blank">... [Read more]</a>
+      </p>
+    </div>
   </div>
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="/assets/eventsimages/megathon-carousel-2.jpg">
+
+    
+  
+    
+    
+      
+
+  <div class="container-fix">
+
+    <div class="row video-fix-rev">
+      <div class="e-img-container">
+          <img class="e-img mx-auto" src="/assets/eventsimages/megathon-carousel-2.jpg">
+      </div>
+    </div>
+      
+    <div class="row heading-fix-rev">
+      <h4> <b>
+          <a class="clink-rev" href="/events/hackathons/megathon.html" target="_blank">Megathon</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix-rev">
+      <p>
+      23 Sep 2017
+      <br>
+      <p>Hosted jointly by E-Cell IIT-Hyderabad and E-Cell IIIT-Hyderabad, Megathon is a 24-hour hackathon for all aspiring student entrepreneurs in Hyderabad. Ideas can solve a real life problem, social issue or any other aspect from the given themes for  <a class="clink-rev" href="/events/hackathons/megathon.html" target="_blank">... [Read more]</a>
+      </p>
+    </div>
   </div>
-     
+
+    
+  
+    
+      
 </div>
+
 
 
 <div id="carIndicators" class="carousel slide" data-ride="carousel">
@@ -1578,16 +1616,11 @@ This 2 day event will be packed with perspective building in <br><a href="/event
 		<div class="row text-center">
 			<div class="col-xs-12 col-md-12 col-sm-12">
 				<ul class="list-inline pt-3">
-					<li class="list-inline-item p-2"><a class="faficon" href="https://www.facebook.com/ecell.iiithyd/" target="_blank"><h2><i
-								 class="fa fa-facebook"></i></h2></a></li>
-					<li class="list-inline-item p-2"><a class="faficon" href="https://www.instagram.com/ecell_iiith/" target="_blank"><h2><i
-								 class="fa fa-instagram"></i></h2></a></li>
-					<li class="list-inline-item p-2"><a class="faficon" href="https://twitter.com/ecell_iiithyd" target="_blank"><h2><i
-								 class="fa fa-twitter"></i></h2></a></li>
-					<li class="list-inline-item p-2"><a class="faficon" href="https://www.youtube.com/channel/UCE8mniuxsSH_SVYTmKWxtfA"
-						 target="_blank"><h2><i class="fa fa-youtube"></i></h2></a></li>
-					<li class="list-inline-item p-2"><a class="faficon" href="https://github.com/IIIT-ECell/website" target="_blank"><h2><i
-								 class="fa fa-github"></i></h2></a></li>
+					<li class="list-inline-item p-2"><a class="faficon" href="https://www.facebook.com/ecell.iiithyd/" target="_blank"><h2><i class="fa fa-facebook"></i></h2></a></li>
+					<li class="list-inline-item p-2"><a class="faficon" href="https://www.instagram.com/ecell_iiith/" target="_blank"><h2><i class="fa fa-instagram"></i></h2></a></li>
+					<li class="list-inline-item p-2"><a class="faficon" href="https://twitter.com/ecell_iiithyd" target="_blank"><h2><i class="fa fa-twitter"></i></h2></a></li>
+					<li class="list-inline-item p-2"><a class="faficon" href="https://www.youtube.com/channel/UCE8mniuxsSH_SVYTmKWxtfA" target="_blank"><h2><i class="fa fa-youtube"></i></h2></a></li>
+					<li class="list-inline-item p-2"><a class="faficon" href="https://github.com/IIIT-ECell/website" target="_blank"><h2><i class="fa fa-github"></i></h2></a></li>
 				</ul>
 			</div>
 		</div>
@@ -1629,6 +1662,7 @@ This 2 day event will be packed with perspective building in <br><a href="/event
 		</div>
 	</div>
 </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

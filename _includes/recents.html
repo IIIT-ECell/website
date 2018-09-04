@@ -3,55 +3,85 @@
     <!-- this class makes both "Recent Blogs" and "Recent Events" look the same -->
     <h1 class="pb-4">Recent Blogs</h1>
   </a>
-  {% assign limval = 0 %} {% for post in site.posts %} {% if limval == 2 %} {% break %} {% endif %} {% if post.categories contains
-  'blogs' %} {% if limval == 1 %} {% assign limval = 2 %} {% else %} {% assign limval = 1 %} {% endif %}
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
-  </div>
-  <div class="col-md-8 col-sm-12">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>
-      {{post.date|date_to_string}} by {{post.author}}
-      <br> {{post.content|slice : 0,250}}
+  {% assign limval = 0 %}
+  {% for post in site.posts %}
+    {% if limval == 2 %}
+      {% break %}
+    {% endif %}
+  {% if post.categories contains 'blogs' %}
+    {% if limval == 1 %}
+      {% assign limval = 2 %}
+    {% else %}
+      {% assign limval = 1 %}
+  {% endif %}
+
+  <div class="container-fix">
+
+    <div class="row video-fix">
+      <div class="e-img-container">
+        <img class="e-img mx-auto" src="{{site.baseurl}}/blogs/images/{{post.img}}">
+      </div>
+    </div>
+      
+    <div class="row heading-fix">
+      <h4> <b>
+          <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix">
+      <p>
+      {{post.date | date_to_string}} by {{post.author}}
       <br>
-      <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
-    </p>
+      {{post.content|slice : 0,250}} <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
+      </p>
+    </div>
+
   </div>
-  {% endif %} {% endfor %}
+
+    {% endif %}
+  {% endfor %}
 </div>
 
 <div id="recents1" class="row mountain white-text p-5" style="overflow:hidden;">
   <h1 class="col-sm-12 col-md-12 pb-4">Recent Events</h1>
 
-  {% assign limval = 0 %} {% for post in site.posts %} {% if limval == 2 %} {% break %} {% endif %} {% if post.categories contains
-  'events' %} {% if limval == 1 %} {% assign limval = 2 %} {% else %} {% assign limval = 1 %} {% endif %}
-  <div class="col-md-8 col-sm-12 py-2">
-    <h6>
-      <b>
-        <u>
-          <!-- To make the text start after the image, looks better -->
-          <br>
-          <a href="{{site.baseurl}}{{post.url}}" target="_blank">
-            {{post.title}}
-          </a>
-      </b>
-      </u>
-    </h6>
-    <p>{{post.date|date_to_string}}<br> {{post.content|slice : 0,250}} <br><a href="{{site.baseurl}}{{post.url}}" target="_blank">...
-        [Read more]</a>
-    </p>
+  {% assign limval = 0 %}
+  {% for post in site.posts %}
+    {% if limval == 2 %}
+      {% break %}
+    {% endif %}
+    {% if post.categories contains 'events' %}
+      {% if limval == 1 %}
+        {% assign limval = 2 %}
+      {% else %}
+        {% assign limval = 1 %}
+    {% endif %}
+
+  <div class="container-fix">
+
+    <div class="row video-fix-rev">
+      <div class="e-img-container">
+          <img class="e-img mx-auto" src="{{site.baseurl}}/assets/eventsimages/{{post.img}}">
+      </div>
+    </div>
+      
+    <div class="row heading-fix-rev">
+      <h4> <b>
+          <a class="clink-rev" href="{{site.baseurl}}{{post.url}}" target="_blank">{{post.title}}</a>
+      </b> </h4>
+    </div>
+
+    <div class="row content-fix-rev">
+      <p>
+      {{post.date | date_to_string}}
+      <br>
+      {{post.content|slice : 0,250}} <a class="clink-rev" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
+      </p>
+    </div>
   </div>
-  <div class="col-md-4 col-sm-12 my-2 e-img-container">
-    <img class="e-img mx-auto" src="{{site.baseurl}}/assets/eventsimages/{{post.img}}">
-  </div>
-  {% endif %} {% endfor %}
+
+    {% endif %}
+  {% endfor %}
 </div>
+
