@@ -226,14 +226,9 @@ a:active {
 }
 
 .cover .container .row .col-sm-12 {
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-=======
   display: flex;
   justify-content: center;
   align-items: center;
->>>>>>> Updated contact details, github link
 }
 
 .cover .container .row .col-md-5 {
@@ -282,20 +277,6 @@ a:active {
     margin-right: 0;
 }
 
-<<<<<<< HEAD
-.showcase,
-.overlay-show {
-    display: flex;
-    height: 10rem;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    overflow: hidden;
-}
-
-.showcase-img {
-    width: 100%;
-=======
 .showcase, .overlay-show {
   display: flex;
   height: 10rem;
@@ -308,9 +289,6 @@ a:active {
 
 .showcase-img {
   width: 100%;
-  opacity: 0.3;
-  filter: alpha(opacity=30)
->>>>>>> Updated contact details, github link
 }
 
 .overlay-show {
@@ -318,8 +296,8 @@ a:active {
     width: 100%;
     height: 100%;
     margin: 0;
-    opacity: 0.7;
-
+    opacity: 0.75;
+    background-color: #000000;
     transition: 0.5s ease;
 }
 

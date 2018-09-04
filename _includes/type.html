@@ -49,7 +49,7 @@
         typeIt = setTimeout("type()", typeDelay);
         if(i == typeText.length) {
             clearTimeout(typeIt);
-            untypeDelay = setTimeout("unType()", 2000);
+            untypeDelay = setTimeout("unType()", 4000);
             return;
         }
     }
@@ -79,7 +79,7 @@
             toPrint++;
             if(toPrint == text.length)
                 toPrint = 0;
-            typeIt = setTimeout("type()", 750);
+            typeIt = setTimeout("type()", 500);
             return;
         }
     }
