@@ -2,19 +2,22 @@
 layout: wrapper
 ---
 
-
-<div class="container content mt-5 p-2 pt-4">
-	<!-- TODO a title + subtitle + date etc feature -->
-
-	{% include bloghead.html %}
-	<!-- TODO the post body goes here -->
+<div class="blog-post container content mt-5 p-2 pt-4">
+	{% include bloghead.html %}	
   	<br>
-  	{% if page.categories contains "blogs" %}
-  	<img class="img-fluid mb-4" src="../images/{{page.img}}" alt="{{page.title}}">
-  	{% else %}
-  	<img class="img-fluid mb-4" src="/assets/eventsimages/{{page.img}}" alt="{{page.title}}">
-  	{% endif %}
-	<br>
-  	<div class="ser ser-body">{{page.content}}</div>
+  	
+	
+  	<div class="ser-body blog-content">
+			
+			<div class="blog-splash-image">
+					{% if page.categories contains "blogs" %}
+					<img class="img-fluid mb-4" src="../images/{{page.img}}" alt="{{page.title}}">
+					{% else %}
+					<img class="img-fluid mb-4" src="/assets/eventsimages/{{page.img}}" alt="{{page.title}}">
+					{% endif %}	 
+			</div>
+			
+		{{page.content}}
+	</div>
 	{% include blogfoot.html %}
 </div>

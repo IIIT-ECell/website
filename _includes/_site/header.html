@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top navy py-0">
 
-    <a class="navbar-brand" href="{{site.baseurl}}/">
+    <a class="navbar-brand ecelllogo" href="{{site.baseurl}}/">
       {% for file in site.static_files %}
         {% if file.path contains "logo-ecell.png" %}
         <img src="{{site.baseurl}}{{file.path}}" height="57">
@@ -13,7 +13,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse pt-3" id="navbarCollapse">
-
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="blog" >
           <a class="nav-link" href="{{site.baseurl}}/blogs/">Blog</a>
@@ -45,7 +44,7 @@
           <a class="nav-link" href="{{site.baseurl}}/partners/">Partners</a>
         </li>
         <li class="nav-item" id="contactus">
-          <a class="nav-link" onclick="gotoContact()">Contact Us</a>
+          <a class="nav-link" onclick="{{site.baseurl}}/#contact">Contact Us</a>
         </li>
       </ul>
 

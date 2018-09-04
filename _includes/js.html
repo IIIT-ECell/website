@@ -6,7 +6,6 @@
 <script src="{{ "/js/animations.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/navscroll.js" | prepend: site.baseurl }}"></script>
 
-
 <script type="text/javascript">
 	function checkActiveNav()
 	{
@@ -41,17 +40,6 @@
 		if(pagename =="Partners and Associates")
 			document.getElementById("partners").classList.add("active");
 	};
-	function gotoHome()
-	{
-		window.location.hash="";
-		window.location.pathname="{{site.baseurl}}/";
-		checkActiveNav();
-	}
-	function gotoContact()
-	{
-		window.location.hash="contact";
-		window.location.pathname="{{site.baseurl}}/";
-		checkActiveNav();
-	}
+	
 	$(document).ready(checkActiveNav);
 </script>

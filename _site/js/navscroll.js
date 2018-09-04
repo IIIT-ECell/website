@@ -1,52 +1,68 @@
-let win = $(window);
-let nav = $('.navbar');
-let cov = $('.cover');
-let jump = $('#jump');
-let jumpicon = $('#jumpicon');
+var $win = $(window),
+    // native DOM-specific lookups are faster than jQuery selector lookups
+    $nav = $(document.getElementsByClassName("navbar")[0]),
+    $cov = $(document.getElementsByClassName("cover")[0]),
+    $jump = $(document.getElementById("jump")),
+    $jumpicon = $(document.getElementById("jumpicon")),
+    coverPageHeight = $cov.height(),
+    headingTopPosition = coverPageHeight / 2,
+    // make navbar opaque just before user scrolls past heading
+    navBarTransparentPixelLimit = headingTopPosition * 0.3,
+    transparentNavbarClass = "transparent";
 
-let shiftY = cov.height() - nav.height();
+function throttle(func, time) {
+    var timeout, hadCalledInBetween;
 
-let scrollHandler = {
-  allow: true,
-  reallow: function() {
-    scrollHandler.allow = true;
-  },
-  delay: 200
+    return function() {
+        if (!timeout) {
+            func.apply(this, arguments);
+
+            timeout = setTimeout(function() {
+                if (hadCalledInBetween) {
+                    func.apply(this, arguments);
+                    hadCalledInBetween = false;
+                }
+                timeout = null;
+            }, time);
+        } else {
+            hadCalledInBetween = true;
+        }
+    };
 }
 
 function checkScroll() {
-  console.log('op');
+    var hiddenClass = "hiddenJumpIcon",
+        scrollTop = $win.scrollTop();
 
-  if(win.scrollTop() > shiftY) {
-    nav.removeClass('transparent');
-  }
-  else {
-    nav.addClass('transparent');
-  }
-
-  if(win.scrollTop() > shiftY/2) {
-    jump.removeClass('transparent');
-    jumpicon.removeClass('transparent');
-  }
-  else {
-    jump.addClass('transparent');
-    jumpicon.addClass('transparent');
-  }
-}
-
-checkScroll();
-if(cov.length > 0) {
-  win.on("scroll load resize", function(){
-    if(scrollHandler.allow) {
-      checkScroll();
-      scrollHandler.allow = false;
-      setTimeout(scrollHandler.reallow, scrollHandler.delay);
+    if (scrollTop > navBarTransparentPixelLimit) {
+        $nav.removeClass(transparentNavbarClass);
+    } else {
+        $nav.addClass(transparentNavbarClass);
     }
-  });
+
+    if (scrollTop > coverPageHeight) {
+        $jump.removeClass(hiddenClass);
+        $jumpicon.removeClass(hiddenClass);
+    } else {
+        $jump.addClass(hiddenClass);
+        $jumpicon.addClass(hiddenClass);
+    }
 }
 
-jump.click(function() { // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0 // Scroll to top of body
-    }, 500);
+// demo for throttle https://jsbin.com/sagiwizuvu/1/edit?output
+if ($cov.length > 0) {
+    checkScroll();
+    $win.on("scroll load resize", throttle(checkScroll, 100));
+} else {
+    // make navbar permanently opaque on non-Home pages
+    $nav.removeClass(transparentNavbarClass);
+}
+
+$jump.click(function() {
+    $("body, html").animate(
+        {
+            scrollTop: 0
+        },
+        500
+    );
 });

@@ -4,40 +4,45 @@
 
 // START: Animating the "Reach and stats" section
 
-var element_position = $('#count-1').offset().top;
-var screen_height = $(window).height();
-var activation_offset = 0.8;//determines how far up the the page the element needs to be before triggering the function
-var activation_point = element_position - (screen_height * activation_offset);
-var max_scroll_height = $('body').height() - screen_height - 5;//-5 for a little bit of buffer
+var animatedTextElm = $(document.getElementById("count-1")),
+    animatedTextPosition = animatedTextElm.length
+        ? animatedTextElm.offset().top
+        : Number.MAX_VALUE,
+    screenHeight = $(window).height(),
+    activationOffset = 0.8, // determines how far up the the page the element needs to be before triggering the function
+    activationPoint = animatedTextPosition - screenHeight * activationOffset,
+    maxScrollHeight = $(document.body).height() - screenHeight - 5; // -5 for a little bit of buffer
 
-//Does something when user scrolls to it OR
-//Does it when user has reached the bottom of the page and hasn't triggered the function yet
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
+// Does something when user scrolls to it OR
+// Does it when user has reached the bottom of the page and hasn't triggered the function yet
+$(window).on("scroll", function() {
+    var yScrollPos = window.pageYOffset,
+        elementInView = yScrollPos > activationPoint,
+        hasReachedBottomOfPage =
+            maxScrollHeight <= yScrollPos && !elementInView,
+        $animatedNumbers = $(".numeric");
 
-    var element_in_view = y_scroll_pos > activation_point;
-    var has_reached_bottom_of_page = max_scroll_height <= y_scroll_pos && !element_in_view;
+    if ((elementInView || hasReachedBottomOfPage) && $animatedNumbers.length) {
+        $animatedNumbers.each(function() {
+            var $this = $(this),
+                countTo = this.getAttribute("count");
 
-    if(element_in_view || has_reached_bottom_of_page) {
-			$('.numeric').each(function() {
-				var $this = $(this),
-						countTo = $this.attr('count');
-
-				$({ countNum: $this.text()}).animate({
-					countNum: countTo
-				},
-				{
-					duration: 1000,
-					easing:'linear',
-					step: function() {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function() {
-						$this.text(this.countNum);
-						//alert('finished');
-					}
-				});
-			});
+            $({ countNum: $this.text() }).animate(
+                {
+                    countNum: countTo
+                },
+                {
+                    duration: 1000,
+                    easing: "linear",
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                }
+            );
+        });
     }
 });
 

@@ -1,35 +1,34 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top navy py-0">
 
-    <a class="navbar-brand" href="{{site.baseurl}}/">
-      {% for file in site.static_files %}
-        {% if file.path contains "logo-ecell.png" %}
-        <img src="{{site.baseurl}}{{file.path}}" height="57">
-        {% endif %}
-      {% endfor %}
+    <a class="navbar-brand ecelllogo" href="{{site.baseurl}}/">
+      {% for file in site.static_files %} {% if file.path contains "logo-ecell.png" %}
+      <img src="{{site.baseurl}}{{file.path}}" height="57"> {% endif %} {% endfor %}
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse pt-3" id="navbarCollapse">
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item" id="home">
-          <a class="nav-link" onclick="gotoHome()" style="cursor: pointer;">Home</a>
+          <a class="nav-link" href="{{site.baseurl}}/#homecover">Home</a>
         </li>
-        <li class="nav-item" id="blog" >
+        <li class="nav-item" id="blog">
           <a class="nav-link" href="{{site.baseurl}}/blogs/">Blog</a>
         </li>
         <li class="nav-item" id="about">
           <a class="nav-link" href="{{site.baseurl}}/about/">About Us</a>
         </li>
         <li class="nav-item dropdown show">
-          <a class="nav-link dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Initiatives</a>
+          <a class="nav-link dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Initiatives</a>
 
           <div class="dropdown-menu navy" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item white-text" href="http://megathon.tech">Megathon</a>
-           <!-- <a class="dropdown-item white-text" href="#">Startup-Aid</a>
+            <!-- <a class="dropdown-item white-text" href="#">Startup-Aid</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item white-text" href="#">E-Cell Alpha Labs</a>
             <div class="dropdown-divider"></div>
@@ -48,7 +47,7 @@
           <a class="nav-link" href="{{site.baseurl}}/partners/">Partners</a>
         </li>
         <li class="nav-item" id="contactus">
-          <a class="nav-link" onclick="gotoContact()" style="cursor: pointer;">Contact Us</a>
+          <a class="nav-link" href="{{site.baseurl}}/#contact">Contact Us</a>
         </li>
       </ul>
 
