@@ -47,3 +47,8 @@ $(window).on("scroll", function() {
 });
 
 // END: Animating the "Reach and stats" section
+
+//  banner fades out on clicking x.. same as in megathon
+function kill() {
+    $('#banner').fadeOut();
+}

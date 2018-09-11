@@ -714,7 +714,7 @@ pre {
   text-align: initial;
   width: 100%;
   margin: auto;
-  margin-top: 1vh; 
+  margin-top: 1vh;
 }
 
 .video-fix {
@@ -812,4 +812,60 @@ pre {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#banner {
+    position: fixed;
+    z-index: 1200;
+    top: 4rem;
+    width: 100%;
+    /* height: 2rem; */
+    transition: all 0.5s ease;
+    color: white;
+}
+
+#banner a {
+    color: white;
+    /* font-style: italic; */
+    text-decoration: underline;
+}
+
+#closeBanner:hover {
+    cursor: pointer;
+}
+
+.align-box-h {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+@media (max-width: 570px) {
+    .xsmall {
+        width: 50%;
+    }
+
+    .numeric {
+        font-size: 2rem;
+    }
+
+    .count-caption {
+        font-size: 1rem;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+}
+
+.paint-banner {
+    background-color: #e14658;
+}
+
+.transparent-banner {
+    background-color: rgba(0, 0, 0, 0);
 }
