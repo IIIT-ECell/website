@@ -1,101 +1,101 @@
 <div id="portfolio" class="navy">
-  <div class="port row">
-    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "megathon.jpg" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <a href="http://megathon.in/" class="overlay-show" target="_blank">
-        <h4 class="showcase-text">Megathon</h4>
-      </a>
+    <div class="port row">
+        <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "megathon.jpg" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <a href="http://megathon.in/" class="overlay-show" target="_blank">
+                <h4 class="showcase-text">Megathon</h4>
+            </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "talks.JPG" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <a class="overlay-show" href="{{site.baseurl}}/talks/">
+                <h4 class="showcase-text">Talks</h4>
+            </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "workshophadoop.jpg" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <a class="overlay-show" href="{{site.baseurl}}/workshops/">
+                <h4 class="showcase-text">Workshops</h4>
+            </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "hackathon.jpg" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <a class="overlay-show" href="{{site.baseurl}}/hackathons/">
+                <h4 class="showcase-text">Hackathons</h4>
+            </a>
+        </div>
+
+        <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "megathon.jpg" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <div class="overlay-show navy"></div>
+            <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Startup Aid</h4></a>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
+            {% for file in site.static_files %}
+            {% if file.path contains "talks.JPG" %}
+            <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
+            {% endif %}
+            {% endfor %}
+            <div class="overlay-show navy"></div>
+            <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Alpha labs</h4></a>
+            </div> -->
+
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "talks.JPG" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <a class="overlay-show" href="{{site.baseurl}}/talks/">
-        <h4 class="showcase-text">Talks</h4>
-      </a>
-    </div>
+    <div id="count-1" class="port row p-5 navy white-text">
+        <div class="col-sm-6 col-md-3 counter p-5 col-xs-6 xsmall">
+            <div class="d-flex show">
+                <div class="numeric" count="60000">0</div>
+                <h1 class="mid">+</h1>
+            </div>
+            <div class="count-caption">People Reached</div>
+        </div>
+        <div class="col-sm-6 col-md-3 counter p-5 xsmall">
+            <div class="d-flex show">
+                <div class="numeric" count="250">0</div>
+                <h1 class="mid">+</h1>
+            </div>
+            <div class="count-caption">Ideas Pitched</div>
+        </div>
+        <div class="col-sm-6 col-md-3 counter p-5 xsmall">
+            <div class="d-flex show">
+                <div class="numeric" count="30">0</div>
+                <h1 class="mid">+</h1>
+            </div>
+            <div class="count-caption">Events Organised</div>
+        </div>
+        <div class="col-sm-6 col-md-3 counter p-5 xsmall">
+            <div class="d-flex show">
+                <div class="numeric" count="20">0</div>
+                <h1 class="mid">+</h1>
+            </div>
+            <div class="count-caption">Speakers</div>
+        </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "workshophadoop.jpg" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <a class="overlay-show" href="{{site.baseurl}}/workshops/">
-        <h4 class="showcase-text">Workshops</h4>
-      </a>
     </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-3 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "hackathon.jpg" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <a class="overlay-show" href="{{site.baseurl}}/hackathons/">
-        <h4 class="showcase-text">Hackathons</h4>
-      </a>
-    </div>
-
-    <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "megathon.jpg" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <div class="overlay-show navy"></div>
-      <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Startup Aid</h4></a>
-    </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 showcase p-0">
-      {% for file in site.static_files %}
-        {% if file.path contains "talks.JPG" %}
-        <img class="showcase-img" src="{{site.baseurl}}{{file.path}}" alt="{{file.basename}}">
-        {% endif %}
-      {% endfor %}
-      <div class="overlay-show navy"></div>
-      <a class="overlay-text" href="{{site.baseurl}}/hackathons/"><h4>Alpha labs</h4></a>
-    </div> -->
-
-  </div>
-
-  <div id="count-1" class="port row p-5 navy white-text">
-    <div class="col-sm-6 col-md-3 counter p-5">
-      <div class="d-flex show">
-        <div class="numeric" count="60000">0</div>
-        <h1 class="mid">+</h1>
-      </div>
-      <div class="count-caption">People Reached</div>
-    </div>
-    <div class="col-sm-6 col-md-3 counter p-5">
-      <div class="d-flex show">
-        <div class="numeric" count="250">0</div>
-        <h1 class="mid">+</h1>
-      </div>
-      <div class="count-caption">Ideas Pitched</div>
-    </div>
-    <div class="col-sm-6 col-md-3 counter p-5">
-      <div class="d-flex show">
-        <div class="numeric" count="30">0</div>
-        <h1 class="mid">+</h1>
-      </div>
-      <div class="count-caption">Events Organised</div>
-    </div>
-    <div class="col-sm-6 col-md-3 counter p-5">
-      <div class="d-flex show">
-        <div class="numeric" count="20">0</div>
-        <h1 class="mid">+</h1>
-      </div>
-      <div class="count-caption">Speakers</div>
-    </div>
-
-  </div>
 
 </div>
