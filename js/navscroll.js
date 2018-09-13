@@ -4,6 +4,7 @@ var $win = $(window),
     $cov = $(document.getElementsByClassName("cover")[0]),
     $jump = $(document.getElementById("jump")),
     $jumpicon = $(document.getElementById("jumpicon")),
+    $banner = $(document.getElementById("banner")),
     coverPageHeight = $cov.height(),
     headingTopPosition = coverPageHeight / 2,
     // make navbar opaque just before user scrolls past heading
@@ -36,8 +37,12 @@ function checkScroll() {
 
     if (scrollTop > navBarTransparentPixelLimit) {
         $nav.removeClass(transparentNavbarClass);
+        $banner.removeClass("transparent-banner");
+        $banner.addClass("paint-banner");
     } else {
         $nav.addClass(transparentNavbarClass);
+        $banner.removeClass("paint-banner");
+        $banner.addClass("transparent-banner");
     }
 
     if (scrollTop > coverPageHeight) {
@@ -66,3 +71,4 @@ $jump.click(function() {
         500
     );
 });
+
