@@ -72,15 +72,15 @@
 }
 
 .clink-rev {
-  color: #FFFFFF;
+    color: #ffffff;
 }
 
 .clink-rev:link {
-  color: #FFFFFF;
+    color: #ffffff;
 }
 
 .clink-rev:visited {
-  color: #FFFFFF;
+    color: #ffffff;
 }
 
 .clink:hover {
@@ -226,9 +226,9 @@ a:active {
 }
 
 .cover .container .row .col-sm-12 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cover .container .row .col-md-5 {
@@ -277,18 +277,19 @@ a:active {
     margin-right: 0;
 }
 
-.showcase, .overlay-show {
-  display: flex;
-  height: 10rem;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  text-align: center;
-  overflow: hidden;
+.showcase,
+.overlay-show {
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
 }
 
 .showcase-img {
-  width: 100%;
+    width: 100%;
 }
 
 .overlay-show {
@@ -335,7 +336,7 @@ a:active {
 }
 
 .showcase-text {
-  text-shadow: 0 1px 0 black;
+    text-shadow: 0 1px 0 black;
 }
 
 /* end showcase styling */
@@ -690,8 +691,9 @@ pre {
 }
 
 .hiddenJumpIcon {
-    height: 0;
-    opacity: 0;
+    height: 0 !important;
+    width: 0 !important;
+    opacity: 0 !important;
 }
 
 @media (max-width: 768px) {
@@ -709,109 +711,108 @@ pre {
 }
 /* end palette colours*/
 
-
 .heading-fix {
-  text-align: initial;
-  width: 100%;
-  margin: auto;
-  margin-top: 1vh;
+    text-align: initial;
+    width: 100%;
+    margin: auto;
+    margin-top: 1vh;
 }
 
 .video-fix {
-  max-width: 575px;
-  width: 90%;
-  margin: auto;
+    max-width: 575px;
+    width: 90%;
+    margin: auto;
 }
 
 .content-fix {
-  text-align: initial;
-  width: 90%;
+    text-align: initial;
+    width: 90%;
 }
 
 .container-fix {
-  margin-bottom: 2vh;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+    margin-bottom: 2vh;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 800px) {
-  .video-fix {
-    float: left;
-    width: 40%;
-    margin: 0;
-  }
+    .video-fix {
+        float: left;
+        width: 40%;
+        margin: 0;
+    }
 
-  .content-fix {
-    margin-top: 0;
-    width: 55%;
-    float: right;
-  }
+    .content-fix {
+        margin-top: 0;
+        width: 55%;
+        float: right;
+    }
 
-  .heading-fix {
-    width: 55%;
-    float: right;
-    text-align: initial;
-    margin-bottom: 0;
-  }
+    .heading-fix {
+        width: 55%;
+        float: right;
+        text-align: initial;
+        margin-bottom: 0;
+    }
 
-  .video-fix-rev {
-    float: right;
-    width: 40%;
-    margin: 0;
-  }
+    .video-fix-rev {
+        float: right;
+        width: 40%;
+        margin: 0;
+    }
 
-  .content-fix-rev {
-    margin-top: 0;
-    width: 55%;
-    float: left;
-  }
+    .content-fix-rev {
+        margin-top: 0;
+        width: 55%;
+        float: left;
+    }
 
-  .heading-fix-rev {
-    width: 55%;
-    float: left;
-    text-align: initial;
-    margin-bottom: 0;
-  }
+    .heading-fix-rev {
+        width: 55%;
+        float: left;
+        text-align: initial;
+        margin-bottom: 0;
+    }
 
-  .container-fix {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 1vh;
-    width: 100%;
-    overflow: auto;
-  }
+    .container-fix {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 1vh;
+        width: 100%;
+        overflow: auto;
+    }
 }
 
 @media (min-width: 1200px) {
-  .container-fix {
-    width: 95%;
-  }
+    .container-fix {
+        width: 95%;
+    }
 }
 
 @media (min-width: 1500px) {
-  /* To increase specificity */
-  .container-fix:nth-child(n) .video-fix {
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: 35%;
-  }
+    /* To increase specificity */
+    .container-fix:nth-child(n) .video-fix {
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 35%;
+    }
 
-  .container-fix:nth-child(n) .heading-fix {
-    width: 60%;
-    margin: auto;
-    margin-top: 1vh;
-  }
+    .container-fix:nth-child(n) .heading-fix {
+        width: 60%;
+        margin: auto;
+        margin-top: 1vh;
+    }
 
-  .container-fix:nth-child(n) .content-fix {
-    width: 60%;
-  }
+    .container-fix:nth-child(n) .content-fix {
+        width: 60%;
+    }
 
-  .container-fix {
-    margin-bottom: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .container-fix {
+        margin-bottom: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .center {
@@ -821,10 +822,9 @@ pre {
 
 #banner {
     position: fixed;
-    z-index: 1200;
+    z-index: 100;
     top: 4rem;
     width: 100%;
-    /* height: 2rem; */
     transition: all 0.5s ease;
     color: white;
 }
@@ -842,6 +842,7 @@ pre {
 .align-box-h {
     text-align: center;
     padding: 0.5rem;
+    padding-top: 1rem;
 }
 
 @media (max-width: 570px) {
