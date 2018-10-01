@@ -4,13 +4,10 @@ title: Hackathons
 permalink: /hackathons/
 ---
 
-<div class="row">
+<div class="row carousel">
   {% for post in site.posts %}
   	{% if post.categories contains "hackathons" %}
-
     	{% include eventlbody.html %}
-
   	{% endif %}
-  	<br>
   {% endfor %}
 </div>

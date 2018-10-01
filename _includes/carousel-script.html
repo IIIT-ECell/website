@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="../slick/slick.min.css">
+<link rel="stylesheet" href="../slick/slick-theme.min.css">
+<script src="../slick/slick.min.js"></script>
+<script>
+    document.onreadystatechange = function(){
+        if(document.readyState === "complete"){
+            $(".carousel").slick({
+                adaptiveHeight: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: true,
+                draggable: true
+            });
+        }
+    };
+</script>

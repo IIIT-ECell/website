@@ -1,5 +1,6 @@
 ---
 layout: talks
-title : Talk Sessions
-permalink : /talks/
+title: Talk Sessions
+permalink: /talks/
+carousel: true
 ---
