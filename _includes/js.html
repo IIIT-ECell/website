@@ -9,13 +9,13 @@
 <script type="text/javascript">
 	function checkActiveNav()
 	{
-		var pagename = "{{page.title}}";
+		let pagename = "{{page.title}}";
 		console.log(pagename);
 		document.getElementById("contactus").classList.remove("active");
 		document.getElementById("home").classList.remove("active");
 		if(pagename =="Index")
 		{
-			var pageUrl=window.location.pathname;
+			let pageUrl=window.location.pathname;
 			pageUrl += window.location.hash;
 			if(pageUrl == "{{site.baseurl}}/#contact")
 			{

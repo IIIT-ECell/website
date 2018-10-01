@@ -4,7 +4,7 @@
 
 // START: Animating the "Reach and stats" section
 
-var animatedTextElm = $(document.getElementById("count-1")),
+let animatedTextElm = $(document.getElementById("count-1")),
     animatedTextPosition = animatedTextElm.length
         ? animatedTextElm.offset().top
         : Number.MAX_VALUE,
@@ -16,7 +16,7 @@ var animatedTextElm = $(document.getElementById("count-1")),
 // Does something when user scrolls to it OR
 // Does it when user has reached the bottom of the page and hasn't triggered the function yet
 $(window).on("scroll", function() {
-    var yScrollPos = window.pageYOffset,
+    let yScrollPos = window.pageYOffset,
         elementInView = yScrollPos > activationPoint,
         hasReachedBottomOfPage =
             maxScrollHeight <= yScrollPos && !elementInView,
@@ -24,7 +24,7 @@ $(window).on("scroll", function() {
 
     if ((elementInView || hasReachedBottomOfPage) && $animatedNumbers.length) {
         $animatedNumbers.each(function() {
-            var $this = $(this),
+            let $this = $(this),
                 countTo = this.getAttribute("count");
 
             $({ countNum: $this.text() }).animate(

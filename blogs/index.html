@@ -11,16 +11,16 @@ pagination:
 	   complete words in the post content
 	*/
   function manualSlice(){
-    var postContents = document.getElementsByClassName("post-content"),
+    let postContents = document.getElementsByClassName("post-content"),
       minSubstringLength = 250;
 
     if(!postContents) return;
     clearInterval(manualSliceInterval);
 
     Array.prototype.forEach.call(postContents, function(postContent){
-      var allWords = postContent.innerHTML.split(/ /g), substringedPost = "", word;
+      let allWords = postContent.innerHTML.split(/ /g), substringedPost = "", word;
 
-      for(var i = 0, len = allWords.length; i < len; i++){
+      for(let i = 0, len = allWords.length; i < len; i++){
         word = allWords[i];
         if(substringedPost.length > minSubstringLength) break;
 
@@ -31,7 +31,7 @@ pagination:
     });
   }
 
-  var manualSliceInterval = setInterval(manualSlice, 100);
+  let manualSliceInterval = setInterval(manualSlice, 100);
   
 </script>
 <style>

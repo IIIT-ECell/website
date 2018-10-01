@@ -1,5 +1,5 @@
 function init() {
-    var $win = $(window),
+    let $win = $(window),
         // native DOM-specific lookups are faster than jQuery selector lookups
         $nav = $(document.getElementsByClassName("navbar")[0]),
         $cov = $(document.getElementsByClassName("cover")[0]),
@@ -36,7 +36,7 @@ function init() {
     }
 
     function checkScroll() {
-        var hiddenClass = "hiddenJumpIcon",
+        let hiddenClass = "hiddenJumpIcon",
             scrollTop = $win.scrollTop();
 
         if (scrollTop > navBarTransparentPixelLimit) {
