@@ -870,3 +870,7 @@ pre {
 .transparent-banner {
     background-color: rgba(0, 0, 0, 0);
 }
+
+.content-fix a {
+    color: #383333;
+}

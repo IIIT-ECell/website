@@ -6,33 +6,9 @@ pagination:
   category: blogs
 ---
 <!-- This page is not using layout/md format otherwise pagination will not work on this page. Pagination will only work on an index.html page -->
+<script src="../js/wordslice.js"></script>
 <script>
-  /* manually slice out the first 250 characters to retain
-	   complete words in the post content
-	*/
-  function manualSlice(){
-    var postContents = document.getElementsByClassName("post-content"),
-      minSubstringLength = 250;
-
-    if(!postContents) return;
-    clearInterval(manualSliceInterval);
-
-    Array.prototype.forEach.call(postContents, function(postContent){
-      var allWords = postContent.innerHTML.split(/ /g), substringedPost = "", word;
-
-      for(var i = 0, len = allWords.length; i < len; i++){
-        word = allWords[i];
-        if(substringedPost.length > minSubstringLength) break;
-
-        substringedPost += word + " ";
-      }
-
-      postContent.innerHTML = substringedPost.replace(/ $/, "") + "...";
-    });
-  }
-
-  var manualSliceInterval = setInterval(manualSlice, 100);
-  
+window.manualSliceInterval = setInterval(window.manualSlice, 100);
 </script>
 <style>
 .pagination a, .pagination span {

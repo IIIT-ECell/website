@@ -1,3 +1,8 @@
+<script src="../js/wordslice.js"></script>
+<script>
+  window.manualSliceInterval = setInterval(window.manualSlice, 100);
+</script>
+
 <div id="recents" class="row neutral p-5">
   <a class="clink col-sm-12" href="{{site.baseurl}}/blogs/" target="_blank">
     <!-- this class makes both "Recent Blogs" and "Recent Events" look the same -->
@@ -32,9 +37,10 @@
     <div class="row content-fix">
       <p>
       {{post.date | date_to_string}} by {{post.author}}
-      <br>
-      {{post.content|slice : 0,250}} <a class="clink" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
       </p>
+      <br>
+      <div class="post-content">{{post.content}}</div>
+      <b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">Read more</a></b>      
     </div>
 
   </div>
@@ -75,9 +81,10 @@
     <div class="row content-fix-rev">
       <p>
       {{post.date | date_to_string}}
-      <br>
-      {{post.content|slice : 0,250}} <a class="clink-rev" href="{{site.baseurl}}{{post.url}}" target="_blank">... [Read more]</a>
       </p>
+      <br>
+      <div class="post-content">{{post.content}}</div>
+      <b><a href ="{{site.baseurl}}{{post.url}}" target ="_blank">Read more</a></b>
     </div>
   </div>
 
