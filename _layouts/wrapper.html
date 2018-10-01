@@ -14,6 +14,12 @@
   {% include footer.html %}
 
   {% include js.html %}
+
+  {% if page.carousel == true %}
+      {% include carousel-script.html %}
+  {% endif %}
+
+  
 </body>
 
 </html>
