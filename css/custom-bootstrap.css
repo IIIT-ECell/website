@@ -84,7 +84,7 @@
 }
 
 .clink:hover {
-    color: #3f3250;
+    color: #001f3f;
 }
 
 a {
@@ -194,7 +194,7 @@ a:active {
     height: 100vh;
     width: 100%;
 
-    background-color: #3f3250;
+    background-color: #001f3f;
     background-image: url("/assets/back/cover1.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -469,7 +469,7 @@ a:active {
 /* start contact styling */
 
 #contact {
-    background-color: #3f3250;
+    background-color: #001f3f;
     /* background-image: url("http://www.open.edu/openlearn/ocw/pluginfile.php/1048644/mod_resource/content/0/a174_1_cover_image_1_edited.jpg"); */
 
     background-position: center;
@@ -620,7 +620,7 @@ pre {
 .nav-item:not(.active):hover,
 .navbar-brand:not(.ecelllogo):hover,
 .dropdown-item:hover {
-    background-color: #3f3250;
+    background-color: #001f3f;
     color: white;
 }
 
@@ -660,11 +660,11 @@ pre {
 }
 
 .mountain {
-    background-color: #3f3250;
+    background-color: #001f3f;
 }
 
 .mountain-text {
-    color: #3f3250;
+    color: #001f3f;
 }
 
 .wash {
