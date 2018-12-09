@@ -4,14 +4,21 @@ title: Workshops
 permalink: /workshops/
 ---
 
+{% assign invert = 0 %}
+
 <div class="row">
 
 	{% for post in site.posts %}
 		{% if post.categories contains "workshops" %}
-
-			{% include eventlbody.html %}
-
+            {% if invert == 0 %}
+                {% include eventlbody.html %}
+                {% assign invert = 1 %}
+            {% elsif invert == 1 %}
+                {% include eventrbody.html %}
+                {% assign invert = 0 %}
+            {% endif %}
 		{% endif %}
 		<br>
 	{% endfor %}
+
 </div>
