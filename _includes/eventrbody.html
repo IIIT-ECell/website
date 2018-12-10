@@ -1,0 +1,20 @@
+<div class="container-fix">
+
+    {% if post.img %}
+    <div class="video-fix-rev">
+        <div class="e-img-container">
+            <img class="e-img mx-auto" src="{{site.baseurl}}/assets/eventsimages/{{post.img}}" alt="{{post.title}}">
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row heading-fix-rev">
+        <h3><b>
+            {{ post.title }}
+        </b></h3>
+    </div>
+
+    <div class="row content-fix-rev">
+        <div class="post-content">{{ post.content }}</div> 
+    </div>
+</div>
