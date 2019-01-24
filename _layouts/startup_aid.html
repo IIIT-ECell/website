@@ -4,19 +4,10 @@
 {% include head.html %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css">
 
 <body class="raleway grey darken-4">
-    <div class="cover_startup_aid cover" id="cover">
-        <!-- <div class="coverlay black">
-        </div> -->
-        <div class="container overlay-text">
-            <div class="row p-5">
-                <div class="col-sm-12">
-                    <h1 class="p-1 m-2 l-head" id="text">Have an idea?</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -63,26 +54,46 @@
                 </li>
             </ul>
         </nav>
-        <div id="content" class="text-white">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+        <!-- <div id="content" class="text-white">
+            <nav class="navbar navbar-expand-lg navbar-light grey darken-4">
+                <div class="container">
     
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-danger">
                         <i class="fas fa-align-left"></i>
                     </button>
                 </div>
             </nav>
-            <div class="container-fluid">
+            <div class="container text-right">
                 <p>{{content}}</p>
             </div>
+        </div> -->
+        <div id="fullpage">
+            <div class="section">
+                <div class="cover_startup_aid cover" id="cover">
+                    <div class="container overlay-text">
+                        <div class="row p-5">
+                            <div class="col-sm-12">
+                                <h1 class="p-1 m-2 l-head" id="text">Have an idea?</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">Some section</div>
+            <div class="section">Some section</div>
+            <div class="section">Some section</div>
         </div>
-    </div>
+    </div> 
+        
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+
 
 <script>
     var lastScrollTop = 0;
@@ -106,6 +117,14 @@
         // in our CSS
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
+        // $('#fullpage').fullpage({
+        //     //options here
+        //     autoScrolling:true,
+        //     scrollHorizontally: true
+        // });
+
+        //methods
+        // $.fn.fullpage.setAllowScrolling(false);
     });
 </script>
 </html>
