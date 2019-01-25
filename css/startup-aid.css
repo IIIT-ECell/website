@@ -59,7 +59,6 @@ body, html {
 
 .top-level-header {
     font-size: 6rem;
-    margin-top: -15%;
 }
 
 .top-level-header + h2 {
@@ -69,7 +68,7 @@ body, html {
 }
 
 .idea-list {
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 5%;
 }
@@ -79,63 +78,109 @@ body, html {
     height: 10%;
     position: relative;
     margin-top: 2%;
-}
-
-.idea-list div::after, .idea-list div::before {
-    position: absolute;
-    z-index: 1;
-    background: #007bff;
-    content: '';
-    display: block;
-}
-/* 2n+1 right arrow; 2n left arrow */
-/* 2n+1 text aligned left; 2n text aligned right */
-.idea-list div:nth-child(2n + 1) {
-    text-align: left;
-}
-.idea-list div:nth-child(2n) {
-    text-align: right;
-}
-.idea-list div:nth-child(2n + 1)::after, .idea-list div:nth-child(2n + 1)::before {
-    left: 50%;
-    right: 0;
-}
-
-.idea-list div:nth-child(2n)::after, .idea-list div:nth-child(2n)::before {
-    left: 0;
-    right: 50%;
-}
-.idea-list div::before {
-    top: 0;
-    bottom: 50%;
-    transform: skewX(-45deg);
-    transform-origin: top;
+    text-align: justify;
+    background: pink;
+    font-size: 2rem;
+    padding: 1%;
 }
 
 .idea-list div::after {
-    top: 50%;
-    bottom: 0;
-    transform: skewX(45deg);
-    transform-origin:bottom;
-}
-.idea-list div:nth-child(2n + 1)::before {
-    transform: skewX(45deg);
-}
-
-.idea-list div:nth-child(2n + 1)::after {
-    transform: skewX(-45deg);
-}
-.text {
-    background-color: #007bff;
-    padding: 1.5% 1.5%;
-    font-size: 1.8rem;
+    border-radius: 100%;
+    position: absolute;
+    height: 100%;
+    content: ' ';
+    background: red;
+    top: 0;
 }
 
-.idea-list div:not(:last-child){
-    margin-bottom: 1.5%;
+.idea-list div:nth-child(2n + 1){
+    text-align: left;
+    padding-left: 5%;
 }
 
-@media (max-width: 766px){
+.idea-list div:nth-child(2n){
+    text-align: right;
+    padding-right: 5%;
+}
+
+.idea-list div:nth-child(2n + 1)::after{
+    right: 0;
+}
+
+.idea-list div:nth-child(2n)::after{
+    left: 0;
+}
+
+.idea-list div:last-child {
+    margin-bottom: 4%;
+}
+
+.full-page.form-application iframe {
+    margin-top: 7%;
+}
+
+.timeline-container {
+    width: 70%;
+    height: 100%;
+}
+
+.timeline {
+    width: 100%;
+    height: 60%;
+}
+
+.timeline div {
+    height: 10%;
+    margin-top: 4.5%;
+    width: 50%;
+    clear: both;
+}
+
+.timeline div h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.timeline div span {
+    font-size: 1.75rem;
+}
+
+.timeline div:nth-child(2n + 1) {
+    float: right;
+    padding-left: 3%;
+}
+
+.timeline div:nth-child(2n) {
+    float: left;
+    text-align: right;
+    padding-right: 3%;
+}
+
+.medium-level-header {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.cta-3 {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px){
+    html {
+/*        font-size: 0.5em;*/
+    }
+
+    header {
+        font-size: 
+    }
+
+    .landing-logo {
+        width: 100%;
+    }
+
     .landing {
         width: 80%;
     }
