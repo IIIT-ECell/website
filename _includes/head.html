@@ -7,6 +7,10 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ "/css/custom-bootstrap.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/css/materialize-colours.css" | prepend: site.baseurl }}">
-  <title>{{site.title}}</title>
+    {% if page.pageHead %}
+        <title>{{ page.pageHead }}</title>
+    {% else %}
+        <title>{{ site.title }}</title>
+    {% endif %}
 	<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/logos/logo-ecell.png"/>
 </head>

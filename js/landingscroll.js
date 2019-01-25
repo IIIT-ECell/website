@@ -22,7 +22,6 @@ function attachHandler(ctaButton){
     if(!nextFullPage) return;
 
     ctaButton.addEventListener("click", function(event){
-        console.log("Moving to " + nextFullPage.tagName + " " + nextFullPage.className);
         nextFullPage.scrollIntoView({behavior: "smooth"});
     });
 }
