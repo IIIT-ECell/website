@@ -1,0 +1,142 @@
+header, nav.navbar {
+    z-index: 100;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.full-page {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-full-page {
+    height: 100%;
+}
+
+.landing {
+    /* margin-top: -13%; */
+    width: 50%;
+    text-align: center;
+}
+
+.landing-logo {
+    width: 95%;
+}
+
+.landing-header {
+    font-family: Georgia Arial;
+    font-size: 7.5rem;
+    margin-top: 13%;
+    margin-bottom: 10%;
+}
+
+[class^="cta-"] {
+    border-radius: 6%;
+    font-size: 2.5rem;
+    padding: 1rem 4.4rem;
+    text-shadow: none;
+    box-shadow: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.idea-list-container {
+    width: 100%;
+    text-align: center;
+}
+
+.idea-list-container ul {
+    list-style: none;
+}
+
+.top-level-header {
+    font-size: 6rem;
+    margin-top: -15%;
+}
+
+.top-level-header + h2 {
+    font-size: 3rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.idea-list {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.idea-list div {
+    width: 100%;
+    height: 10%;
+    position: relative;
+    margin-top: 2%;
+}
+
+.idea-list div::after, .idea-list div::before {
+    position: absolute;
+    z-index: 1;
+    background: #007bff;
+    content: '';
+    display: block;
+}
+/* 2n+1 right arrow; 2n left arrow */
+/* 2n+1 text aligned left; 2n text aligned right */
+.idea-list div:nth-child(2n + 1) {
+    text-align: left;
+}
+.idea-list div:nth-child(2n) {
+    text-align: right;
+}
+.idea-list div:nth-child(2n + 1)::after, .idea-list div:nth-child(2n + 1)::before {
+    left: 50%;
+    right: 0;
+}
+
+.idea-list div:nth-child(2n)::after, .idea-list div:nth-child(2n)::before {
+    left: 0;
+    right: 50%;
+}
+.idea-list div::before {
+    top: 0;
+    bottom: 50%;
+    transform: skewX(-45deg);
+    transform-origin: top;
+}
+
+.idea-list div::after {
+    top: 50%;
+    bottom: 0;
+    transform: skewX(45deg);
+    transform-origin:bottom;
+}
+.idea-list div:nth-child(2n + 1)::before {
+    transform: skewX(45deg);
+}
+
+.idea-list div:nth-child(2n + 1)::after {
+    transform: skewX(-45deg);
+}
+.text {
+    background-color: #007bff;
+    padding: 1.5% 1.5%;
+    font-size: 1.8rem;
+}
+
+.idea-list div:not(:last-child){
+    margin-bottom: 1.5%;
+}
+
+@media (max-width: 766px){
+    .landing {
+        width: 80%;
+    }
+}
