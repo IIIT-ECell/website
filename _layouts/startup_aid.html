@@ -2,55 +2,153 @@
 <html lang="en">
 
 {% include head.html %}
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css"> -->
+<link rel="stylesheet" href="{{site.baseurl}}/css/startup-aid.css">
 
 <body class="raleway grey darken-4">
     {% include header.html %}
-    <div id="fullpage">
-        <div class="section cover_startup_aid">
-            <div class="container" id="homecover">
-                <div class="row p-5">
-                    <div class="col-sm-12">
-                        <h1 class="p-1 m-2 l-head">Have an idea?</h1>
-                    </div>
+    <div class="cover_noback">
+        <div class="container" id="homecover">
+            <div class="row p-5">
+                <div class="col-sm-12 col-md-12">
+                    <h1 class="p-1 m-2 l-head">Have an idea?</h1>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <a href="#cover_2">
+                        <button class="btn btn-dark bg-dark">
+                            <h2 class="p-1 m-2 l-head">Let's get started</h2>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="cover_noback">
+        <div class="container overlay-text" id="cover_2">
+            <div class="row p-5">
+                <div class="col-sm-12">
+                    <h2 class="m-2 l-head text-center">ALL YOU NEED IS AN IDEA!</h2>
+                </div>
+                <div class="col-sm-12">
+                    <button class="btn btn-dark bg-dark">
+                        <a href="#cover_3"><h2 class="p-1 m-2 l-head">Here's some cool examples</h2></a>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="section">Some section 2</div>
-        <div class="section">
-            <div class="slide" data-anchor="slide1"> Slide 1 </div>
-            <div class="slide" data-anchor="slide2"> Slide 2 </div>
-            <div class="slide" data-anchor="slide3"> Slide 3 </div>
-            <div class="slide" data-anchor="slide4"> Slide 4 </div>
+    </div>
+    <div class="cover_noback">
+        <div class="container overlay-text" id="cover_3">
+            <div class="row p-5">
+                <div class="col-sm-4 text-right">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+                <div class="col-sm-8 text-center">
+                    <h2 class="p-2 l-head">- I want to make good and cheap cookies available to everyone</h2>
+                </div>
+                <div class="col-sm-8">
+                    <h2 class="p-2 l-head text-right">- I want to solve the energy crisis with biogas!</h2>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-burn"></i>
+                </div>
+                <div class="col-sm-4 text-right">
+                        <i class="fas fa-robot"></i>
+                </div>
+                <div class="col-sm-8 text-center">
+                    <h2 class="p-2 l-head">- I want to automate daily life chores!</h2>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2 class="p-2 l-head text-right">- I want to effectively clean lakes!</h2>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fas fa-water"></i>
+                </div>
+                <div class="col-sm-12">
+                    <a href="#cover_4"><button class="btn btn-dark bg-dark">
+                        <h2 class="p-1 m-2 l-head">I have an idea!</h2>
+                    </button></a>
+                </div>
+            </div>
         </div>
-        <div class="section">Some section 3</div>
+    </div>
+    <div class="cover_noback">
+        <div class="container overlay-text" id="cover_4">
+            <div class="row p-5">
+                <div class="col-sm-12">
+                    <h2 class="m-2 l-head text-center">This is how your journey will look</h2>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2 class="p-2 l-head">Sprint 1</h2>
+                    <h2>Brainstorm and refine your idea.</h2>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2 class="p-2 l-head">Sprint 2</h2>
+                    <h2>Do a detailed market analysis.</h2>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2 class="p-2 l-head">Sprint 3</h2>
+                    <h2>Learn how to obtain funds, manage a team.</h2>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2 class="p-2 l-head">Sprint 4</h2>
+                    <h2>Get ready to pitch to CIE.</h2>
+                </div>
+                <div class="col-sm-12">
+                    <a href="#apply"><button class="btn btn-dark bg-dark">
+                        <h2 class="p-1 m-2 l-head">Apply Now</h2>
+                    </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cover_noback">
+        <form action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/action.php" method="POST" class="container overlay-text" id="apply">
+            <div class="row p-5">
+                <div class="col-sm-12">
+                    <h2 class="p-2 l-head">Startup Aid Application</h2>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group wide">
+                        <label for="Name">Name</label>
+                        <input name="Name" id="Idea" class="form-control" dir="auto" aria-label="Name" aria-required="true" type="text" placeholder="John Doe">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group wide">
+                        <label for="Email">Email</label>
+                        <input name="Email" id="Email" class="form-control" dir="auto" aria-label="Email" aria-required="true" type="text" placeholder="john@doe.com">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group wide">
+                        <label for="Idea">Idea</label>
+                        <input name="Idea" id="Idea" class="form-control" dir="auto" aria-label="Idea" aria-required="true" type="text" placeholder="Your idea is your copyright">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" ></script>
-
 
 <script>
-    $(document).ready(function () {
-        $('#fullpage').fullpage({
-            //options here
-            autoScrolling:true,
-            scrollHorizontally: true, 
-            navigation: true,
-            navigationTooltips:["section 1","section 2","section 3","section 4"],
-            parallax: true,
-            showActiveTooltip: true
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
 
-        });
-
-        // methods
-        $.fn.fullpage.setAllowScrolling(true);
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500, 'linear');
     });
+
 </script>
 </html>

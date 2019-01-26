@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+.body {
+    background: url('/assets/back/background-try.jpg');
+}
+
+.cover_noback{
+    height: 100vh;
+    width: 100%;
+}
+.cover_noback .container{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cover_noback .container .row {
+    justify-content: center;
+    align-items: center;
+}
+
+.cover_noback .container .row .col-sm-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover_noback .container .row .col-md-5 {
+    display: flex;
+    justify-content: center;
+}
+
+.cover_noback .container .row .col-md-7 {
+    display: flex;
+    justify-content: center;
+}
+
+.cover_noback .container .row h1 {
+    font-weight: 100;
+    font-size: 16vh;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cover_noback .container .row h2 {
+    font-weight: lighter;
+    font-size: 4vh;
+    color: #d7dfea;
+}
+
+.col-sm-4 .fas{
+    color: white;
+    font-size: 5rem;
+}
+
+@media(max-width:768px) {
+    .col-sm-4 .fas {
+        font-size: x-large;
+    }
+}
