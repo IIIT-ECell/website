@@ -38,7 +38,7 @@ body, html {
 }
 
 [class^="cta-"] {
-    border-radius: 6%;
+    border-radius: 25px;
     font-size: 2.5rem;
     padding: 1rem 4.4rem;
     text-shadow: none;
@@ -168,9 +168,9 @@ body, html {
     margin: 0 auto;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     html {
-/*        font-size: 0.5em;*/
+        font-size: 0.5em;
     }
 
     header {
@@ -184,4 +184,60 @@ body, html {
     .landing {
         width: 80%;
     }
+
+    .top-level-header {
+        padding: 0 5%;
+    }
+
+    .idea-list {
+        width: 85%;
+    }
+
+    .idea-list-container div {
+        font-size: 2.5rem;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        text-align: justify !important;
+    }
+
+    .idea-list-container div::before, .idea-list-container div::after {
+        display: none;
+    }
+    
+    .top-level-header + h2 {
+        font-size: 2.5rem !important;
+    }
+
+    .idea-list div {
+        font-size: 2.25rem;
+    }
+
+    .timeline-container {        
+        width: 90%;
+    }
+
+    .medium-level-header {
+        font-size: 3.75rem;
+        margin-top: 30%;
+    }
+
+    .form-application {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .top-level-header {
+        margin-top: 10%;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    .idea-list div:last-child {
+        /* Retain margin while removing element */
+        height: 0;
+        padding: 0;
+        font-size: 0;
+    }
+
 }

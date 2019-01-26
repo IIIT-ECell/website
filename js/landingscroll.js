@@ -8,21 +8,23 @@
         }
     }, 100);
 
-    var fixButtonWidthInterval = setInterval(function(){
+    var fixButtonWidthInterval = setInterval(findButtonsAndFixWidth, 100);
+    function findButtonsAndFixWidth(){
         var elements = document && document.querySelectorAll(".idea-list div");
         if(elements && elements.length == 4){
             fixButtonsWidth(elements);
             clearInterval(fixButtonWidthInterval);
         }
-    }, 100);
-
+    }
     var above766 = true;
     window.addEventListener("resize", handleResize);
 
     let FULL_PAGE_HEIGHT;
+    var SHOULD_REDIRECT;
 
     function onload(){
         FULL_PAGE_HEIGHT = document.querySelector(".full-page").clientHeight;
+        SHOULD_REDIRECT = window.innerWidth <= 766;
 
         var scrollButtons = document.querySelectorAll("[class^=\"cta-\"]");
 
@@ -31,6 +33,12 @@
         }
 
         handleResize();
+        var formApplicationButton = document.querySelector(".cta-3");
+        formApplicationButton.addEventListener('click', function() {
+            if(SHOULD_REDIRECT)
+                window.location.href =
+                    "https://docs.google.com/forms/d/e/1FAIpQLSd6VeW-D_S4Tj8nME0IiAs3G4UP3aDMzsUQE9XB2nDQSp2wzA/viewform?usp=sf_link";
+        });
     }
 
     function attachHandler(ctaButton){
@@ -50,30 +58,36 @@
     }
 
     function handleResize(){
-        return;
         // need to toggle
         var headerToFix = document.querySelector("header"),
             footerToFix = document.querySelector("footer");
         if(window.innerWidth <= 766 && above766){
+            SHOULD_REDIRECT = true;
             changeFontSizeValue(headerToFix, true);
             changeFontSizeValue(footerToFix, true);
-            console.log(headerToFix);
-            console.log(footerToFix);
             above766 = false;
         }
         else if(window.innerWidth > 766 && !above766) {
             changeFontSizeValue(headerToFix, false);
             changeFontSizeValue(footerToFix, false);
             above766 = true;
+            SHOULD_REDIRECT = false;
         }
+        findButtonsAndFixWidth();
     }
 
     function changeFontSizeValue(root, shouldDouble){
         var childs = root.children, f = shouldDouble ? 2 : 0.5;
 
         for(let i = 0, len = childs.length; i < len; i++){
-            childs[i].style.fontSize = (+window.getComputedStyle(childs[i]).fontSize.replace(/\D/g, "")) * f + "px";
             changeFontSizeValue(childs[i], shouldDouble);
+            if(childs[i].style.fontSize) {
+                childs[i].style.fontSize = "";
+            } else {
+                var currentSize = parseInt(window.getComputedStyle(childs[i], null).getPropertyValue("font-size"));
+                var newSize = currentSize * f;
+                childs[i].style.fontSize = newSize + 'px';
+            }
         }
     }
 })();
