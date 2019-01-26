@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'ErasFont';
+    src: url('../assets/fonts/eras_medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('../assets/fonts/sharp_sans_no2_extrabold-webfont.woff2') format('woff2'),
+    url('../assets/fonts/sharp_sans_no2_extrabold-webfont.woff') format('woff'),
+    url('../assets/fonts/sharp_sans_no2_extrabold-webfont.ttf') format('truetype');
+}
+
 header, nav.navbar {
     z-index: 100;
 }
@@ -27,7 +39,7 @@ body, html {
 }
 
 .landing-logo {
-    width: 95%;
+    width: 450px;
 }
 
 .landing-header {
@@ -35,9 +47,11 @@ body, html {
     font-size: 7.5rem;
     margin-top: 13%;
     margin-bottom: 10%;
+    font-family: 'SharpSans';
 }
 
 [class^="cta-"] {
+    outline: none !important;
     border-radius: 25px;
     font-size: 2.5rem;
     padding: 1rem 4.4rem;
@@ -46,6 +60,7 @@ body, html {
     background: blue;
     color: white;
     cursor: pointer;
+    font-family: 'ErasFont';
 }
 
 .idea-list-container {
@@ -59,12 +74,14 @@ body, html {
 
 .top-level-header {
     font-size: 6rem;
+    font-family: 'SharpSans';
 }
 
 .top-level-header + h2 {
     font-size: 3rem;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-family: 'SharpSans';
 }
 
 .idea-list {
@@ -95,12 +112,12 @@ body, html {
 
 .idea-list div:nth-child(2n + 1){
     text-align: left;
-    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .idea-list div:nth-child(2n){
     text-align: right;
-    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .idea-list div:nth-child(2n + 1)::after{
@@ -117,64 +134,130 @@ body, html {
 
 .full-page.form-application iframe {
     margin-top: 7%;
+    display: block;
 }
 
 .timeline-container {
     width: 70%;
-    height: 100%;
 }
 
 .timeline {
     width: 100%;
-    height: 60%;
+    margin: 8% auto;
 }
 
-.timeline div {
-    height: 10%;
-    margin-top: 4.5%;
-    width: 50%;
-    clear: both;
-}
-
-.timeline div h3 {
+.timeline td h3 {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.timeline div span {
+.timeline td span {
     font-size: 1.75rem;
 }
 
-.timeline div:nth-child(2n + 1) {
-    float: right;
-    padding-left: 3%;
+.timeline td {
+    width: 45%;
+    padding: 0 5%;
 }
 
-.timeline div:nth-child(2n) {
-    float: left;
+.sprint-left {
     text-align: right;
-    padding-right: 3%;
+}
+
+.sprint-right {
+    text-align: left;
 }
 
 .medium-level-header {
     font-size: 4rem;
     text-align: center;
     margin-top: 7%;
+    font-family: 'SharpSans';
 }
 
 .cta-3 {
     width: fit-content;
     display: block;
     margin: 0 auto;
+    font-size: 2.75rem;
+}
+
+@media (max-height: 950px) {
+    .landing {
+        width: 75%;
+        padding-top: 5%;
+    }
+
+    .landing-logo {
+        width:60%;
+    }
+
+    .landing-header {
+        font-size: 6.5rem;
+        margin-top: 15%;
+        margin-bottom: 30%;
+    }
+
+    .idea-list-container {
+        padding-top: 5%;
+    }
+
+    .top-level-header {
+        font-size: 4.5rem;
+    }
+
+    .top-level-header + h2 {
+        margin-top: 10%;
+        font-size: 2.5rem;
+    }
+
+    .idea-list {
+        width: 60%;
+    }
+
+    .idea-list div {
+        width: 94%;
+        font-size: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4%;
+    }
+
+    .cta-2 {
+        margin-top: 2%;
+        font-size: 2.5rem;
+    }
+
+    .timeline-container {
+        width: 70%;
+    }
+
+    .medium-level-header {
+        margin-top: 9%;
+        font-size: 3.5rem;
+    }
+
+    .timeline-container .sprint h3 {
+        font-size: 1.8rem;
+    }
+    .timeline-container .sprint span {
+        font-size: 1.65rem;
+    }
+
+    .full-page.form-application {
+        min-height: 100%;
+        height: fit-content;
+    }
+
+    .full-page.form-application iframe{
+        margin: 0 auto;
+        margin-top: 7%;
+    }
 }
 
 @media (max-width: 768px) {
     html {
         font-size: 0.5em;
-    }
-
-    header {
-        font-size: 
     }
 
     .landing-logo {
@@ -200,10 +283,10 @@ body, html {
         text-align: justify !important;
     }
 
-    .idea-list-container div::before, .idea-list-container div::after {
-        display: none;
+    .idea-list div::before, .idea-list div::after {
+        display: none !important;
     }
-    
+
     .top-level-header + h2 {
         font-size: 2.5rem !important;
     }
@@ -212,7 +295,7 @@ body, html {
         font-size: 2.25rem;
     }
 
-    .timeline-container {        
+    .timeline-container {
         width: 90%;
     }
 
@@ -223,6 +306,18 @@ body, html {
 
     .form-application {
         display: none;
+    }
+
+    .timeline {
+        height: fit-content;
+    }
+
+    .timeline td span {
+        font-size: 2rem;
+    }
+
+    .timeline td h3 {
+        font-size: 2.25rem;
     }
 }
 
@@ -240,4 +335,15 @@ body, html {
         font-size: 0;
     }
 
+    .timeline td span {
+        font-size: 1.75rem;
+    }
+
+    .timeline td h3 {
+        font-size: 2rem;
+    }
+
+    .cta-3{
+        font-size: 2rem; 
+    }
 }

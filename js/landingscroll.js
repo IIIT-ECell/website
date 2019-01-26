@@ -37,7 +37,7 @@
         formApplicationButton.addEventListener('click', function() {
             if(SHOULD_REDIRECT)
                 window.location.href =
-                    "https://docs.google.com/forms/d/e/1FAIpQLSd6VeW-D_S4Tj8nME0IiAs3G4UP3aDMzsUQE9XB2nDQSp2wzA/viewform?usp=sf_link";
+                    "https://goo.gl/forms/UkIl0vywOBVzrALg2";
         });
     }
 
@@ -45,8 +45,9 @@
         var nextFullPage = ctaButton.parentNode.parentNode.nextElementSibling;
         if(!nextFullPage) return;
 
+
         ctaButton.addEventListener("click", function(event){
-            nextFullPage.scrollIntoView({behavior: "smooth"});
+            smoothScroll(nextFullPage)
         });
     }
 
@@ -63,24 +64,24 @@
             footerToFix = document.querySelector("footer");
         if(window.innerWidth <= 766 && above766){
             SHOULD_REDIRECT = true;
-            changeFontSizeValue(headerToFix, true);
-            changeFontSizeValue(footerToFix, true);
+            changeFontSizeValue(headerToFix, 2);
+            changeFontSizeValue(footerToFix, 1.75);
             above766 = false;
         }
         else if(window.innerWidth > 766 && !above766) {
-            changeFontSizeValue(headerToFix, false);
-            changeFontSizeValue(footerToFix, false);
+            changeFontSizeValue(headerToFix, 1 / 2);
+            changeFontSizeValue(footerToFix, 1 / 1.75);
             above766 = true;
             SHOULD_REDIRECT = false;
         }
         findButtonsAndFixWidth();
     }
 
-    function changeFontSizeValue(root, shouldDouble){
-        var childs = root.children, f = shouldDouble ? 2 : 0.5;
+    function changeFontSizeValue(root, f){
+        var childs = root.children;
 
         for(let i = 0, len = childs.length; i < len; i++){
-            changeFontSizeValue(childs[i], shouldDouble);
+            changeFontSizeValue(childs[i], f);
             if(childs[i].style.fontSize) {
                 childs[i].style.fontSize = "";
             } else {
@@ -89,5 +90,39 @@
                 childs[i].style.fontSize = newSize + 'px';
             }
         }
+    }
+
+    // from SO: https://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click
+    function smoothScroll(target) {
+        var MIN_PIXELS_PER_STEP = 16;
+        var MAX_SCROLL_STEPS = 30;
+        var scrollContainer = target;
+        do {
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do {
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+            (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+
+        var stepFunc = function() {
+            scrollContainer.scrollTop =
+                Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+
+            if (scrollContainer.scrollTop >= targetY) {
+                return;
+            }
+
+            window.requestAnimationFrame(stepFunc);
+        };
+
+        window.requestAnimationFrame(stepFunc);
     }
 })();
