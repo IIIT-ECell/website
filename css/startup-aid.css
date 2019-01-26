@@ -3,6 +3,7 @@ html {
 }
 .body {
     background: url('/assets/back/background-try.jpg');
+    background-color: #212529;
 }
 
 .cover_noback{
