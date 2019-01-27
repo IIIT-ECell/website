@@ -10,7 +10,7 @@ html {
     height: 100vh;
     width: 100%;
 }
-.cover_noback .container{
+.cover_noback{
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -19,48 +19,48 @@ html {
     overflow: hidden;
 }
 
-.cover_noback .container .row {
+.cover_noback .row {
     justify-content: center;
     align-items: center;
 }
 
-.cover_noback .container .row .col-sm-12 {
+.cover_noback .row .col-sm-12 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cover_noback .container .row .col-md-5 {
+.cover_noback .row .col-md-5 {
     display: flex;
     justify-content: center;
 }
 
-.cover_noback .container .row .col-md-7 {
+.cover_noback .row .col-md-7 {
     display: flex;
     justify-content: center;
 }
 
-.cover_noback .container .row h1 {
+.cover_noback .row h1 {
     font-weight: 100;
     font-size: 16vh;
     color: #cb8b5a;
     text-transform: uppercase;
 }
 
-.cover_noback .container .row h2 {
+.cover_noback .row h2 {
     font-weight: lighter;
     font-size: 8vh;
     color: #cb8b5a;
 }
 
-.cover_noback .container .row h3 {
+.cover_noback .row h3 {
     font-weight: lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4vh;
     color: #1d1d1b;
 }
 
-.cover_noback .container .row h4 {
+.cover_noback .row h4 {
     font-weight: lighter;
     font-size: 4vh;
     color: #cb8b5a;

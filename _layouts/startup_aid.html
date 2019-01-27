@@ -1,22 +1,48 @@
 <!doctype html>
 <html lang="en">
 
-{% include head.html %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
-<link rel="stylesheet" href="{{site.baseurl}}/css/startup-aid.css">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	{% include ganal.html %}
+	{% include fbmeta.html %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>{{site.title}}</title>
+    <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/logos/logo-ecell.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/startup-aid.css">
+
+</head>
 
 <body class="raleway grey darken-4">
     
     <div id="fullpage">
         <div class="section cover_noback">
-            <div class="container">
+            <div class="slide">
                 <div class="row p-5">
                     <div class="col-sm-12 col-md-12">
                         <h1 class="p-1 m-2 l-head">Have an idea?</h1>
                     </div>
+                    <div class="col-md-6 col-sm-6 p-5">
+                        <button class="btn" id="moveDown1" style="background-color:#cb8b5a">
+                            <h3 class="p-1 m-4 l-head text-black">Tell Me More</h3>
+                        </button>
+                        <button class="btn" id="moveRight1" style="background-color:#cb8b5a">
+                            <h3 class="p-1 m-4 l-head text-black">I want to Apply</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="row p-5">
+                    <div class="col-sm-12 col-md-12">
+                        <h1 class="p-1 m-2 l-head">|Form Here|</h1>
+                    </div>
                     <div class="col-md-12 col-sm-12">
                         <button class="btn" id="moveDown1" style="background-color:#cb8b5a">
-                            <h3 class="p-1 m-2 l-head text-black">Let's get started</h3>
+                            <h3 class="p-1 m-2 l-head text-black">Submit</h3>
                         </button>
                     </div>
                 </div>
@@ -95,7 +121,7 @@
                         <h4>Get ready to pitch to CIE.</h4>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn" style="background-color:#cb8b5a">
+                        <button class="btn" style="background-color:#cb8b5a" id="moveToForm">
                             <h3 class="p-1 m-2 l-head">Apply Now</h3>
                         </button>
                     </div>
@@ -122,8 +148,10 @@
             autoScrolling:true,
             scrollHorizontally: true,
             parallax: false,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
             sectionsColor : ["#1d1d1b", '#1d1d1b','#cb8b5a','#1d1d1b'],
             responsiveHeight: 650,
+            controlArrows: false,
         });
         // methods
         $.fn.fullpage.setAllowScrolling(true);
@@ -136,6 +164,12 @@
     });
     $(document).on('click', '#moveDown3', function(){
         fullpage_api.moveSectionDown();
+    });
+    $(document).on('click', '#moveToForm', function(){
+        fullpage_api.moveTo('page1',1);
+    });
+    $(document).on('click','#moveRight1', function(){
+        fullpage_api.moveTo('page1',1);
     });
 
 </script>
