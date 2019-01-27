@@ -41,29 +41,33 @@ html {
 }
 
 .cover_noback .row h1 {
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: 16vh;
-    color: #cb8b5a;
+    color: #7F7F50;
     text-transform: uppercase;
 }
 
 .cover_noback .row h2 {
-    font-weight: lighter;
+    /* font-weight: lighter; */
     font-size: 8vh;
-    color: #cb8b5a;
+    color: #7F7F50;
 }
 
 .cover_noback .row h3 {
-    font-weight: lighter;
+    /* font-weight: lighter; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 4vh;
     color: #1d1d1b;
 }
 
 .cover_noback .row h4 {
-    font-weight: lighter;
+    /* font-weight: lighter; */
     font-size: 4vh;
-    color: #cb8b5a;
+    color: #7F7F50;
+}
+
+.l-head {
+    font-weight: lighter;
 }
 
 .col-sm-4 .fas{
@@ -75,4 +79,9 @@ html {
     .col-sm-4 .fas {
         font-size: x-large;
     }
+}
+
+.white-1  {
+    font-family: Helvetica;
+    color: #e5bcdb !important;
 }

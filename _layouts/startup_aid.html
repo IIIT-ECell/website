@@ -21,82 +21,178 @@
     <div id="fullpage">
         <div class="section cover_noback">
             <div class="slide">
-                <div class="row p-5">
+                <div class="row p-1">
                     <div class="col-sm-12 col-md-12">
                         <h1 class="p-1 m-2 l-head">Have an idea?</h1>
                     </div>
-                    <div class="col-md-6 col-sm-6 p-5">
-                        <button class="btn" id="moveDown1" style="background-color:#cb8b5a">
+                </div>
+                <div class="row p-1">
+                    <div class="col-md-6 col-sm-6 p-1 text-right">
+                        <button class="btn moveDown" style="background-color:#7F7F50">
                             <h3 class="p-1 m-4 l-head text-black">Tell Me More</h3>
                         </button>
-                        <button class="btn" id="moveRight1" style="background-color:#cb8b5a">
+                    </div>
+                    <div class="col-md-6 col-sm-6 p-1 text-left">
+                        <button class="btn moveRight" style="background-color:#7F7F50">
                             <h3 class="p-1 m-4 l-head text-black">I want to Apply</h3>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="slide">
-                <div class="row p-5">
-                    <div class="col-sm-12 col-md-12">
-                        <h1 class="p-1 m-2 l-head">|Form Here|</h1>
+                <div class="container">
+                    <form class="row p-2 m-2">
+                        <div class="col-md-2 form-group"></div>
+                        <div class="form-group col-md-4 text-center">
+                            <label for="name" class="white-1">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                            <label for="email" class="white-1">Email</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" id="email" placeholder="john@doe.com">
+                        </div>
+                        <div class="col-md-2 form-group"></div>
+                        <div class="col-md-2 form-group"></div>
+
+                        <div class="form-group col-md-8 text-center">
+                            <label for="idea" class="white-1">Idea</label>
+                            <textarea class="form-control" id="idea" placeholder="Your Idea Here" rows="4"></textarea>
+                        </div>
+                        <div class="col-md-2 form-group"></div>
+                        <button class="btn moveDown" style="background-color:#7F7F50">
+                            <h3 class="p-1 m-1 l-head text-black">Submit</h3>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="section cover_noback">
+            <div class="row p-1">
+                <div class="col-sm-4 col-md-4">
+                    <h2 class="p-3 m-1 l-head text-white">What is</h2>
+                    <h1 class="p-3 m-1" style="line-height:0.9;">Startup Aid ?</h1>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <h4 class="m-4 text-left white-1">A 5-week program aimed at students to help structure their startup 
+                        idea by connecting them with experts in the field and will leave 
+                        the idea ready for incubation pitches. In the end you can pitch to 
+                        CIE and receive funding.
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="section text-white cover_noback">
+            <div class="slide">
+                <div class="row p-4">
+                    <div class="col-sm-12">
+                        <h2 class="m-2 l-head text-center">What is a good idea? <br>There are no bad ideas or prerequisites.</h2>
                     </div>
-                    <div class="col-md-12 col-sm-12">
-                        <button class="btn" id="moveDown1" style="background-color:#cb8b5a">
-                            <h3 class="p-1 m-2 l-head text-black">Submit</h3>
+                    <div class="col-sm-12">
+                        <button class="btn moveRight" style="background-color:#7F7F50">
+                            <h3 class="p-1 m-2 l-head">Here's some cool examples >> </h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="row p-4">
+                    <div class="col-sm-4">
+                        
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 class="p-1 m-2 l-head">Commut</h2>
+                        <p>Founded by six IIIT-H graduates, Commut is a tech-driven bus shuttle
+                                service that has been operational in Hyderabad since 2015
+                                providing economical, reliable and hassle free transport to work. It
+                                was recently acquired by a Dubai based company, Careem that will
+                                be looking after their shuttle service operations in about 100 cities
+                                around the world.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right">
+                        <button class="btn moveLeft" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
+                        </button>
+                    </div>
+                    <div class="col-md-6 col-sm-6 p-1 text-left">
+                        <button class="btn moveRight" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="row p-4">
+                    <div class="col-sm-8">
+                        <h2 class="p-1 m-2 l-head">DreamVu</h2>
+                        <p>DreamVu has developed the world's first omni-stereo camera
+                                hardware and software platform for unifying human and machine
+                                vision. Our technology has a billion fold advantage in capturing
+                                and processing visual information in comparison to the current
+                                solutions available in the market. With a wide range of applications
+                                DreamVu is set to revolutionize the way we capture reality.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right">
+                        <button class="btn moveLeft" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
+                        </button>
+                    </div>
+                    <div class="col-md-6 col-sm-6 p-1 text-left">
+                        <button class="btn moveRight" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="row p-4">
+                    <div class="col-sm-4">
+                        
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 class="p-1 m-2 l-head">WhichPlease</h2>
+                        <p>Purpose behind starting WichPlease was hunger. Young foodies of
+                                IIIT-Hyderabad, Rahul sachdev, Pravin Gadodiya, Siddharth Jain
+                                and Saurabh Jain founded which please to overcome the problem
+                                of finding tasty, affordable and hygienic food options on a daily
+                                basis. Today WichPlease caters to as many as 200 plus customers in
+                                a day and many leave a positive review on Zomato thanking for
+                                the service and remembering for the food. It’s a standing proof
+                                that reflects commitment and careful execution of the once
+                                students of IIIT Hyderabad to today’s proud entrepreneurs.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right">
+                        <button class="btn moveLeft" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
+                        </button>
+                    </div>
+                    <div class="col-md-6 col-sm-6 p-1 text-left">
+                        <button class="btn moveRight" style="background-color:#7F7F50">
+                            <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section text-white cover_noback">
+        <div class="section cover_noback">
             <div class="container">
                 <div class="row p-4">
-                    <div class="col-sm-12">
-                        <h2 class="m-2 l-head text-center">ALL YOU NEED IS AN IDEA!</h2>
-                    </div>
-                    <div class="col-sm-12">
-                        <button class="btn" id="moveDown2" style="background-color:#cb8b5a">
-                            <h3 class="p-1 m-2 l-head">Here's some cool examples</h3>
-                        </button>
-                    </div>
+                        <div class="col-sm-4 col-md-4">
+                            <h2 class="p-3 m-1 l-head text-white">Why</h2>
+                            <h1 class="p-3 m-1" style="line-height:0.9;">Startup Aid ?</h1>
+                        </div>
+                        <div class="p-4 col-sm-4 col-md-8">
+                            <h4 class="m-4 text-left white-1">The program has no prerequisites and is aimed at students. Just carry an idea and walk into the room. Incubation has never been easier. There is also an all-paid-for Singapore trip for selected people who finish the 5-week program. With teach you a lot: connect with faculty, alumni startups, experts from the field and learn about the startup market and culture.
+                            </h4>
+                        </div>
                 </div>
-            </div>
-        </div>
-        <div class="section text-white cover_noback">
-            <div class="container">
-                <div class="row p-4">
-                    <div class="col-sm-4 text-right">
-                        <i class="fas fa-cookie-bite"></i>
-                    </div>
-                    <div class="col-sm-8 text-left">
-                        <h3 class="p-1 l-head">- I want to make good and cheap cookies available to everyone</h3>
-                    </div>
-                    <div class="col-sm-8">
-                        <h3 class="p-1 l-head text-right">- I want to solve the energy crisis with biogas!</h3>
-                    </div>
-                    <div class="col-sm-4">
-                        <i class="fas fa-burn"></i>
-                    </div>
-                    <div class="col-sm-4 text-right">
-                            <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="col-sm-8 text-left">
-                        <h3 class="p-1 l-head">- I want to automate daily life chores!</h3>
-                    </div>
-    
-                    <div class="col-sm-8">
-                        <h3 class="p-1 l-head text-right">- I want to effectively clean lakes!</h3>
-                    </div>
-                    <div class="col-sm-4">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <div class="col-sm-12">
-                        <button class="btn" id="moveDown3" style="background-color:#1d1d1b">
-                            <h2 class="p-1 m-2 l-head">I have an idea!</h2>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            </div>            
         </div>
         <div class="section text-white cover_noback fp-auto-height-responsive">
             <div class="container" id="cover_4">
@@ -121,7 +217,7 @@
                         <h4>Get ready to pitch to CIE.</h4>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn" style="background-color:#cb8b5a" id="moveToForm">
+                        <button class="btn" style="background-color:#7F7F50" id="moveToForm">
                             <h3 class="p-1 m-2 l-head">Apply Now</h3>
                         </button>
                     </div>
@@ -146,27 +242,24 @@
             scrollHorizontally: true,
             parallax: false,
             anchors: ['page1', 'page2', 'page3', 'page4'],
-            sectionsColor : ["#1d1d1b", '#1d1d1b','#cb8b5a','#1d1d1b'],
+            sectionsColor : ["#1d1d1b", '#1d1d1b','#1d1d1b',"#1d1d1b","#1d1d1b"],
             responsiveHeight: 650,
             controlArrows: false,
         });
         // methods
         $.fn.fullpage.setAllowScrolling(true);
     });
-    $(document).on('click', '#moveDown1', function(){
-        fullpage_api.moveSectionDown();
-    });
-    $(document).on('click', '#moveDown2', function(){
-        fullpage_api.moveSectionDown();
-    });
-    $(document).on('click', '#moveDown3', function(){
+    $(document).on('click', '.moveDown', function(){
         fullpage_api.moveSectionDown();
     });
     $(document).on('click', '#moveToForm', function(){
         fullpage_api.moveTo('page1',1);
     });
-    $(document).on('click','#moveRight1', function(){
-        fullpage_api.moveTo('page1',1);
+    $(document).on('click','.moveRight', function(){
+        fullpage_api.moveSlideRight();
+    });
+    $(document).on('click','.moveLeft', function(){
+        fullpage_api.moveSlideLeft();
     });
 
 </script>
