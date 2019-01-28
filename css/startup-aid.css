@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 .body {
-    background-color: #212529;
+    background: #111628 url("https://abhigyanghosh30.gitlab.io/new_researchweb.gitlab.io/assets/bg-pattern.png") repeat scroll;
 }
 #landing {
     background: url('/assets/back/cover3.jpg'); 
@@ -14,6 +14,8 @@ html {
 .cover_noback{
     height: 100vh;
     width: 100%;
+    background: url("https://abhigyanghosh30.gitlab.io/new_researchweb.gitlab.io/assets/bg-pattern.png") repeat scroll;
+
 }
 .cover_noback{
     max-width: 100%;
@@ -44,68 +46,126 @@ html {
     display: flex;
     justify-content: center;
 }
-@media(min-width:769px){
-    .cover_noback .row h1 {
-        /* font-weight: 100; */
-        font-size: 16vh;
-        color: #7F7F50;
-        text-transform: uppercase;
-    }
-
-    .cover_noback .row h2 {
-        /* font-weight: lighter; */
-        font-size: 8vh;
-        color: #7F7F50;
-    }
-
-    .cover_noback .row h3 {
-        /* font-weight: lighter; */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 4vh;
-        color: #1d1d1b;
-    }
-
-    .cover_noback .row h4 {
-        /* font-weight: lighter; */
-        font-size: 4vh;
-        color: #7F7F50;
-    }
-}
-
-@media(max-width:769px){
+@media (max-width:769px){
     .cover_noback .row h1 {
         /* font-weight: 100; */
         font-size: 16vw;
-        color: #7F7F50;
+        color: #bba559;
         text-transform: uppercase;
     }
 
     .cover_noback .row h2 {
         /* font-weight: lighter; */
         font-size: 8vw;
-        color: #7F7F50;
+        color: #bba559;
     }
 
     .cover_noback .row h3 {
         /* font-weight: lighter; */
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 4vw;
-        color: #1d1d1b;
+        color: #111628;
     }
 
     .cover_noback .row h4 {
         /* font-weight: lighter; */
         font-size: 4vw;
-        color: #7F7F50;
+        color: #bba559;
     }
 }
+
+@media(min-width:769px){
+    .cover_noback .row h1 {
+        /* font-weight: 100; */
+        font-size: 16vh;
+        color: #bba559;
+        text-transform: uppercase;
+    }
+
+    .cover_noback .row h2 {
+        /* font-weight: lighter; */
+        font-size: 8vh;
+        color: #bba559;
+    }
+
+    .cover_noback .row h3 {
+        /* font-weight: lighter; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 4vh;
+        color: #111628;
+    }
+
+    .cover_noback .row h4 {
+        /* font-weight: lighter; */
+        font-size: 4vh;
+        color: #bba559;
+    }
+}
+
+@media (max-width : 769px) and (max-width : 1025px){
+    .cover_noback .row h1 {
+        /* font-weight: 100; */
+        font-size: 8vh;
+        color: #bba559;
+        text-transform: uppercase;
+    }
+
+    .cover_noback .row h2 {
+        /* font-weight: lighter; */
+        font-size: 4vh;
+        color: #bba559;
+    }
+
+    .cover_noback .row h3 {
+        /* font-weight: lighter; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vh;
+        color: #111628;
+    }
+
+    .cover_noback .row h4 {
+        /* font-weight: lighter; */
+        font-size: 2vh;
+        color: #bba559;
+    }
+}
+
+@media (max-width: 1025px) and (max-height:1367px){
+    .cover_noback .row h1 {
+        /* font-weight: 100; */
+        font-size: 8vh;
+        color: #bba559;
+        text-transform: uppercase;
+    }
+
+    .cover_noback .row h2 {
+        /* font-weight: lighter; */
+        font-size: 4vh;
+        color: #bba559;
+    }
+
+    .cover_noback .row h3 {
+        /* font-weight: lighter; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2vh;
+        color: #111628;
+    }
+
+    .cover_noback .row h4 {
+        /* font-weight: lighter; */
+        font-size: 2vh;
+        color: #bba559;
+    }
+}
+
+
 
 .l-head {
     font-weight: lighter;
 }
 
 .col-sm-4 .fas{
-    color: #1d1d1b;
+    color: #111628;
     font-size: 5rem;
 }
 
@@ -117,5 +177,5 @@ html {
 
 .white-1  {
     font-family: Helvetica;
-    color: #e5bcdb !important;
+    color: #eeeeee !important;
 }
