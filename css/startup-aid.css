@@ -35,7 +35,7 @@
 }
 
 /* END CUSTOM DECLARATIONS */
-a{
+a:hover{
     text-decoration: none;
 }
 html {
@@ -82,6 +82,27 @@ html {
     justify-content: center;
 }
 
+.test_left{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left,white 50%,transparent 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+.test_left:hover{
+    background-position: -100% 0;
+}
+.test_right{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,transparent 50%,white 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+.test_right:hover{
+    background-position: 100% 0;
+}
+
 @media (min-width:768px){
     #landing h6 {
         font-size: 2.94vw;
@@ -96,23 +117,26 @@ html {
         display: flex;
         height: 32.9vw;
         width: 36.6vw;
+
     }
     .smol-right {
         align-self: flex-end;
         height: 6.58vw;
         width: 7.32vw;
-        border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        border: double white;
+        font: 1.7vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
     
     .smol-left {
         align-self: flex-start;
         height: 6.58vw;
         width: 7.32vw;
-        border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        border: double white;
+        font: 1.7vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
     
     .mid-centre {
@@ -120,12 +144,11 @@ html {
         justify-items: center;
         height: 19.7vw;
         width: 21.9vw;
-        border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        border: double white;
+        font: 1.8vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 20% 0;
     }
-    
 }
 @media (max-width:767px){
     #landing h6 {
@@ -148,8 +171,9 @@ html {
         height: 13.5vw;
         width: 15vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: 3.5vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
 
     .smol-left {
@@ -157,8 +181,9 @@ html {
         height: 13.5vw;
         width: 15vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: 3.5vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
     .mid-centre {
         align-self: center;
@@ -166,7 +191,7 @@ html {
         height: 40.5vw;
         width: 45vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: 3.7vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 20% 0;
     }
@@ -194,8 +219,9 @@ html {
         height: 9vh;
         width: 10vh;
         border: 1px solid white;
-        font: bold 1.7vw Georgia, serif;
+        font: 1.5vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
 
     .smol-left {
@@ -203,8 +229,9 @@ html {
         height: 9vh;
         width: 10vh;
         border: 1px solid white;
-        font: bold 1.7vw Georgia, serif;
+        font: 1.5vw Impact, Charcoal, sans-serif;
         text-align: center;
+        padding: 3% 0;
     }
     .mid-centre {
         align-self: center;
@@ -212,7 +239,7 @@ html {
         height: 27vh;
         width: 30vh;
         border: 1px solid white;
-        font: bold 1.9vw Georgia, serif;
+        font: 2vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 20% 0;
     }
@@ -278,11 +305,6 @@ html {
     text-transform: uppercase;
 }
 
-
-.boxlink:hover {
-    background-color: white;
-}
-
 .titular {
     line-height: 0.85;
 }
@@ -290,3 +312,4 @@ html {
 .flighter {
     font-weight: lighter;
 }
+
