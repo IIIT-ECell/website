@@ -1,0 +1,16 @@
+<html>
+<body>
+{% raw %}
+<?php
+	$name = $_POST["Name"]; //Get the form data
+    $mail = $_POST["Mail"];
+    $message = $_POST["Idea"];
+    $file = fopen('ideas.csv', 'a') or die("!!!Error in sending the message!!!") ;//Open the .txt file
+    $content = $name.",".$mail.",".$message.PHP_EOL;
+    fwrite($file , $content); //Write it in there
+    fclose($file ); //Finally close our .txt
+    die("Message sent to MasterG");
+?>
+{% endraw %}
+</body>
+</html>

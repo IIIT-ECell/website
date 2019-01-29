@@ -84,7 +84,7 @@
 }
 
 .clink:hover {
-    color: #3f3250;
+    color: #001f3f;
 }
 
 a {
@@ -190,11 +190,65 @@ a:active {
 /* end home scroll styling */
 
 /* start cover styling */
+.cover_startup_aid {
+    height: 100vh;
+    width: 100%;
+
+    background-color: #001f3f;
+    background-image: url("/assets/back/background-try.jpg") !important;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover_startup_aid .container{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cover_startup_aid .container .row {
+    justify-content: center;
+    align-items: center;
+}
+
+.cover_startup_aid .container .row .col-sm-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover_startup_aid .container .row .col-md-5 {
+    display: flex;
+    justify-content: center;
+}
+
+.cover_startup_aid .container .row .col-md-7 {
+    display: flex;
+    justify-content: center;
+}
+
+.cover_startup_aid .container .row h1 {
+    font-weight: 100;
+    font-size: 16vh;
+    color: white;
+    text-transform: uppercase;
+}
+
+.cover_startup_aid .container .row h2 {
+    font-weight: lighter;
+    font-size: 4vh;
+    color: #d7dfea;
+}
+
 .cover {
     height: 100vh;
     width: 100%;
 
-    background-color: #3f3250;
+    background-color: #001f3f;
     background-image: url("/assets/back/cover1.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -469,7 +523,7 @@ a:active {
 /* start contact styling */
 
 #contact {
-    background-color: #3f3250;
+    background-color: #001f3f;
     /* background-image: url("http://www.open.edu/openlearn/ocw/pluginfile.php/1048644/mod_resource/content/0/a174_1_cover_image_1_edited.jpg"); */
 
     background-position: center;
@@ -620,7 +674,7 @@ pre {
 .nav-item:not(.active):hover,
 .navbar-brand:not(.ecelllogo):hover,
 .dropdown-item:hover {
-    background-color: #3f3250;
+    background-color: #001f3f;
     color: white;
 }
 
@@ -660,11 +714,11 @@ pre {
 }
 
 .mountain {
-    background-color: #3f3250;
+    background-color: #001f3f;
 }
 
 .mountain-text {
-    color: #3f3250;
+    color: #001f3f;
 }
 
 .wash {
@@ -682,6 +736,7 @@ pre {
 .neutral-text {
     color: ebede8;
 }
+
 
 @media (min-width: 767px) {
     .transparent {
