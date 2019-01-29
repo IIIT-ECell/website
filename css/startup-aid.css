@@ -134,7 +134,7 @@ html {
         font-size:  1.8vw;
         text-align: center;
         padding: 20% 0;
-        /* animation: pulse 2s infinite; */
+        animation: pulse 2s infinite;
     }
     
 }
@@ -212,8 +212,8 @@ html {
     }
     .smol-left {
         align-self: flex-start;
-        height: 140px;
-        width: 140px;
+        height: 15vh;
+        width: 15vh;
         border: 1px double white;
         font-size: 1.7vw;
         text-align: center;
@@ -222,8 +222,8 @@ html {
     .smol-bottom {
         align-self: flex-start;
         display: flex;
-        height: 140px;
-        width: 140px;
+        height: 15vh;
+        width: 30vh;
         position: relative;
         border: 1px double white;
         font-size: 1.7vw;
@@ -232,7 +232,7 @@ html {
     .mid-centre {
         align-self: center;
         justify-items: center;
-        height: 27vh;
+        height: 30vh;
         width: 30vh;
         border: 1px double white;
         font-size:  1.9vw;
