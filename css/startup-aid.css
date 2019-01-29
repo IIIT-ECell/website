@@ -77,12 +77,39 @@ html {
     justify-content: center;
 }
 
-@media(max-width:769px){
-    .cover_noback .row h1 {
-        /* font-weight: 100; */
-        font-size: 16vw;
-        color: #7F7F50;
-        text-transform: uppercase;
+@media (max-width:767px){
+    .vertical h6 {
+        font-size: 7.05vw;
+    }
+    .vertical h1 {
+        font-size: 24vw;
+    }
+
+    .spanvert {
+        display: flex;
+        height: 67.5vw;
+        width: 75vw;
+    }
+    .smol-right {
+        align-self: flex-end;
+        height: 13.5vw;
+        width: 15vw;
+        border: 1px solid white;
+    }
+
+    .smol-left {
+        align-self: flex-start;
+        height: 13.5vw;
+        width: 15vw;
+        border: 1px solid white;
+    }
+
+    .mid-centre {
+        align-self: center;
+        justify-items: center;
+        height: 40.5vw;
+        width: 45vw;
+        border: 1px solid white;
     }
 
     .cover_noback .row h2 {
@@ -120,6 +147,7 @@ html {
     }
 }
 
+
 .white-1  {
     font-family: "Bebas Neue";
     color: #db2d3b !important;
@@ -127,51 +155,52 @@ html {
     /* font-weight: bolder; */
 }
 
+
 .vertical {
     flex-direction: column
     /* font-size: 2rem; */
 }
-.vertical h6 {
-    font-size: 2.5rem;
+
+@media (min-width:768px){
+    .vertical h6 {
+        font-size: 2.94vw;
+    }
+    .vertical h1 {
+        font-size: 10vw;;
+    }
+    .spanvert {
+        display: flex;
+        height: 32.9vw;
+        width: 36.6vw;
+    }
+    .smol-right {
+        align-self: flex-end;
+        height: 6.58vw;
+        width: 7.32vw;
+        border: 1px solid white;
+    }
+    
+    .smol-left {
+        align-self: flex-start;
+        height: 6.58vw;
+        width: 7.32vw;
+        border: 1px solid white;
+    }
+    
+    .mid-centre {
+        align-self: center;
+        justify-items: center;
+        height: 19.7vw;
+        width: 21.9vw;
+        border: 1px solid white;
+    }
+    
 }
-.vertical h5 {
-    font-size: 3rem;
-}
-.vertical h1 {
-    font-size: 8.5rem;
-}
-.vertical p {
-    font-size: 2rem;
-}
+
 .capslock {
     text-transform: uppercase;
 }
-.spanvert {
-    display: flex;
-    height: 450px;
-    width: 500px;
-}
-.smol-right {
-    align-self: flex-end;
-    height: 90px;
-    width: 100px;
-    border: 1px solid white;
-}
 
-.smol-left {
-    align-self: flex-start;
-    height: 90px;
-    width: 100px;
-    border: 1px solid white;
-}
-
-.mid-centre {
-    align-self: center;
-    justify-items: center;
-    height: 270px;
-    width: 300px;
-    border: 1px solid white;
-}
 
 .boxlink:hover {
     background-color: white;
