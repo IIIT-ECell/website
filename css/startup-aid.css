@@ -37,11 +37,11 @@
 /* END CUSTOM DECLARATIONS */
 html {
     scroll-behavior: smooth;
+    font-size: 2vh;
 }
 .body {
     background: #111628 url("https://abhigyanghosh30.gitlab.io/new_researchweb.gitlab.io/assets/bg-pattern.png") repeat scroll;
 }
-
 
 .cover_noback{
     height: 100vh;
@@ -80,13 +80,13 @@ html {
 }
 
 @media (min-width:768px){
-    #landing h6 {
+    .vertical h6 {
         font-size: 2.94vw;
     }
-    #landing h1 {
+    .vertical h1 {
         font-size: 10vw;;
     }
-    #landing h3 {
+    .vertical h3 {
         font-size: 6vw;;
     }
     .spanvert {
@@ -118,13 +118,13 @@ html {
     
 }
 @media (max-width:767px){
-    #landing h6 {
+    .vertical h6 {
         font-size: 7.05vw;
     }
-    #landing h1 {
+    .vertical h1 {
         font-size: 24vw;
     }
-    #landing h3 {
+    .vertical h3 {
         font-size: 14.10vw;
     }
 
@@ -157,13 +157,16 @@ html {
 }
 
 @media (max-width:767px) and (orientation: landscape){
-    #landing h6 {
+    html {
+        font-size: 2vw;
+    }
+    .vertical h6 {
         font-size: 3vw;
     }
-    #landing h1 {
+    .vertical h1 {
         font-size: 10.2vw;
     }
-    #landing h3 {
+    .vertical h3 {
         font-size: 6vw;
     }
 
@@ -221,6 +224,11 @@ html {
     }
 }
 
+@media (width: 768px) and (orientation: portrait) {
+    html {
+        font-size: 1vh;
+    }
+}
 
 
 .l-head {
