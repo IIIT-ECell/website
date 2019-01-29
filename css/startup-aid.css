@@ -22,14 +22,17 @@
     font-weight: lighter;
 }
 
-.raleway {
+/* .raleway {
     font-family: 'Raleway';
-}
+} */
 
 .norwester {
     font-family: 'Norwester';
 }
 
+.verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* END CUSTOM DECLARATIONS */
 html {
@@ -77,11 +80,14 @@ html {
 }
 
 @media (min-width:768px){
-    .vertical h6 {
+    #landing h6 {
         font-size: 2.94vw;
     }
-    .vertical h1 {
+    #landing h1 {
         font-size: 10vw;;
+    }
+    #landing h3 {
+        font-size: 6vw;;
     }
     .spanvert {
         display: flex;
@@ -112,11 +118,14 @@ html {
     
 }
 @media (max-width:767px){
-    .vertical h6 {
+    #landing h6 {
         font-size: 7.05vw;
     }
-    .vertical h1 {
+    #landing h1 {
         font-size: 24vw;
+    }
+    #landing h3 {
+        font-size: 14.10vw;
     }
 
     .spanvert {
@@ -148,11 +157,14 @@ html {
 }
 
 @media (max-width:767px) and (orientation: landscape){
-    .vertical h6 {
+    #landing h6 {
         font-size: 3vw;
     }
-    .vertical h1 {
+    #landing h1 {
         font-size: 10.2vw;
+    }
+    #landing h3 {
+        font-size: 6vw;
     }
 
     .spanvert {
@@ -227,11 +239,9 @@ html {
 }
 
 
-.white-1  {
-    font-family: "Bebas Neue";
+.redded  {
     color: #db2d3b !important;
     font-weight: bolder;
-    /* font-weight: bolder; */
 }
 
 
@@ -251,4 +261,8 @@ html {
 
 .titular {
     line-height: 0.85;
+}
+
+.flighter {
+    font-weight: lighter;
 }
