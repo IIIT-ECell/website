@@ -102,7 +102,7 @@ html {
         height: 6.58vw;
         width: 7.32vw;
         border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        font: bold 1.8vw;
         text-align: center;
     }
     
@@ -111,7 +111,7 @@ html {
         height: 6.58vw;
         width: 7.32vw;
         border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        font: bold 1.8vw;
         text-align: center;
     }
     
@@ -121,7 +121,7 @@ html {
         height: 19.7vw;
         width: 21.9vw;
         border: 1px solid white;
-        font: bold 1.8vw Georgia, serif;
+        font: bold 1.8vw;
         text-align: center;
         padding: 20% 0;
     }
@@ -148,7 +148,7 @@ html {
         height: 13.5vw;
         width: 15vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: bold 3.3vw;
         text-align: center;
     }
 
@@ -157,7 +157,7 @@ html {
         height: 13.5vw;
         width: 15vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: bold 3.3vw;
         text-align: center;
     }
     .mid-centre {
@@ -166,7 +166,7 @@ html {
         height: 40.5vw;
         width: 45vw;
         border: 1px solid white;
-        font: bold 3.3vw Georgia, serif;
+        font: bold 3.3vw;
         text-align: center;
         padding: 20% 0;
     }
@@ -197,7 +197,7 @@ html {
         height: 9vh;
         width: 10vh;
         border: 1px solid white;
-        font: bold 1.7vw Georgia, serif;
+        font: bold 1.7vw;
         text-align: center;
     }
 
@@ -206,7 +206,7 @@ html {
         height: 9vh;
         width: 10vh;
         border: 1px solid white;
-        font: bold 1.7vw Georgia, serif;
+        font: bold 1.7vw;
         text-align: center;
     }
     .mid-centre {
@@ -215,7 +215,7 @@ html {
         height: 27vh;
         width: 30vh;
         border: 1px solid white;
-        font: bold 1.9vw Georgia, serif;
+        font: bold 1.9vw;
         text-align: center;
         padding: 20% 0;
     }
@@ -286,9 +286,15 @@ html {
     text-transform: uppercase;
 }
 
+.boxlink {
+    text-decoration: none;
+    color: #e5e5e5;
+}
 
 .boxlink:hover {
+    text-decoration: none;
     background-color: white;
+    color: #131313;
 }
 
 .titular {
