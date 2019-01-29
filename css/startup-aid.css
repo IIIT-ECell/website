@@ -81,13 +81,7 @@ html {
     display: flex;
     justify-content: center;
 }
-.smol-text {
-    transform: rotate(45deg);
-    display: grid;
-    margin-top: 15%;
-    margin-left: 10%;
 
-}
 
 @media (min-width:768px){
     .vertical h6 {
@@ -113,7 +107,6 @@ html {
         font-size:  1.8vw;
         text-align: center;
     }
-    
     .smol-bottom {
         align-self: flex-start;
         justify-items: center;
@@ -124,7 +117,6 @@ html {
         font-size:  1.8vw;
         text-align: center;
     }
-    
     .mid-centre {
         align-self: flex-end;
         justify-items: center;
@@ -136,7 +128,17 @@ html {
         padding: 20% 0;
         animation: pulse 2s infinite;
     }
-    
+    .smol-text{
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+    .big-text {
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 6vh;
+    }
 }
 @media (max-width:767px){
     .vertical h6 {
@@ -164,7 +166,6 @@ html {
         font-size: 2.04vw;
         text-align: center;
     }
-
     .smol-bottom {
         align-self: flex-start;
         justify-items: center;
@@ -186,7 +187,16 @@ html {
         padding: 17% 0;
         animation: pulse 2s infinite;
     }
-    
+    .smol-text{
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 8vw;
+    }
+    .big-text {
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 8vw;
+    }
 }
 
 @media (max-width:767px) and (orientation: landscape){
@@ -240,7 +250,20 @@ html {
         padding: 17% 0;
         animation: pulse 2s infinite;
     }
-    
+    .smol-text{
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 2vh;
+        margin-left: 3vh;
+    }
+    .big-text {
+        transform: rotate(45deg);
+        display: grid;
+        margin-top:0vh;
+        margin-left: 5vh;
+        margin-right:3vh;
+        margin-bottom:0vh; 
+    }
 }
 
 #fp-nav ul li a span{
