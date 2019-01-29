@@ -299,6 +299,22 @@ html {
     html {
         font-size: 1vh;
     }
+    .smol-left {
+        font-size: 2vw ;
+    }
+    .mid-centre {
+        font-size: 2vw ;
+    }
+    .smol-text{
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 2vw;
+    }
+    .big-text {
+        transform: rotate(45deg);
+        display: grid;
+        margin-top: 2vw;
+    }
 }
 
 
@@ -323,6 +339,9 @@ html {
     font-weight: bolder;
 }
 
+.guilded {
+    color:#bba559;
+}
 
 .vertical {
     flex-direction: column
