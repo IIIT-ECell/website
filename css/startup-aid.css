@@ -81,6 +81,13 @@ html {
     display: flex;
     justify-content: center;
 }
+.smol-text {
+    transform: rotate(45deg);
+    display: grid;
+    margin-top: 15%;
+    margin-left: 10%;
+
+}
 
 @media (min-width:768px){
     .vertical h6 {
@@ -93,38 +100,41 @@ html {
         font-size: 6vw;;
     }
     .spanvert {
-        display: flex;
-        height: 32.9vw;
+        display: inline-block;
+        height: 36.6vw;
         width: 36.6vw;
+        transform: rotate(-45deg);
     }
-    .smol-right {
-        align-self: flex-end;
-        height: 6.58vw;
-        width: 7.32vw;
-        border: 1px solid white;
-        font: bold 1.8vw;
+    .smol-left {
+        align-self: flex-start;
+        height: 10vw;
+        width: 10vw;
+        border: 1px double white;
+        font-size:  1.8vw;
         text-align: center;
     }
     
-    .smol-left {
+    .smol-bottom {
         align-self: flex-start;
-        height: 6.58vw;
-        width: 7.32vw;
-        border: 1px solid white;
-        font: bold 1.8vw;
+        justify-items: center;
+        display: flex;
+        height: 10vw;
+        width: 20vw;
+        border: 1px double white;
+        font-size:  1.8vw;
         text-align: center;
     }
     
     .mid-centre {
-        align-self: center;
+        align-self: flex-end;
         justify-items: center;
-        height: 19.7vw;
-        width: 21.9vw;
-        border: 1px solid white;
-        font: bold 1.8vw;
+        height: 20vw;
+        width: 20vw;
+        border: 1px double white;
+        font-size:  1.8vw;
         text-align: center;
         padding: 20% 0;
-        animation: pulse 2s infinite;
+        /* animation: pulse 2s infinite; */
     }
     
 }
@@ -140,34 +150,38 @@ html {
     }
 
     .spanvert {
-        display: flex;
+        display: grid;
         height: 67.5vw;
         width: 75vw;
+        transform: rotate(-45deg);
     }
-    .smol-right {
-        align-self: flex-end;
-        height: 13.5vw;
-        width: 15vw;
+    .smol-left {
+        align-self: flex-start;
+        justify-items: center;
+        height: 20vw;
+        width: 20vw;
         border: 1px solid white;
         font: bold 3.3vw;
         text-align: center;
     }
 
-    .smol-left {
+    .smol-bottom {
         align-self: flex-start;
-        height: 13.5vw;
-        width: 15vw;
-        border: 1px solid white;
-        font: bold 3.3vw;
+        justify-items: center;
+        display: flex;
+        height: 20vw;
+        width: 40vw;
+        border: 1px double white;
+        font-size:  3.3vw;
         text-align: center;
     }
     .mid-centre {
         align-self: center;
         justify-items: center;
-        height: 40.5vw;
-        width: 45vw;
-        border: 1px solid white;
-        font: bold 3.3vw;
+        height: 40vw;
+        width: 40vw;
+        border: 1px double white;
+        font-size:  3.3vw;
         text-align: center;
         padding: 20% 0;
     }
@@ -189,25 +203,29 @@ html {
     }
 
     .spanvert {
-        display: flex;
+        display: inline-grid;
         height: 45vh;
         width: 50vh;
+        transform: rotate(-45deg);
+
     }
-    .smol-right {
-        align-self: flex-end;
-        height: 9vh;
-        width: 10vh;
-        border: 1px solid white;
-        font: bold 1.7vw;
+    .smol-left {
+        align-self: flex-start;
+        height: 140px;
+        width: 140px;
+        border: 1px double white;
+        font-size: 1.7vw;
         text-align: center;
     }
 
-    .smol-left {
+    .smol-bottom {
         align-self: flex-start;
-        height: 9vh;
-        width: 10vh;
-        border: 1px solid white;
-        font: bold 1.7vw;
+        display: flex;
+        height: 140px;
+        width: 140px;
+        position: relative;
+        border: 1px double white;
+        font-size: 1.7vw;
         text-align: center;
     }
     .mid-centre {
@@ -215,8 +233,8 @@ html {
         justify-items: center;
         height: 27vh;
         width: 30vh;
-        border: 1px solid white;
-        font: bold 1.9vw;
+        border: 1px double white;
+        font-size:  1.9vw;
         text-align: center;
         padding: 20% 0;
     }
