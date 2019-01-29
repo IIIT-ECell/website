@@ -140,6 +140,10 @@ html {
     }
 }
 @media (max-width:767px){
+
+    nav.navbar {
+        height: 6vh;
+    }
     .vertical h6 {
         font-size: 7.05vw;
     }
@@ -407,4 +411,12 @@ button.downb {
 }
 .test_right:hover{
     background-position: 100% 0;
+}
+
+.navy-text {
+    color: #22252c;
+}
+
+.dropdown-item.white-text {
+    color: #1b1b1d;
 }
