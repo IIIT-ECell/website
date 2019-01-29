@@ -131,8 +131,7 @@ html {
     .smol-text{
         transform: rotate(45deg);
         display: grid;
-        margin-top: 15%;
-        margin-left: 10%;
+        margin-top: 5vh;
     }
     .big-text {
         transform: rotate(45deg);
