@@ -110,7 +110,7 @@ html {
         height: 10vw;
         width: 10vw;
         border: 1px double white;
-        font-size:  1.8vw;
+        font: 1.7vw Impact, Charcoal, sans-serif;
         text-align: center;
     }
     
@@ -121,7 +121,7 @@ html {
         height: 10vw;
         width: 20vw;
         border: 1px double white;
-        font-size:  1.8vw;
+        font: 1.7vw Impact, Charcoal, sans-serif;
         text-align: center;
     }
     
@@ -130,11 +130,11 @@ html {
         justify-items: center;
         height: 20vw;
         width: 20vw;
-        border: 1px double white;
-        font-size:  1.8vw;
+        border: double white;
+        font: 1.8vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 20% 0;
-        animation: pulse 2s infinite;
+        /*animation: pulse 2s infinite;*/
     }
     
 }
@@ -161,7 +161,7 @@ html {
         height: 20vw;
         width: 20vw;
         border: 1px solid white;
-        font-size: 2.04vw;
+        font: 2.04vw Impact, Charcoal, sans-serif;
         text-align: center;
     }
 
@@ -172,7 +172,7 @@ html {
         height: 20vw;
         width: 40vw;
         border: 1px double white;
-        font-size:  3.3vw;
+        font: 3.5vw Impact, Charcoal, sans-serif;   
         text-align: center;
     }
     .mid-centre {
@@ -181,7 +181,7 @@ html {
         height: 40vw;
         width: 40vw;
         border: 1px double white;
-        font-size:  3.3vw;
+        font: 3.7vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 17% 0;
         animation: pulse 2s infinite;
@@ -215,7 +215,7 @@ html {
         height: 15vh;
         width: 15vh;
         border: 1px double white;
-        font-size: 1.7vw;
+        font: 1.5vw Impact, Charcoal, sans-serif;
         text-align: center;
     }
 
@@ -226,7 +226,7 @@ html {
         width: 30vh;
         position: relative;
         border: 1px double white;
-        font-size: 1.7vw;
+        font: 1.5vw Impact, Charcoal, sans-serif;
         text-align: center;
     }
     .mid-centre {
@@ -235,7 +235,7 @@ html {
         height: 30vh;
         width: 30vh;
         border: 1px double white;
-        font-size:  1.9vw;
+        font: 2vw Impact, Charcoal, sans-serif;
         text-align: center;
         padding: 17% 0;
         animation: pulse 2s infinite;
@@ -346,4 +346,24 @@ button.downb {
     50% { transform: scale(1.02); }
     60% { transform: scale(1); }
     100% { transform: scale(1); }
- } 
+ }
+ .test_left{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left,white 50%,transparent 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+.test_left:hover{
+    background-position: -100% 0;
+}
+.test_right{
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,transparent 50%,white 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+.test_right:hover{
+    background-position: 100% 0;
+}
