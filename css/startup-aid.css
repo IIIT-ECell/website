@@ -161,7 +161,7 @@ html {
         height: 20vw;
         width: 20vw;
         border: 1px solid white;
-        font: bold 3.3vw;
+        font-size: 2.04vw;
         text-align: center;
     }
 
@@ -183,7 +183,8 @@ html {
         border: 1px double white;
         font-size:  3.3vw;
         text-align: center;
-        padding: 20% 0;
+        padding: 17% 0;
+        animation: pulse 2s infinite;
     }
     
 }
@@ -236,7 +237,8 @@ html {
         border: 1px double white;
         font-size:  1.9vw;
         text-align: center;
-        padding: 20% 0;
+        padding: 17% 0;
+        animation: pulse 2s infinite;
     }
     
 }
@@ -330,6 +332,11 @@ html {
 
 .fab {
     color:#bba559;
+}
+
+button.downb {
+    color:#bba559; 
+    background-color: transparent;
 }
 
 @keyframes pulse {
