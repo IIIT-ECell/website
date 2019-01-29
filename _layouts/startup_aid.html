@@ -96,9 +96,9 @@
                         <h2 class="m-2 l-head text-center">What is a good idea? <br>There are no bad ideas or prerequisites.</h2>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn moveRight" style="background-color:#bba559">
+                        <a href="#page3/1/"><button class="btn moveRight" style="background-color:#bba559">
                             <h3 class="p-1 m-2 l-head">Here's some cool examples >> </h3>
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
@@ -118,14 +118,14 @@
                         </p>
                     </div>
                     <div class="col-md-6 col-sm-6 text-right">
-                        <button class="btn moveLeft" style="background-color:#bba559">
+                        <a href="#page3"><button class="btn moveLeft" style="background-color:#bba559">
                             <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
-                        </button>
+                        </button></a>
                     </div>
                     <div class="col-md-6 col-sm-6 p-1 text-left">
-                        <button class="btn moveRight" style="background-color:#bba559">
+                        <a href="#page3/2/"><button class="btn moveRight" style="background-color:#bba559">
                             <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
@@ -145,14 +145,14 @@
                         
                     </div>
                     <div class="col-md-6 col-sm-6 text-right">
-                        <button class="btn moveLeft" style="background-color:#bba559">
+                        <a href="#page3/1/"><button class="btn moveLeft" style="background-color:#bba559">
                             <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
-                        </button>
+                        </button></a>
                     </div>
                     <div class="col-md-6 col-sm-6 p-1 text-left">
-                        <button class="btn moveRight" style="background-color:#bba559">
+                        <a href="#page3/3/"><button class="btn moveRight" style="background-color:#bba559">
                             <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
@@ -174,14 +174,16 @@
                                 students of IIIT Hyderabad to today’s proud entrepreneurs.</p>
                     </div>
                     <div class="col-md-6 col-sm-6 text-right">
-                        <button class="btn moveLeft" style="background-color:#bba559">
+                        <a href="#page3/2/"><button class="btn moveLeft" style="background-color:#bba559">
                             <h3 class="m-1 l-head"><i class="fas fa-chevron-left"></i></h3>
-                        </button>
+                        </button></a>
                     </div>
                     <div class="col-md-6 col-sm-6 p-1 text-left">
-                        <button class="btn moveRight" style="background-color:#bba559">
-                            <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
-                        </button>
+                        <a href="#">
+                            <a href="#page3/1/"><button class="btn moveRight" style="background-color:#bba559">
+                                <h3 class="m-1 l-head"><i class="fas fa-chevron-right"></i></h3>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -228,9 +230,9 @@
                         <h4>Get ready to pitch to CIE.</h4>
                     </div>
                     <div class="col-sm-12">
-                        <button class="btn" style="background-color:#bba559" id="moveToForm">
+                        <a href="#page1/1/"><button class="btn" style="background-color:#bba559" id="moveToForm">
                             <h3 class="p-1 m-2 l-head">Apply Now</h3>
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
@@ -243,8 +245,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" ></script>
-<script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js" ></script>
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script> -->
+<!-- <script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js" ></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
 <script>
     $(document).ready(function () {
         $('#fullpage').fullpage({
@@ -252,23 +254,13 @@
             autoScrolling:true,
             scrollHorizontally: true,
             parallax: false,
-            anchors: ['page1', 'page2', 'page3', 'page4'],
+            anchors: ['page1', 'page2', 'page3', 'page4','page5'],
             controlArrows: false,
+            navigation:true,
+            navigationPosition: 'right',
         });
         // methods
         $.fn.fullpage.setAllowScrolling(true);
-    });
-    $(document).on('click', '.moveDown', function(){
-        fullpage_api.moveSectionDown();
-    });
-    $(document).on('click', '#moveToForm', function(){
-        fullpage_api.moveTo('page1',1);
-    });
-    $(document).on('click','.moveRight', function(){
-        fullpage_api.moveSlideRight();
-    });
-    $(document).on('click','.moveLeft', function(){
-        fullpage_api.moveSlideLeft();
     });
 
 </script>

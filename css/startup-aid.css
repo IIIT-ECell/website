@@ -222,6 +222,10 @@ html {
     
 }
 
+#fp-nav ul li a span{
+    background-color: #bba559;
+}
+
 @media(min-width:769px){
     #landing {
         background: url('/assets/back/cover3.jpg'); 
