@@ -170,6 +170,7 @@ html {
         font: bold 3.3vw;
         text-align: center;
         padding: 20% 0;
+        animation: pulse 2s infinite;
     }
     
 }
@@ -219,6 +220,7 @@ html {
         font: bold 1.9vw;
         text-align: center;
         padding: 20% 0;
+        animation: pulse 2s infinite;
     }
     
 }
