@@ -124,6 +124,7 @@ html {
         font: bold 1.8vw;
         text-align: center;
         padding: 20% 0;
+        animation: pulse 2s infinite;
     }
     
 }
@@ -312,3 +313,12 @@ html {
 .fab {
     color:#bba559;
 }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.05); }
+    40% { transform: scale(1); } 
+    50% { transform: scale(1.02); }
+    60% { transform: scale(1); }
+    100% { transform: scale(1); }
+ } 
