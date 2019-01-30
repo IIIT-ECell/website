@@ -140,6 +140,10 @@ html {
     }
 }
 @media (max-width:767px){
+
+    nav.navbar {
+        height: 6vh;
+    }
     .vertical h6 {
         font-size: 7.05vw;
     }
