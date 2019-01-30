@@ -408,3 +408,11 @@ button.downb {
 .test_right:hover{
     background-position: 100% 0;
 }
+
+.navy-text {
+    color: #22252c;
+}
+
+.dropdown-item.white-text {
+    color: #1b1b1d;
+}
