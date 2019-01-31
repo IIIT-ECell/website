@@ -84,6 +84,14 @@ html {
 
 
 @media (min-width:768px){
+    .sprintdt {
+        padding-bottom: 5vh;
+    }
+    
+    .sprintdb {
+        padding-top: 5vh;
+    }
+
     .vertical h6 {
         font-size: 2.94vw;
     }
@@ -142,10 +150,10 @@ html {
 @media (max-width:767px){
 
     nav.navbar {
-        height: 8vh;
+        height: 6vh;
     }
     .ecelllogo img {
-        height: 6vh;
+        height: 4vh;
     }
     .vertical h6 {
         font-size: 7.05vw;
