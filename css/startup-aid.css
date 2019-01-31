@@ -142,6 +142,9 @@ html {
 @media (max-width:767px){
 
     nav.navbar {
+        height: 8vh;
+    }
+    .ecelllogo img {
         height: 6vh;
     }
     .vertical h6 {
@@ -419,4 +422,8 @@ button.downb {
 
 .dropdown-item.white-text {
     color: #1b1b1d;
+}
+
+.navbar-collapse.pt-3.collapse.show {
+    background-color: #111628;
 }
