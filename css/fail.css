@@ -1,0 +1,6 @@
+.cover_fail_back {
+    background: url('../assets/logos/fail_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
