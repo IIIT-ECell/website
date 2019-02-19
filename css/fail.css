@@ -54,8 +54,8 @@ html {
 }
 
 .active {
-    background-color: #ef2028;
-    color: white;
+    background-color: #bba559;
+    color: #1b1b1d;
 }
 
 .wrapper {
@@ -66,12 +66,12 @@ html {
 
 #sidebar {
     width: 25vw;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     min-height: 100vh;
     z-index: 999;
-    background: #ef2028;
+    background: #1b1b1d;
     color: #1b1b1d;
     transition: all 0.3s;
 }
@@ -80,16 +80,17 @@ html {
 }
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #fff;
+    background: #1b1b1d;
+    color: #bba559;
 }
 
 #sidebar ul.components {
     padding: 20px 0px;
-    border-bottom: 1px solid #323232; 
+    /* border-bottom: 1px solid #;  */
 }
 
 #sidebar ul p {
-    color: #000;
+    color: #bba559;
     padding: 10px;
 }
 #sidebar ul li a {
@@ -99,16 +100,22 @@ html {
 }
 #sidebar ul li a:hover {
     color: #bba559;
-    background: #fff;
+    background: #1b1b1d;
 }
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
+    color: #1b1b1d;
     background: #bba559;
 }
+
+#content {
+    margin-left: 25vw;
+    transition: all 0.3s;
+}
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #ef2028;
+    background: #1b1b1d;
 }
 
 a[data-toggle="collapse"] {
@@ -122,3 +129,70 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
+#sidebar.active + #navbar{
+    margin-left: 10vw;
+}
+#sidebar.active + #navbar + #content{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#navbar {
+    height:10vh;
+    margin-left: 25vw;
+    position: fixed;
+    transition: all 0.3s;
+}
+
+.section {
+    padding-top:10vh;
+    height: 100vh;
+}
+
+@media (max-width:768px) {
+    #sidebar {
+        width: 75vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        z-index: 999;
+        background: #1b1b1d;
+        color: #bba559;
+        transition: all 0.3s;
+    }
+    #sidebar.active {
+        margin-left: -75vw;
+    }
+    
+    #sidebar.active + #navbar + #content {
+        margin-left: 10vw;
+    }
+    #sidebar.active + #navbar{
+        margin-left: 0vw;
+    }
+    #navbar {
+        margin-left: 75vw;
+    }
+}
+
+h1 {
+    font-size: 8vh;
+    color:#bba559;
+    padding: 5px;
+}
+h2 {
+    font-size: 4vh;
+    color: #bba559;
+    padding: 5px;
+}
+h3 {
+    font-size: 2vh;
+    color: #bba559;
+    padding: 5px;
+}
+
+.btn {
+    background: #1b1b1d;
+    color: #bba559;
+}

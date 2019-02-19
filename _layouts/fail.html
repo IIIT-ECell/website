@@ -7,16 +7,19 @@
 
 </style>
 <body class="raleway grey darken-4">
-    <div class="cover_fail_back" id="landing">
+    <div class="container">
+        <div id="landing">
+            
+        </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" style="display:none">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>FAIL</h3>
             </div>
             <ul class="list-unstyled components">
-                <p>moments we dont usually share</p>
-                <li class="active">
+                    <h1>FAIL!</h1>
+                    <h3>moments we dont usually share</h3>
+                <li>
                     <a href="#home">Home</a>
                 </li>
                 <li>
@@ -37,22 +40,68 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
-        <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                <div class="container-fluid">
+        <div id="navbar">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark"> -->
+                <button type="button" id="sidebarCollapse" class="btn">
+                    <i class="fas fa-align-left"></i>
+                    <!-- <span>Toggle Sidebar</span> -->
+                </button>
+            <!-- </nav> -->
+        </div>
         
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <!-- <span>Toggle Sidebar</span> -->
-                    </button>
-        
-                </div>
-            </nav>
-            <p>{{content}}</p>
+        <div id="content" class="container">
+            <div id="about" class="section">
+                <h2>About FAIL!</h2>
+                <p class="text-white p-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div id="speaker1" class="section">
+                <h2>Speaker 1</h2>
+                <p class="text-white p-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur.
+                </p>
+            </div>
+            <div id="speaker2" class="section">
+                <h2>Speaker 2</h2>
+                <p class="text-white p-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer" id="contact">
+        <div class="row text-center">
+            <div class="col-xs-12 col-md-12 col-sm-12">
+                <ul class="list-inline pt-3">
+                    <li class="list-inline-item p-2"><a class="faficon" href="https://www.facebook.com/ecell.iiithyd/" target="_blank"><h2><i class="fab fa-facebook"></i></h2></a></li>
+                    <li class="list-inline-item p-2"><a class="faficon" href="https://www.instagram.com/ecell_iiith/" target="_blank"><h2><i class="fab fa-instagram"></i></h2></a></li>
+                    <li class="list-inline-item p-2"><a class="faficon" href="https://twitter.com/ecell_iiithyd" target="_blank"><h2><i class="fab fa-twitter"></i></h2></a></li>
+                    <li class="list-inline-item p-2"><a class="faficon" href="https://www.youtube.com/channel/UCE8mniuxsSH_SVYTmKWxtfA" target="_blank"><h2><i class="fab fa-youtube"></i></h2></a></li>
+                    <li class="list-inline-item p-2"><a class="faficon" href="https://github.com/IIIT-ECell" target="_blank"><h2><i class="fab fa-github"></i></h2></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
@@ -61,19 +110,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" ></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
 <script>
     var lastScrollTop = 0;
     $(document).scroll(function(event){
+        event.preventDefault();
         var st = $(this).scrollTop();
         if (st > lastScrollTop){
-            $("#landing").slideUp();
+            $("#landing").slideUp(()=>{
+                $(".wrapper").slideDown();
+            });
+            // document.getElementById("#about").scrollIntoView();
         }
         lastScrollTop = st;
     });
     $(document).ready(function () {
-        $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-        });
+        // $("#sidebar").mCustomScrollbar({
+        //     theme: "minimal"
+        // });
         $("#sidebarCollapse").on("click",function () {
             $('#sidebar').toggleClass('active');
             // close dropdowns
