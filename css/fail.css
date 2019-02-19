@@ -129,12 +129,12 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-#sidebar.active + #navbar{
-    margin-left: 10vw;
-}
 #sidebar.active + #navbar + #content{
     margin-left: 10vw;
     margin-right: 10vw;
+}
+#sidebar.active + #navbar{
+    margin-left: 0vw;
 }
 
 #navbar {
