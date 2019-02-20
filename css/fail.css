@@ -49,7 +49,7 @@ html {
     background-repeat: no-repeat; 
     background-position: center;
     height: 100vh;
-    width:100vw;
+    width:100%;
     overflow: hidden;
 }
 
@@ -144,11 +144,6 @@ a[data-toggle="collapse"] {
     transition: all 0.3s;
 }
 
-.section {
-    padding-top:10vh;
-    height: 100vh;
-}
-
 @media (max-width:768px) {
     #sidebar {
         width: 75vw;
@@ -175,24 +170,33 @@ a[data-toggle="collapse"] {
         margin-left: 75vw;
     }
 }
+@media (min-width:769px){
+    .section{
+        height: 100vh;
+    }
+}
 
 h1 {
     font-size: 8vh;
     color:#bba559;
-    padding: 5px;
+    padding: 4px;
 }
 h2 {
     font-size: 4vh;
     color: #bba559;
-    padding: 5px;
+    padding: 4px;
 }
 h3 {
     font-size: 2vh;
     color: #bba559;
-    padding: 5px;
+    padding: 4px;
 }
 
 .btn {
     background: #1b1b1d;
     color: #bba559;
+}
+.speaker-image{
+    height: 50vh;
+    position: center;
 }
