@@ -6,11 +6,9 @@
 
 
 </style>
-<body class="raleway grey darken-4">
-    <div class="container">
-        <div id="landing">
-            
-        </div>
+<body class="raleway black">
+    <div id="landing">
+        
     </div>
     <div class="wrapper" style="display:none">
         <nav id="sidebar">
@@ -138,6 +136,13 @@
             // in our CSS
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
+    });
+    $("#landing").ready(()=>{
+        setTimeout(()=>{
+            $("#landing").slideUp(()=>{
+                $(".wrapper").slideDown();
+            });
+        },10010);
     });
 </script>
 </html>
