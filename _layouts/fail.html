@@ -140,6 +140,31 @@
 
     </div>
     <div class="footer" id="contact">
+        <form class="contact__form container" method="post" action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/mail.php">             
+            <!-- form message -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="contact__msg" style="display: none">
+                        <p>Your message was sent successfully.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end message -->
+
+            <!-- form element -->
+            <div class="row">
+                <div class="col-12 form-group">
+                    <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-12 form-group">
+                    <div class="g-recaptcha" data-sitekey="6Lcu2JIUAAAAAExPT9M3w1bLwXqCinAnGC57GEth"></div>
+                </div>
+                <div class="col-12">
+                    <input name="submit" type="submit" class="btn btn-success" value="Send Message">
+                </div>
+            </div>
+            <!-- end form element -->
+        </form>
         <div class="row text-center">
             <div class="col-xs-12 col-md-12 col-sm-12">
                 <ul class="list-inline pt-3">
@@ -161,6 +186,7 @@
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" ></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script> -->
+<script src="{{site.baseurl}}/js/main.js"></script>
 <script>
     var $sidebarCollapseBtn;
     var lastScrollTop = 0;
