@@ -1,12 +1,26 @@
 <!doctype html>
 <html lang="en">
 
-{% include head.html %}
+<!-- taken directlry from head.html with ganal removed -->
+        <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta charset="utf-8">
+                <!-- {% include ganal.html %} -->
+                {% include fbmeta.html %}
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+                <link rel="stylesheet" href="{{ "/css/custom-bootstrap.css" | prepend: site.baseurl }}">
+                <!-- <link rel="stylesheet" href="{{ "/css/materialize-colours.css" | prepend: site.baseurl }}"> -->
+              <title>{{site.title}}</title>
+                <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/logos/logo-ecell.png"/>
+            </head>
+            
 <link rel="stylesheet" href="{{site.baseurl}}/css/fail.css">
 
 
 </style>
-<body class="raleway black">
+<body class="raleway" style="background-color: black;">
     <div id="landing">
         
     </div>
@@ -53,35 +67,45 @@
         
         <div id="content" class="container-fluid">
             <div id="about" class="section">
-                <h2 class="text-center m-5">About FAIL!</h2>
-                <p class="text-white p-5">
-                    FAIL! is an initiative started from an international group of students at Massachusetts Institute of Technology (MIT). FAIL! has inspired people in Europe, and North America and now we are proud to bring it to Asia.
-                    <br>
-                    <br>FAIL! is an event aimed at embracing failures rather than giving up at them, hiding them, or ignoring the lessons they teach us. It is a celebration of the moments we generally don't share.
-                    <br>
-                    <br>Failure can happen to anyone, anywhere, and is a key to success. A misstep can happen to even professionals, experts, CEO’s, or professors. We bring them to FAIL! to share the meaning of their personal and professional failures and to understand the deeper meaning of failures.
-                    <br>
-                    <br>We have invited Indian youth icons from all over the country as far as Jammu to talk about the times they've had a setback in their lives, when they've fallen face first, and how they recovered and learned from these experiences.
-                </p>
-            </div>
-            <div id="speaker1" class="container section">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/ajay_spekarer-1.png">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 class="text-center m-4">Ajay Kumar Siotra</h2>
+                <div class="row p-5">
+                        <h2 class="text-center m-5">About FAIL!</h2>
                         <p class="text-white p-5">
-                            Ajay Kumar Siotra, one of Jammu's budding Entrepreneurs and owner of Cafe Scoorervala. An inspiration to many!
+                            FAIL! is an initiative started from an international group of students at Massachusetts Institute of Technology (MIT). FAIL! has inspired people in Europe, and North America and now we are proud to bring it to Asia.
                             <br>
-                            His passion for cooking reflected in his food. His MasterChef India apron was a mark of his determination.
+                            <br>FAIL! is an event aimed at embracing failures rather than giving up at them, hiding them, or ignoring the lessons they teach us. It is a celebration of the moments we generally don't share.
                             <br>
-                            Hurdling through the societal norms, Siotra followed his dreams. Elimination from the competition was a fall, but that definitely was his stepping stone to a bright future.
+                            <br>Failure can happen to anyone, anywhere, and is a key to success. A misstep can happen to even professionals, experts, CEO’s, or professors. We bring them to FAIL! to share the meaning of their personal and professional failures and to understand the deeper meaning of failures.
                             <br>
-                            He will be sharing his experiences and failures on 2nd March 2019 at IIIT, Hyderabad.
-                            <br>
-                            <a href="https://goo.gl/forms/uZVSufmysL05GRB42" style="color:#bba559"><button class="btn">RSVP here</button></a>
+                            <br>We have invited Indian youth icons from all over the country as far as Jammu to talk about the times they've had a setback in their lives, when they've fallen face first, and how they recovered and learned from these experiences.
                         </p>
+                </div>
+            </div>
+            <div id="speaker1" class="container-fluid">
+                <div class="section">    
+                    <div class="row speaker">
+                        <div class="col-sm-4">
+                            <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/ajay_spekarer-1.png">
+                        </div>
+                        <div class="col-sm-6">
+                            <h2 class="m-4">Ajay Kumar Siotra</h2>
+                            <div class="text-white m-4">
+                                    <p>
+                                        Ajay Kumar Siotra, one of Jammu's budding Entrepreneurs and owner of Cafe Scoorervala. An inspiration to many!
+                                    </p>
+                                    <p>
+                                        His passion for cooking reflected in his food. His MasterChef India apron was a mark of his determination.
+                                    </p>
+                                    <p>
+                                        Hurdling through the societal norms, Siotra followed his dreams. Elimination from the competition was a fall, but that definitely was his stepping stone to a bright future.
+                                    </p>
+                                    <p>
+                                        He will be sharing his experiences and failures on 2nd March 2019 at IIIT, Hyderabad.
+                                    </p>
+                                    <p>
+                                        <a href="https://goo.gl/forms/uZVSufmysL05GRB42" style="color:#bba559"><button class="btn">RSVP here</button></a>
+                                    </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,17 +113,23 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h2 class="text-center m-4">Pankhuri Gidwani</h2>
-                        <p class="text-white p-5">
-                            Ajay Kumar Siotra, one of Jammu's budding Entrepreneurs and owner of Cafe Scoorervala. An inspiration to many!
-                            <br>
-                            His passion for cooking reflected in his food. His MasterChef India apron was a mark of his determination.
-                            <br>
-                            Hurdling through the societal norms, Siotra followed his dreams. Elimination from the competition was a fall, but that definitely was his stepping stone to a bright future.
-                            <br>
-                            He will be sharing his experiences and failures on 2nd March 2019 at IIIT, Hyderabad.
-                            <br>
-                            <a href="https://goo.gl/forms/uZVSufmysL05GRB42" style="color:#bba559"><button class="btn">RSVP here</button></a>
-                        </p>
+                        <div class="text-white m-4">
+                            <p>
+                                Ajay Kumar Siotra, one of Jammu's budding Entrepreneurs and owner of Cafe Scoorervala. An inspiration to many!
+                            </p>
+                            <p>
+                                His passion for cooking reflected in his food. His MasterChef India apron was a mark of his determination.
+                            </p>
+                            <p>
+                                Hurdling through the societal norms, Siotra followed his dreams. Elimination from the competition was a fall, but that definitely was his stepping stone to a bright future.
+                            </p>
+                            <p>
+                                He will be sharing his experiences and failures on 2nd March 2019 at IIIT, Hyderabad.
+                            </p>
+                            <p>
+                                <a href="https://goo.gl/forms/uZVSufmysL05GRB42" style="color:#bba559"><button class="btn">RSVP here</button></a>
+                            </p>
+                        </div>
                     </div>
                     <div class="col-sm-6">
                         <img class="img-fluid speaker-image" src="/assets/speakers/pnkhuri_spekarer.png">
@@ -127,11 +157,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" ></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script> -->
 <script>
+    var $sidebarCollapseBtn;
     var lastScrollTop = 0;
     $(document).scroll(function(event){
         event.preventDefault();
@@ -148,15 +179,25 @@
         // $("#sidebar").mCustomScrollbar({
         //     theme: "minimal"
         // });
-        $("#sidebarCollapse").on("click",function () {
+        $sidebarCollapseBtn = $("#sidebarCollapse");
+        $sidebarCollapseBtn.on("click", function(){
             $('#sidebar').toggleClass('active');
-            // close dropdowns
-            $('.collapse.in').toggleClass('in');
-            // and also adjust aria-expanded attributes we use for the open/closed arrows
-            // in our CSS
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
+        toggleBtnState();
     });
+
+    function toggleBtnState(){
+        if(document.body.clientWidth >= 1000){
+            $sidebarCollapseBtn.hide();
+            $("#sidebar").addClass("active");
+        }else{
+            $sidebarCollapseBtn.show();
+            $sidebarCollapseBtn.click();
+        }
+    }
+
+    $(window).on("resize", toggleBtnState);
+    
     $("#landing").ready(()=>{
         setTimeout(()=>{
             $("#landing").slideUp(()=>{

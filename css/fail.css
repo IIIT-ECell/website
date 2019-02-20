@@ -144,6 +144,15 @@ a[data-toggle="collapse"] {
     transition: all 0.3s;
 }
 
+.row.speaker {
+    justify-content: center;
+    align-items: center;
+}
+
+.row.speaker > div:first-child {
+    text-align: center;
+}
+
 @media (max-width:768px) {
     #sidebar {
         width: 75vw;
@@ -173,6 +182,8 @@ a[data-toggle="collapse"] {
 @media (min-width:769px){
     .section{
         height: 100vh;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -184,7 +195,6 @@ h1 {
 h2 {
     font-size: 4vh;
     color: #bba559;
-    padding: 4px;
 }
 h3 {
     font-size: 2vh;
