@@ -54,7 +54,7 @@ html {
 }
 
 .active {
-    background-color: #bba559;
+    background-color: #ef2028;
     color: #1b1b1d;
 }
 
@@ -81,7 +81,7 @@ html {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #1b1b1d;
-    color: #bba559;
+    color: #ef2028;
 }
 
 #sidebar ul.components {
@@ -90,7 +90,7 @@ html {
 }
 
 #sidebar ul p {
-    color: #bba559;
+    color: #ef2028;
     padding: 10px;
 }
 #sidebar ul li a {
@@ -99,12 +99,12 @@ html {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #bba559;
+    color: #ef2028;
     background: #1b1b1d;
 }
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #1b1b1d;
-    background: #bba559;
+    background: #ef2028;
 }
 
 #content {
@@ -142,6 +142,7 @@ a[data-toggle="collapse"] {
     margin-left: 25vw;
     position: fixed;
     transition: all 0.3s;
+    z-index: 100;
 }
 
 .row.speaker {
@@ -162,7 +163,7 @@ a[data-toggle="collapse"] {
         min-height: 100vh;
         z-index: 999;
         background: #1b1b1d;
-        color: #bba559;
+        color: #ef2028;
         transition: all 0.3s;
     }
     #sidebar.active {
@@ -177,6 +178,7 @@ a[data-toggle="collapse"] {
     }
     #navbar {
         margin-left: 75vw;
+        z-index: 100;
     }
 }
 @media (min-width:769px){
@@ -189,22 +191,22 @@ a[data-toggle="collapse"] {
 
 h1 {
     font-size: 8vh;
-    color:#bba559;
+    color:#ef2028;
     padding: 4px;
 }
 h2 {
     font-size: 4vh;
-    color: #bba559;
+    color: #ef2028;
 }
 h3 {
     font-size: 2vh;
-    color: #bba559;
+    color: #ef2028;
     padding: 4px;
 }
 
 .btn {
     background: #1b1b1d;
-    color: #bba559;
+    color: #ef2028;
 }
 .speaker-image{
     height: 50vh;

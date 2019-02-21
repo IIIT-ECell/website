@@ -190,10 +190,14 @@
     });
 
     function toggleBtnState(){
-        if(document.body.clientWidth >= 1000){
+        console.log(document.body.clientWidth);
+        if(document.body.clientWidth >= 769){
+            console.log("Desktop");
             $sidebarCollapseBtn.hide();
-            $("#sidebar").addClass("active");
+            $("#sidebar").removeClass("active");
         }else{
+            console.log("Mobile");
+            $("#sidebar").addClass("active");
             $sidebarCollapseBtn.show();
             $sidebarCollapseBtn.click();
         }
