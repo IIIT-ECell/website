@@ -138,8 +138,8 @@ a[data-toggle="collapse"] {
 }
 
 #navbar {
-    height:10vh;
-    margin-left: 25vw;
+    /* height:10vh;
+    margin-left: 25vw; */
     position: fixed;
     transition: all 0.3s;
     z-index: 100;
