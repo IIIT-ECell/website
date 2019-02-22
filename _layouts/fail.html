@@ -187,6 +187,21 @@
             $('#sidebar').toggleClass('active');
         });
         toggleBtnState();
+        $.ajax({
+            type: "GET",
+            url: "https://researchweb.iiit.ac.in/~abhigyan.ghosh/messages.json",
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Headers": "*"
+            }
+        })
+        .done((response)=>{
+            console.log("snbd");
+            data_arr = json.parse(response);
+            console.log(data_arr);
+        })
+        ;
     });
 
     function toggleBtnState(){
