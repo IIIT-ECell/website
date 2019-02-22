@@ -2,24 +2,21 @@
 <html lang="en">
 
 <!-- taken directlry from head.html with ganal removed -->
-        <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <meta charset="utf-8">
-                <!-- {% include ganal.html %} -->
-                {% include fbmeta.html %}
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-                <link rel="stylesheet" href="{{ "/css/custom-bootstrap.css" | prepend: site.baseurl }}">
-                <!-- <link rel="stylesheet" href="{{ "/css/materialize-colours.css" | prepend: site.baseurl }}"> -->
-              <title>{{site.title}}</title>
-                <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/logos/logo-ecell.png"/>
-            </head>
-            
-<link rel="stylesheet" href="{{site.baseurl}}/css/fail.css">
-
-
-</style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <!-- {% include ganal.html %} -->
+    {% include fbmeta.html %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/css/custom-bootstrap.css" | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="{{ "/css/materialize-colours.css" | prepend: site.baseurl }}"> -->
+    <title>{{site.title}}</title>
+    <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/logos/logo-ecell.png"/>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/fail.css">
+</head>
+        
 <body class="raleway" style="background-color: black;">
     <div id="landing">
         
@@ -47,7 +44,7 @@
                             <a href="#speaker2">Pankhuri</a>
                         </li>
                         <li>
-                            <a href="#speaker3">Speaker 3</a>
+                            <a href="#speaker3">Aditi Avasthi</a>
                         </li>
                     </ul>
                 </li>
@@ -126,13 +123,37 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <img class="img-fluid speaker-image" src="/assets/speakers/pnkhuri_spekarer.png">
+                        <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/pnkhuri_spekarer.png">
+                    </div>
+                </div>
+            </div>
+
+            <div id="speaker3" class="container section">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/aditi_speaker_1.png">
+                    </div>                    
+                    <div class="col-sm-6">
+                        <h2 class="text-center m-4">Aditi Avasthi</h2>
+                        <div class="text-white m-4">
+                            <p>
+                                BBC’s 100 women tackling illiteracy, BW Disrupt’s list of 40 under 40, Fortune’s 40 under 40, BBC’s top 100 inspirational and innovative women, these are a few among the many lists Aditi Awasthi has made into after she founded Embibe, a technology and AI driven platform for education.
+                            </p>
+                            <p>
+                                Join Aditi Avasthi on 2nd March 2019 at FAIL!, brought to you by E-Cell IIIT-Hyderabad, as she talks about the challenges she faced on her path to becoming the CEO of the world's largest AI platform in education.
+                            </p>
+                            <p>
+                                <a href="https://goo.gl/forms/uZVSufmysL05GRB42" style="color:#bba559"><button class="btn">RSVP here</button></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- <iframe src="https://researchweb.iiit.ac.in/~abhigyan.ghosh/fail_wall.html">
+        </iframe> -->
     </div>
+       
     <div class="footer" id="contact">
         <form class="container" method="post" action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/mail.php">             
 
@@ -187,21 +208,12 @@
             $('#sidebar').toggleClass('active');
         });
         toggleBtnState();
-        $.ajax({
-            type: "GET",
-            url: "https://researchweb.iiit.ac.in/~abhigyan.ghosh/messages.json",
-            headers: {
-                "accept": "application/json",
-                "Access-Control-Allow-Origin":"*",
-                "Access-Control-Allow-Headers": "*"
-            }
-        })
-        .done((response)=>{
-            console.log("snbd");
-            data_arr = json.parse(response);
-            console.log(data_arr);
-        })
-        ;
+        $.getJSON("https://researchweb.iiit.ac.in/~abhigyan.ghosh/messages.json",function(data){
+            var items = [];
+            $.each(data, function(key,val){
+                console.log(val);
+            });
+        });
     });
 
     function toggleBtnState(){
