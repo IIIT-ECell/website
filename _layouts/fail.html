@@ -27,9 +27,9 @@
             </div>
             <ul class="list-unstyled components text-center">
                     <img src="/assets/logos/fail_logo.png" class="img-fluid">
-                    <h3>moments we dont usually share</h3>
+                    <h3>the moments we generally don't share</h3>
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="{{site.baseurl}}">E-Cell Home</a>
                 </li>
                 <li>
                     <a href="#about">About</a>
@@ -38,18 +38,24 @@
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Speakers</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#speaker1">Ajay Kumar</a>
+                            <a href="#speaker1">Ajay Kumar Siotra</a>
                         </li>
                         <li>
-                            <a href="#speaker2">Pankhuri</a>
+                            <a href="#speaker2">Pankhuri Gidwani</a>
                         </li>
                         <li>
                             <a href="#speaker3">Aditi Avasthi</a>
                         </li>
+                        <li>
+                            <a href="#speaker4">Dutee Chand</a>
+                        </li>
+                        <li>
+                            <a href="#speaker5">Viiveck Verma</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#failure-story">Your Failure Story</a>
                 </li>
             </ul>
         </nav>
@@ -63,30 +69,30 @@
         </div>
         
         <div id="content" class="container-fluid">
-            <div id="about" class="section">
+            <div id="about" class="section container-fluid">
                 <div class="row p-5">
-                        <h2 class="text-center p-5 m-5">About FAIL!</h2>
-                        <p class="text-white">
+                        <h1 class="text-center pr-5 mr-5">About FAIL!</h1>
+                        <p class="text-white pb-4">
                             Started at the Massachusetts Institute of Technology with professors from MIT and the Ivy League colleges as past speakers,  FAIL! has now reached Asia at IIIT Hyderabad. Some past speakers of FAIL! include Mira Wilczek(President and CEO of Cogo Labs), Daniel Jackson (Professor and Associate Director of the Computer Science and Artificial Intelligence Lab at the Massachusetts Institute of Technology) and Deborah Blum(Director of the Knight Science Journalism Program).
                         </p>
-                        <p class="text-white">
+                        <p class="text-white pb-4">
                             FAIL! is aimed at facing the moments of failure head-on, sharing them and most importantly improving by them. It is a celebration of moments we don’t generally share.
                         </p>
-                        <p class="text-white">
+                        <p class="text-white pb-4">
                             Come listen to the failure stories of youth icons from all over India as they share their struggles on their journey to success:
                         </p>
                                 
                 </div>
             </div>
-            <div id="speaker1" class="container-fluid">
-                <div class="section">    
-                    <div class="row speaker">
+            <div id="speaker1" class="section container-fluid">
+                <!-- <div class="section">     -->
+                    <div class="row speaker py-5">
                         <div class="col-sm-4">
                             <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/ajay_spekarer-1.png">
                         </div>
-                        <div class="col-sm-6">
-                            <h2 class="m-4">Ajay Kumar Siotra</h2>
-                            <div class="text-white m-4">
+                        <div class="col-sm-8">
+                            <h2 class="text-center m-4">Ajay Kumar Siotra</h2>
+                            <div class="text-white px-3">
                                     <p>
                                         Ajay Kumar Siotra, one of Jammu's budding Entrepreneurs and owner of Cafe Scoorervala. An inspiration to many!
                                     </p>
@@ -105,13 +111,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
-            <div id="speaker2" class="container section">
-                <div class="row">
-                    <div class="col-sm-6">
+            <div id="speaker2" class="section container-fluid">
+                <div class="row speaker py-5">
+                    <div class="col-sm-4">
+                        <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/pnkhuri_spekarer.png">
+                    </div>
+                    <div class="col-sm-8">
                         <h2 class="text-center m-4">Pankhuri Gidwani</h2>
-                        <div class="text-white m-4">
+                        <div class="text-white px-3">
                             <p>
                                 Pankhuri Gidwani is the face of the new generation. As the 2nd runner up in Miss India 2016, and the brand ambassador of Women Power Line 1090, she's a testament to the fact that age is no barrier for making a mark.
                             </p>
@@ -123,20 +132,17 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/pnkhuri_spekarer.png">
-                    </div>
                 </div>
             </div>
 
-            <div id="speaker3" class="container section">
-                <div class="row">
-                    <div class="col-sm-6">
+            <div id="speaker3" class="section container-fluid">
+                <div class="row speaker py-5">
+                    <div class="col-sm-4">
                         <img class="img-fluid speaker-image" src="{{site.baseurl}}/assets/speakers/aditi_speaker_1.png">
                     </div>                    
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                         <h2 class="text-center m-4">Aditi Avasthi</h2>
-                        <div class="text-white m-4">
+                        <div class="text-white px-3">
                             <p>
                                 BBC’s 100 women tackling illiteracy, BW Disrupt’s list of 40 under 40, Fortune’s 40 under 40, BBC’s top 100 inspirational and innovative women, these are a few among the many lists Aditi Awasthi has made into after she founded Embibe, a technology and AI driven platform for education.
                             </p>
@@ -151,11 +157,14 @@
                 </div>
             </div>
 
-            <div id="speaker4" class="container section">
-                <div class="row">
-                    <div class="col-sm-6">
+            <div id="speaker4" class="section container-fluid">
+                <div class="row speaker py-5">
+                    <div class="col-sm-4">
+                        <img class="img-fluid speaker-image" src="/assets/speakers/duteechand_spekarer.png">
+                    </div>
+                    <div class="col-sm-8">
                         <h2 class="text-center m-4">Dutee Chand</h2>
-                        <div class="text-white m-4">
+                        <div class="text-white px-3">
                             <p>
                                 From being India's most loved athlete to facing the wrath of her own people, from being India's third ever woman athlete to qualify 100 metres event in summer Olympics to fighting for her rights in the court Dutee Chand is an epitome for all those people who choose fight over flight because when you choose fight you become a legend like our speaker Ms. Dutee Chand.
                             </p>
@@ -167,18 +176,18 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <img class="img-fluid speaker-image" src="/assets/speakers/duteechand_spekarer.png">
-                    </div>
                 </div>
             </div>
 
 
-            <div id="speaker5" class="container section">
-                <div class="row">
-                    <div class="col-sm-6">
+            <div id="speaker5" class="section container-fluid">
+                <div class="row speaker py-5">
+                    <div class="col-sm-4">
+                        <img class="img-fluid speaker-image" src="/assets/speakers/viiveck_speaker.png">
+                    </div>
+                    <div class="col-sm-8">
                         <h2 class="text-center m-4">Viiveck Verma</h2>
-                        <div class="text-white m-4">
+                        <div class="text-white px-3">
                             <p>
                                 From being in the corporate world for many years to be a startup ecosystem enabler, Viiveck Verma has donned many caps. The ex-CEO of Karvy Data Management Services who is now a Board Member of investing community Hyderabad Angels(the third largest startup investment ecosystem enabler in the country) and the chief strategy officer & head retail at Srinivasa Farms.
                             </p>
@@ -193,9 +202,6 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <img class="img-fluid speaker-image" src="/assets/speakers/viiveck_speaker.png">
-                    </div>
                 </div>
             </div>
         </div>
@@ -203,7 +209,7 @@
         </iframe> -->
     </div>
        
-    <div class="footer" id="contact">
+    <div class="footer" id="failure-story">
         <form class="container" method="post" action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/mail.php">             
 
             <!-- form element -->

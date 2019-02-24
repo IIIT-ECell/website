@@ -154,7 +154,19 @@ a[data-toggle="collapse"] {
     text-align: center;
 }
 
+
+
 @media (max-width:768px) {
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    html {
+        font-size: 1rem;
+    }
+
     #sidebar {
         width: 75vw;
         position: fixed;
@@ -181,18 +193,37 @@ a[data-toggle="collapse"] {
         z-index: 100;
     }
 }
+
+
+@media (max-width:768px) and (orientation: portrait) {
+
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+
 @media (min-width:769px){
     .section{
         height: 100vh;
         display: flex;
         align-items: center;
     }
+    .section.container-fluid {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+body {
+    font-family: 'Raleway';
 }
 
 h1 {
     font-size: 8vh;
     color:#ef2028;
     padding: 4px;
+    font-family: 'Bebas Neue';
 }
 h2 {
     font-size: 4vh;
@@ -209,6 +240,15 @@ h3 {
     color: #ef2028;
 }
 .speaker-image{
-    height: 50vh;
+    width: 100%;
+    height: auto;
     position: center;
+}
+
+.collapse.list-unstyled {
+    font-size: 0.9rem;
+}
+
+.container-fluid {
+    min-height: 100vh;
 }
