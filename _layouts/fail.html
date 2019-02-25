@@ -19,7 +19,9 @@
         
 <body class="raleway" style="background-color: black;">
     <div id="landing">
-        
+        <video id="back-vid" preload="preload" autoplay muted autobuffer>
+            <source src="/assets/back/FAIL_INTRO.webm" type="video/webm"></source>
+        </video>
     </div>
     <div class="wrapper" style="display:none">
         <nav id="sidebar">
@@ -281,7 +283,7 @@
 
     $(window).on("resize", toggleBtnState);
     
-    $("#landing").ready(()=>{
+    $("#back-vid").ready(()=>{
         setTimeout(()=>{
             $("#landing").slideUp(()=>{
                 $(".wrapper").slideDown();
