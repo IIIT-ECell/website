@@ -43,11 +43,7 @@ html {
     font-size: 2vh;
 }
 
-#landing {
-    background: url('../assets/back/fback.png');
-    background-size: contain;
-    background-repeat: no-repeat; 
-    background-position: center;
+#back-vid {
     height: 100vh;
     width:100%;
     overflow: hidden;
@@ -203,12 +199,12 @@ a[data-toggle="collapse"] {
 }
 
 
+.section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 @media (min-width:769px){
-    .section{
-        height: 100vh;
-        display: flex;
-        align-items: center;
-    }
     .section.container-fluid {
         padding-left: 3rem;
         padding-right: 3rem;

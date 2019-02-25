@@ -19,7 +19,9 @@
         
 <body class="raleway" style="background-color: black;">
     <div id="landing">
-        
+        <video id="back-vid" src="/assets/back/FAIL_INTRO.webm" type="video/webm" preload="preload" autoplay muted autobuffer>
+            <!-- <source src="/assets/back/FAIL_INTRO.webm" type="video/webm"></source> -->
+        </video>
     </div>
     <div class="wrapper" style="display:none">
         <nav id="sidebar">
@@ -27,7 +29,7 @@
             </div>
             <ul class="list-unstyled components text-center">
                     <img src="/assets/logos/fail_logo.png" class="img-fluid">
-                    <h3>the moments we generally don't share</h3>
+                    <h3>Inspiring resilience</h3>
                 <li>
                     <a href="{{site.baseurl}}">E-Cell Home</a>
                 </li>
@@ -287,12 +289,11 @@
 
     $(window).on("load", toggleBtnState);
     
-    $("#landing").ready(()=>{
-        setTimeout(()=>{
+    document.getElementById("back-vid").addEventListener('ended',()=>{
+            console.log('video ended');
             $("#landing").slideUp(()=>{
                 $(".wrapper").slideDown();
             });
-        },500);
-    });
+    },false);
 </script>
 </html>

@@ -435,3 +435,7 @@ button.downb {
 .navbar-collapse.pt-3.collapse.show {
     background-color: #111628;
 }
+
+p {
+    text-align: justify;
+}
