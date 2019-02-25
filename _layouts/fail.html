@@ -28,36 +28,37 @@
             <div class="sidebar-header">
             </div>
             <ul class="list-unstyled components text-center">
-                    <img src="/assets/logos/fail_logo.png" class="img-fluid">
-                    <h3>Inspiring resilience</h3>
+                <div class="mb-3">
+                    <img src="/assets/logos/fail_below_white.png" class="img-fluid p-5">
+                </div>
                 <li>
-                    <a href="{{site.baseurl}}">E-Cell Home</a>
+                    <a href="{{site.baseurl}}" onclick="hidebar()">E-Cell Home</a>
                 </li>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" onclick="hidebar()">About</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Speakers</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#speaker1">Ajay Kumar Siotra</a>
+                            <a href="#speaker1" onclick="hidebar()">Ajay Kumar Siotra</a>
                         </li>
                         <li>
-                            <a href="#speaker2">Pankhuri Gidwani</a>
+                            <a href="#speaker2" onclick="hidebar()">Pankhuri Gidwani</a>
                         </li>
                         <li>
-                            <a href="#speaker3">Aditi Avasthi</a>
+                            <a href="#speaker3" onclick="hidebar()">Aditi Avasthi</a>
                         </li>
                         <li>
-                            <a href="#speaker4">Dutee Chand</a>
+                            <a href="#speaker4" onclick="hidebar()">Dutee Chand</a>
                         </li>
                         <li>
-                            <a href="#speaker5">Viiveck Verma</a>
+                            <a href="#speaker5" onclick="hidebar()">Viiveck Verma</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#contact">Your Failure Story</a>
+                    <a href="#contact" onclick="hidebar()">Your Failure Story</a>
                 </li>
             </ul>
         </nav>
@@ -212,14 +213,19 @@
     </div>
        
     <div class="footer" id="contact">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Let us know your failure story!</h2>
+            </div>
+        </div>
         <form class="container" method="post" action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/mail.php">             
 
             <!-- form element -->
             <div class="row">
-                <div class="col-12 form-group">
-                    <textarea name="message" id="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                <div class="col-sm-12 form-group">
+                    <textarea name="message" id="message" class="form-control" rows="3" placeholder="Your story" required></textarea>
                 </div>
-                <div class="col-12">
+                <div class="col-sm-12">
                     <input name="submit" type="submit" class="btn btn-success" value="Send Message">
                 </div>
             </div>
@@ -295,5 +301,9 @@
                 $(".wrapper").slideDown();
             });
     },false);
+
+    function hidebar(){
+        $("#sidebar").toggleClass("active");
+    }
 </script>
 </html>
