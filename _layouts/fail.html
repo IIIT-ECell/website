@@ -19,8 +19,8 @@
         
 <body class="raleway" style="background-color: black;">
     <div id="landing">
-        <video id="back-vid" preload="preload" autoplay muted autobuffer>
-            <source src="/assets/back/FAIL_INTRO.webm" type="video/webm"></source>
+        <video id="back-vid" src="/assets/back/FAIL_INTRO.webm" type="video/webm" preload="preload" autoplay muted autobuffer>
+            <!-- <source src="/assets/back/FAIL_INTRO.webm" type="video/webm"></source> -->
         </video>
     </div>
     <div class="wrapper" style="display:none">
@@ -283,12 +283,11 @@
 
     $(window).on("resize", toggleBtnState);
     
-    $("#back-vid").ready(()=>{
-        setTimeout(()=>{
+    document.getElementById("back-vid").addEventListener('ended',()=>{
+            console.log('video ended');
             $("#landing").slideUp(()=>{
                 $(".wrapper").slideDown();
             });
-        },10010);
-    });
+    },false);
 </script>
 </html>
