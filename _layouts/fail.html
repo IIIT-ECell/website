@@ -208,18 +208,25 @@
                 </div>
             </div>
         </div>
-        <!-- <iframe src="https://researchweb.iiit.ac.in/~abhigyan.ghosh/fail_wall.html">
-        </iframe> -->
     </div>
+    <!-- <iframe src="https://researchweb.iiit.ac.in/~abhigyan.ghosh/fail_wall.html">
+    </iframe> -->
        
     <div class="footer" id="contact">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2>Let us know your failure story!</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Let us know your failure story!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a href="https://researchweb.iiit.ac.in/~abhigyan.ghosh/fail_wall.html">See other's failure stories</a>
+                </div>
             </div>
         </div>
         <form class="container" method="post" action="https://researchweb.iiit.ac.in/~abhigyan.ghosh/mail.php">             
-
+            
             <!-- form element -->
             <div class="row">
                 <div class="col-sm-12 form-group">
@@ -303,7 +310,9 @@
     },false);
 
     function hidebar(){
-        $("#sidebar").toggleClass("active");
+        if(document.body.clientWidth <= 769){
+            $("#sidebar").toggleClass("active");
+        }
     }
 </script>
 </html>
