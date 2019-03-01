@@ -1,3 +1,8 @@
+---
+title: Fail!
+permalink: /fail/
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,9 +24,9 @@
         
 <body class="raleway" style="background-color: black;">
     <div id="landing">
-        <video id="back-vid" src="/assets/back/FAIL_INTRO.webm" type="video/webm" preload="preload" autoplay muted autobuffer>
+        <!-- <video id="back-vid" src="/assets/back/FAIL_INTRO.webm" type="video/webm" preload="preload" autoplay muted autobuffer> -->
             <!-- <source src="/assets/back/FAIL_INTRO.webm" type="video/webm"></source> -->
-        </video>
+        <!-- </video> -->
     </div>
     <div class="wrapper" style="display:none">
         <nav id="sidebar">
@@ -32,7 +37,7 @@
                     <img src="/assets/logos/fail_below_white.png" class="img-fluid p-5">
                 </div>
                 <li>
-                    <a href="{{site.baseurl}}" onclick="hidebar()">E-Cell Home</a>
+                    <a href="https://ecell.iiit.ac.in/" onclick="hidebar()">E-Cell Home</a>
                 </li>
                 <li>
                     <a href="#about" onclick="hidebar()">About</a>
@@ -61,6 +66,12 @@
                     <a href="#contact" onclick="hidebar()">Your Failure Story</a>
                 </li>
             </ul>
+            <div style="width: 100%; background-color: white; bottom: 0;">
+                Sponsored by 
+                <a href="https://www.fintapp.com/" target="_blank">
+                    <img src="../assets/sponsors/fintapp1.png" alt="fintapp" style="width: 50%;">
+                </a>
+            </div>
         </nav>
         <div id="navbar">
             <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark"> -->
@@ -76,7 +87,7 @@
                 <div class="row p-5">
                         <h1 class="text-center pr-5 mr-5">About FAIL!</h1>
                         <p class="text-white pb-4">
-                            Started at the Massachusetts Institute of Technology with professors from MIT and the Ivy League colleges as past speakers,  FAIL! has now reached Asia at IIIT Hyderabad. Some past speakers of FAIL! include Mira Wilczek(President and CEO of Cogo Labs), Daniel Jackson (Professor and Associate Director of the Computer Science and Artificial Intelligence Lab at the Massachusetts Institute of Technology) and Deborah Blum(Director of the Knight Science Journalism Program).
+                            Started at the Massachusetts Institute of Technology with professors from MIT and the Ivy League colleges as past speakers,  FAIL! has now reached Asia at IIIT Hyderabad. Some past speakers of FAIL! include Mira Wilczek (President and CEO of Cogo Labs), Daniel Jackson (Professor and Associate Director of the Computer Science and Artificial Intelligence Lab at the Massachusetts Institute of Technology) and Deborah Blum(Director of the Knight Science Journalism Program).
                         </p>
                         <p class="text-white pb-4">
                             FAIL! is aimed at facing the moments of failure head-on, sharing them and most importantly improving by them. It is a celebration of moments we don’t generally share.
@@ -207,11 +218,13 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
     <!-- <iframe src="https://researchweb.iiit.ac.in/~abhigyan.ghosh/fail_wall.html">
     </iframe> -->
-       
+    
     <div class="footer" id="contact">
         <div class="container">
             <div class="row">
@@ -302,12 +315,20 @@
 
     $(window).on("load", toggleBtnState);
     
-    document.getElementById("back-vid").addEventListener('ended',()=>{
-            console.log('video ended');
+    // document.getElementById("back-vid").addEventListener('ended',()=>{
+    //         console.log('video ended');
+    //         $("#landing").slideUp(()=>{
+    //             $(".wrapper").slideDown();
+    //         });
+    // },false);
+
+    $("#landing").ready(()=>{
+        setTimeout(()=>{
             $("#landing").slideUp(()=>{
                 $(".wrapper").slideDown();
             });
-    },false);
+        },1000);
+    });
 
     function hidebar(){
         if(document.body.clientWidth <= 769){

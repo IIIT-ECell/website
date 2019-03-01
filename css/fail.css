@@ -43,9 +43,21 @@ html {
     font-size: 2vh;
 }
 
-#back-vid {
+/* #back-vid {
     height: 100vh;
     width:100%;
+    overflow: hidden;
+} */
+
+#landing {
+    /* background: url('../assets/back/fail_back.gif'); */
+    background: url('../assets/back/fback.png');
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
     overflow: hidden;
 }
 
