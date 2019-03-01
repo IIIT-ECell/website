@@ -260,3 +260,12 @@ h3 {
 .container-fluid {
     min-height: 100vh;
 }
+
+#helper {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
