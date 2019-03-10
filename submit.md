@@ -1,6 +1,6 @@
 ---
 layout: redirect
-title : Redireecting to submission portal
+title : Redirecting to submission portal
 permalink : /submit/
 ---
 
