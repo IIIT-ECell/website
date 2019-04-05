@@ -1,0 +1,31 @@
+name,about,project,about_project,npos,duration,start,skills,stipend,type,perks,more_details
+Finoramic,Cheap and easy credit for everyone...,Finoramic,Intern will work with Finoramic Team on various ML/AI and software development projects ,2,3 months (possible extension) ,5/1/2019,Basic Programming ,TBD (based on interview),Work at Office,,
+Nourishwel,We are a preventive healthcare company focused on nutrition. We provide a digital health care platform . To the  customer we provide a virtual personal nutrition partner.,Food Tracker,Develop AI based solution to track the food that has been consumed and the impact it has. ,3,3 months,5/1/2019,Ai,20000,Work from Home,Certificate,
+XMACHINES,"XMACHINES is a robotics startup developing Autonomous Mobile robots for multiple industries like Research, Manufacturing and Warehousing. We recenlty got selected in CIE Avishkar program and funded by IIIT-H foundadtion.",Autonomous Mobile Robots,To develop Navigation part in our mobile robots we need Interns from IIIT who has hands-on experience with ROS.,1,3 months,10/4/2019,"ROS, Python",8000-12000,Work at Office,,
+ROSCO-Auto CPR Pvt. Ltd. ,"We are developing IOT smart CPR. Instead of performing manual CPR, our product gives mechanical CPR which is integrated with defibrillator, ECG and IOT to save time and achieve higher servival rates of heart stokes ",IOT Smart CPR ,"We are developing an automated CPR with built-in defibrillator, ECG and integrated with IOT device to save time and increase servival rates of heat stroke patients ",2,6 months,5/1/2019,"Electrical and communication, programming, Ms office, mechanical design ",Stipend will provide depends on intern ,Both are Suitable,Certificate and Stipend ,
+Paymatrix,Paymatrix simplifies property rent payments and collections.,Build Scalable modern web app and progress web app, 1. Build front end in Vue 2. Build Rest API  3. Progresive web app,3,2-3 Months,1/5/2019,"Javascript, Vue, PHP, Laravel,  MySql,  REST API, Micro-services, PWA, Cloud (AWS/GCP). Experience Vue or Laravel or PWA is good to have.",Yes ,Work at Office,"Stipend for Work at office with team, Certificate, recommendation letter and pre-placement offer (Based on available position)",
+AlgoLeap Technologies Private Limited,"AlgoLeap is an advanced analytics firm specializing in the application of machine intelligence to enhance decision-making, augment customer engagement and embed self-learning and selfimproving intelligence into enterprise platforms and processes.",Product Development,"Analyzing, Understanding and preparation of Data Mapping through Documents, data dictionary, BRD, FDD documentation. • Provide estimates on test Effort based on this analysis. • Creating ETLs for the source, target dimension and fact table data based on data mappings. Create data validation scripts. • Create reports by translating ETL/BI mappings into SQL queries.",,3 mpnths,4/10/2019,"Strong proficiency in MySQL development skills.
+• Design high-performance database schemas for large volumes of data (TBs of data)
+• Decent experience with recent versions of MySQL
+• Proficient in writing stored procedures.
+• Proficient in writing and optimizing SQL statements
+• Knowledge of MySQL features, such as its event scheduler
+• Very good understanding on ETL tools and ETL activities
+• Good at understanding Data Lineage from different systems.
+• Should be Hands-on running and debugging Pentaho Jobs, SQL queries
+• Experience in creating OLTP and OLAP Data ware house using Pentaho Suite (Pentaho Data
+Integration/Kettle, Pentaho BI Server
+• Deep knowledge of ETL processes and/or other migration tools.
+• Using bunch of transformations in Pentaho transformations including Row Normalizer, Row
+Demoralizer, Database Lookup, Database Join, Calculator, Add Sequence, Add Constants and
+various types of inputs and outputs for various data sources including Tables, Access, Text File,
+Excel and CSV file.",Yes,Work at Office,Stipend,
+Bitaces,"At Bitaces, we provide scalable cybersecurity solutions that help enterprises safeguard confidential and proprietary data from security risks such as malicious insiders, network vulnerabilities and inadequate security policies.",Bitaces,Outreach/marketing/sales for blockchain cybersecurity solutions.,3,2-3months,4/15/2019,"Communication, critical thinking",Variable,Both are Suitable,"Certificate, flexibility ",
+Onward Assist (www.onwardhealth.ai),"Onward Assist (www.onwardhealth.ai) is a state-of-the-art AI platform for oncology that helps clinicians make better medical decisions. The platform provides automated diagnostic tools and decision support tools to be used by Histopathologists, Radiologists or Oncologists. The core work at Onward is in Computer Vision, building models to analyse medical images.",ML/ Computer Vision based classifiers for medical images,"(1.) Analysis of academic literature, papers in relevant areas, (2.) Basic refinement and build of compuer vision code and reporting of validation results, accracies, (3.) Advanced interns ",2,2 Months (extendable based on quality of work),5/1/2019,"(1.)Need-to-have (Atleast 2 of the following): Python (Excellent) | Matlab (Intermediate) | Good Communication Skills | Openness & Keen to research and learn new skills. 
+(2.)Nice-to-Have: Programming Skills - Java, JS, C/C++, Angular (Excellent). ",8000 to 12000,Work at Office,"Internship Letter (based on completion of Tasks, Milestones)","Interested candidates can research 1-2 papers in the areas around ML-based automated detection in medical images (histopathology or Mammography), and can share with us, if there are specific areas they want to work in."
+Aided,"Aided is an AI & Hea­lthcare startup buil­ding intelligent sol­utions to aid, evalu­ate and assist speci­al needs children. ",Aided.ai,Building Web/Mobile applications to screen and assist Special needs children,2,6 Months - 1 Year,5/1/2019,"Full Stack Python Developers & AI Engineers (NLP, ML & Deep Learning)",12000 PM,Both are Suitable,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+, ,,,,,,,,,,
