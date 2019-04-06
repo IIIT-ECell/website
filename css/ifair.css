@@ -1,9 +1,20 @@
-#company-list {
+#company-list,
+#filter-list {
     margin: auto;
     width: 75%;
+    margin-top: 0;
 }
 
 .card-header .btn {
     width: 100%;
     text-align: left;
+}
+
+#filter-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#filter-list ul li {
+    margin-bottom: 5px;
 }
