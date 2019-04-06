@@ -9,9 +9,9 @@ layout : wrapper
 
     If the csv gets updated, please copy paste the first line from `_data/ifair_headers` to `_data/ifair.csv`
 {% endcomment %}
+<link rel="stylesheet" href="../css/ifair.css">
 
-<!-- TODO: remove this style inline -->
-<div id="company-list" style="margin: auto; width: 75%;" class="mb-5 mt-5">
+<div id="company-list"  class="mb-5 mt-5">
     {% for row in site.data.ifair %}
     {% if row.name %}
         {% capture cnt %}{% increment count %}{% endcapture %}

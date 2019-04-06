@@ -1,0 +1,9 @@
+#company-list {
+    margin: auto;
+    width: 75%;
+}
+
+.card-header .btn {
+    width: 100%;
+    text-align: left;
+}
