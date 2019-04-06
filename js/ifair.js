@@ -40,22 +40,19 @@ function filterCompanies() {
             if (!lambda) continue;
             if (!lambda(comp)) shouldDisplay = false;
         }
-        console.log(comp.comp, shouldDisplay);
         displayBasedOnFlag(comp.comp, shouldDisplay);
     });
 }
 
 function filterByStipend() {
-    var min = $minStipendInput.value || 0,
-        max = $minStipendInput.value || 1e9;
-    filters.stipend = function(x) {
-        return x.stipend >= min && x.stipend <= max;
-    };
+    var min = +$minStipendInput.value || 0,
+        max = +$maxStipendInput.value || 1e9;
+    filters.stipend = x => x.stipend >= min && x.stipend <= max;
     filterCompanies();
 }
 
 function filterByDuration() {
-    var min = $minDurationInput.value || 0;
+    var min = +$minDurationInput.value || 0;
 
     filters.duration = x => x.duration >= min;
     filterCompanies();
