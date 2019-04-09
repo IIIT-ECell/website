@@ -8,7 +8,7 @@ function getAllCompanies() {
         comp: x,
         stipend: getCompanyStipend(x),
         duration: getCompanyDuration(x),
-        remote: true
+        remote: getCompanyRemote(x)
     }));
 }
 
@@ -21,7 +21,7 @@ function getCompanyDuration(company) {
 }
 
 function getCompanyRemote(company) {
-    return true;
+    return company.querySelector(".type").innerHTML;
 }
 
 // string, function
@@ -47,7 +47,7 @@ function filterCompanies() {
 function filterByStipend() {
     var min = +$minStipendInput.value || 0,
         max = +$maxStipendInput.value || 1e9;
-    filters.stipend = x => x.stipend >= min && x.stipend <= max;
+    filters.stipend = x => x.stipend >= min && x.stipend <= max || isNaN(x.stipend);
     filterCompanies();
 }
 
@@ -59,7 +59,12 @@ function filterByDuration() {
 }
 
 function filterByRemote() {
-    filters.remote = x => x.remote;
+    if($remoteWorkInput.checked){
+        console.log("checked")
+        filters.remote = x => x.remote=="Work from Home" || x.remote=="Both are Suitable";
+    }
+    else
+        filters.remote = x => x.remote;
     filterCompanies();
 }
 
