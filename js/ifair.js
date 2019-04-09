@@ -13,7 +13,7 @@ function getAllCompanies() {
 }
 
 function getCompanyStipend(company) {
-    return Number.parseInt(company.querySelector(".stipend").innerHTML, 10);
+    return company.querySelector(".stipend").innerHTML;
 }
 
 function getCompanyDuration(company) {
@@ -47,7 +47,16 @@ function filterCompanies() {
 function filterByStipend() {
     var min = +$minStipendInput.value || 0,
         max = +$maxStipendInput.value || 1e9;
-    filters.stipend = x => x.stipend >= min && x.stipend <= max || isNaN(x.stipend);
+    filters.stipend = x => {
+        let s = x.stipend;
+        if (!/\d+(-\d+)?/.test(s)) return true;
+        if (s.indexOf("-") == -1) {
+            return +x.stipend >= min && +x.stipend <= max;
+        } else {
+            let compData = s.split("-").map(Number.parseInt);
+            return (compData[0] >= min && compData[0] <= max) || (compData[1] >= min && compData[1] <= max);
+        }
+    };
     filterCompanies();
 }
 
@@ -59,12 +68,9 @@ function filterByDuration() {
 }
 
 function filterByRemote() {
-    if($remoteWorkInput.checked){
-        console.log("checked")
-        filters.remote = x => x.remote=="Work from Home" || x.remote=="Both are Suitable";
-    }
-    else
-        filters.remote = x => x.remote;
+    if ($remoteWorkInput.checked) {
+        filters.remote = x => x.remote == "Work from Home" || x.remote == "Both are Suitable";
+    } else filters.remote = () => true;
     filterCompanies();
 }
 

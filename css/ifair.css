@@ -28,17 +28,20 @@
     padding-left: 1vh;
 }
 
-
 #filter-list ul li {
     margin-bottom: 5px;
 }
 
-.bg-navy{
+.bg-navy {
     background: #001f3f;
 }
-.bg-pinkred{
+.bg-pinkred {
     background: #e14658;
 }
-.bg-gold{
+.bg-gold {
     background: #bba559;
+}
+
+.apply-btn {
+    font-size: 30px;
 }

@@ -34,17 +34,20 @@ fields:
 {% endcomment %}
   <div class="row"> 
     <div class="col-sm-3 bg-navy text-white text-center">
-      <div id="filter-list" class="sticky-top">
+      <div id="filter-list" class="sticky-top">        
         <b>Filter by:</b>
         <ul class="list-unstyled">
-            <li class="pt-3">Stipend range(total): </li>
-            <li><input id="minstipend" type="number" placeholder="Minimum"></li>
-            <li>to</li>
-            <li><input id="maxstipend" type="number" placeholder="Maximum"></li>
-            <li class="pt-3">Minimum work duration (months): <input type="number" id="minduration"></li>
-            <li class="pt-3"><label for="remotework">Remote work</label> <input type="checkbox" id="remotework"></li>
-            <li class="pt-3"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd0lHayGJtO5IqGhXyyTKaZmMqtQ1BjuP7YGeYfwdfwSBH8YA/viewform"><button class="btn bg-gold">Apply Here!</button></a></li>
+          <li class="pt-3">Stipend range (per month): </li>
+          <li><input id="minstipend" type="number" placeholder="Minimum" class="form-control"></li>
+          <li>to</li>
+          <li><input id="maxstipend" type="number" placeholder="Maximum" class="form-control"></li>
+          <li class="pt-3">Minimum work duration (months): <input type="number" id="minduration"  class="form-control"></li>
+          <li class="pt-3"><label for="remotework">Remote work</label> <input type="checkbox" id="remotework"  class="form-check-input"></li>
+          <li class="pt-3"><button class="btn btn-primary">Filter</button></li>
         </ul>
+        <div class="pt-5 pb-2">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0lHayGJtO5IqGhXyyTKaZmMqtQ1BjuP7YGeYfwdfwSBH8YA/viewform"><button class="btn bg-gold apply-btn">Apply Here!</button></a>
+        </div>
       </div>
     </div>
     <div id="company-list" class="pb-5 pt-5 col-sm-9">
