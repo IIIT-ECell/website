@@ -22,13 +22,13 @@ layout: page
 
 <div class="row text-center">
 	{% for names in site.data.partners %}
-	{% if names.current %}
-	<div class="col-md-4 col-xs-4 col-sm-4">
-	<a href="{{names.url}}"" target="_blank">
-			<img src="../assets/partners/{{names.pic}}" alt="{{names.partner}}" class="img-fluid ilink p-3">
-		</a>
-	</div>
-	{% endif %}
+        {% if names.current %}
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <a href="{{names.url}}" target="_blank">
+                    <img src="../assets/partners/{{names.pic}}" alt="{{names.partner}}" class="img-fluid ilink p-3">
+                </a>
+            </div>
+        {% endif %}
 	{% endfor %}
 </div>
 

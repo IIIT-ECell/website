@@ -1,0 +1,47 @@
+/* #company-list {
+    position: relative;
+    margin-left: 25%;
+} */
+
+.company-name {
+    font-weight: bold;
+}
+
+.card-header .btn.btn-info {
+    text-align: left;
+    color: white !important;
+    background-color: #4d6ae3;
+}
+
+.card-header .btn.btn-info:hover {
+    color: white !important;
+}
+
+.card-body .field {
+    font-weight: bold;
+}
+
+#filter-list {
+    /* margin: 20px 0 20px 20px; */
+    /* background-color: #e14658; */
+    padding-top: 10vh;
+    padding-left: 1vh;
+}
+
+#filter-list ul li {
+    margin-bottom: 5px;
+}
+
+.bg-navy {
+    background: #001f3f;
+}
+.bg-pinkred {
+    background: #e14658;
+}
+.bg-gold {
+    background: #bba559;
+}
+
+.apply-btn {
+    font-size: 30px;
+}
