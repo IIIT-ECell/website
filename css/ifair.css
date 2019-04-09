@@ -1,8 +1,6 @@
-#company-list,
-#filter-list {
-    margin: auto;
-    width: 75%;
-    margin-top: 0;
+#company-list {
+    position: relative;
+    margin-left: 25%;
 }
 
 .company-name {
@@ -24,8 +22,8 @@
 }
 
 #filter-list {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 20px;
+    position: fixed;
 }
 
 #filter-list ul li {
