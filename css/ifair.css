@@ -1,7 +1,7 @@
-#company-list {
+/* #company-list {
     position: relative;
     margin-left: 25%;
-}
+} */
 
 .company-name {
     font-weight: bold;
@@ -22,9 +22,10 @@
 }
 
 #filter-list {
-    margin: 20px 0 20px 20px;
-    position: fixed;
+    /* margin: 20px 0 20px 20px; */
+    padding-top:10vh;
 }
+
 
 #filter-list ul li {
     margin-bottom: 5px;
