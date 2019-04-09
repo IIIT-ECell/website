@@ -28,30 +28,32 @@ layout : wrapper
         <div class="card mb-5">
             <div class="card-header" id="company{{ cnt }}">
                 <h5><span class="company-name">{{ row.name }}</span></h5>
-                <p>Stipend: <span class="stipend">{{ row.stipend }}</span></p>
-                <p>About the project: {{ row.about_project }}</p>
+                <p><b>Stipend</b>: <span class="stipend">{{ row.stipend }}</span></p>
+                <p><b>About the project</b>: {{ row.about_project }}</p>
 
-                <a class="btn" data-toggle="collapse" data-target="#collapse{{ cnt }}" aria-expanded="true" aria-controls="collapse{{ cnt }}">
+                <a class="btn btn-info" data-toggle="collapse" data-target="#collapse{{ cnt }}" aria-expanded="true" aria-controls="collapse{{ cnt }}">
                     See more
                 </a>
             </div>
 
-            <div id="collapse{{ cnt }}" class="collapse" aria-labelledby="heading{{ cnt }}" data-parent="#company-list">
-                <div class="card-body">
-                    <ul>
-                        <li>About the Startup: {{ row.about }}</li>
-                        <li>Project: {{ row.project }}</li>
-                        <li>About the Project: {{ row.about_project }}</li>
-                        <li>Number of Positions: {{ row.npos }}</li>
-                        <li>Duration: <span class="duration">{{ row.duration }}</span></li>
-                        <li>Starting time: {{ row.start }}</li>
-                        <li>Skills Required: {{ row.skills }}</li>
-                        <li>Stipend: {{ row.stipend }}</li>
-                        <li>Type of internship: {{ row.type }}</li>
-                        <li>Perks: {{ row.perks }}</li>
-                        <li>More Details: {{ row.more_details }}</li>
-                    </ul>
-                </div>
+            <div id="collapse{{ cnt }}" class="card-body collapse" aria-labelledby="heading{{ cnt }}" data-parent="#company-list">
+                <ul>
+                    <li><span class="field">About the Startup</span>: {{ row.about }}</li>
+                    <li><span class="field">Project</span>: {{ row.project }}</li>
+                    <li><span class="field">About the Project</span>: {{ row.about_project }}</li>
+                    <li><span class="field">Number of Positions</span>: {{ row.npos }}</li>
+                    <li><span class="field">Duration</span>: <span class="duration">{{ row.duration }}</span></li>
+                    <li><span class="field">Starting time</span>: {{ row.start }}</li>
+                    <li><span class="field">Skills Required</span>: {{ row.skills }}</li>
+                    <li><span class="field">Stipend</span>: {{ row.stipend }}</li>
+                    <li><span class="field">Type of internship</span>: {{ row.type }}</li>
+                    {% if row.perks %}
+                        <li><span class="field">Perks</span>: {{ row.perks }}</li>
+                    {% endif %}
+                    {% if row.more_details %}
+                        <li><span class="field">More details</span>: {{ row.more_details }}</li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
     {% endif %}

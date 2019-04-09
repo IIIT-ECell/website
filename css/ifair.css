@@ -5,9 +5,22 @@
     margin-top: 0;
 }
 
-.card-header .btn {
-    width: 100%;
+.company-name {
+    font-weight: bold;
+}
+
+.card-header .btn.btn-info {
     text-align: left;
+    color: white !important;
+    background-color: #4d6ae3;
+}
+
+.card-header .btn.btn-info:hover {
+    color: white !important;
+}
+
+.card-body .field {
+    font-weight: bold;
 }
 
 #filter-list {
