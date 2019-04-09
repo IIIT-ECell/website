@@ -23,10 +23,22 @@
 
 #filter-list {
     /* margin: 20px 0 20px 20px; */
-    padding-top:10vh;
+    /* background-color: #e14658; */
+    padding-top: 10vh;
+    padding-left: 1vh;
 }
 
 
 #filter-list ul li {
     margin-bottom: 5px;
+}
+
+.bg-navy{
+    background: #001f3f;
+}
+.bg-pinkred{
+    background: #e14658;
+}
+.bg-gold{
+    background: #bba559;
 }
