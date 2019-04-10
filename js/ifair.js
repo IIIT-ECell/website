@@ -4,6 +4,7 @@
  */
 function getAllCompanies() {
     var companies = [...document.querySelectorAll("#company-list .card")];
+    console.log(companies)
     return companies.map(x => ({
         comp: x,
         stipend: getCompanyStipend(x),
@@ -13,15 +14,30 @@ function getAllCompanies() {
 }
 
 function getCompanyStipend(company) {
-    return company.querySelector(".stipend").innerHTML;
+    let stipendContainer = company.querySelector(".stipend");
+
+    if(!stipendContainer)
+        return "";
+
+    return stipendContainer.innerHTML;
 }
 
 function getCompanyDuration(company) {
-    return Number.parseInt(company.querySelector(".duration").innerHTML, 10);
+    let durationContainer = company.querySelector(".duration");
+
+    if(!durationContainer)
+        return 0;
+
+    return Number.parseInt(durationContainer.innerHTML, 10);
 }
 
 function getCompanyRemote(company) {
-    return company.querySelector(".type").innerHTML;
+    let remoteContainer = company.querySelector(".type");
+
+    if(!remoteContainer)
+        return "";
+
+    return remoteContainer.innerHTML;
 }
 
 // string, function
