@@ -4,7 +4,6 @@
  */
 function getAllCompanies() {
     var companies = [...document.querySelectorAll("#company-list .card")];
-    console.log(companies)
     return companies.map(x => ({
         comp: x,
         stipend: getCompanyStipend(x),
