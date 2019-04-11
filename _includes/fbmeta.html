@@ -1,8 +1,15 @@
 <!-- facebook Open Graph Metadatas -->
-<meta property="fb:app_id"       content="142981703176476" />
+<meta property="fb:app_id" content="142981703176476" />
 <meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title }}" />
-<meta property="og:description" content="{{ page.content | markdownify | strip_html | strip_newlines | truncate: 300 }}" />
-<meta property="og:image" content="{{ site.url }}/{{ page.image }}" />
-
+<meta
+    property="og:description"
+    content="{{ page.description | markdownify | strip_html | strip_newlines | truncate: 300 }}"
+/>
+<!-- <meta property="og:image" content="https://ecell.iiit.ac.in/assets/logos/logo-ecell.png" /> -->
+<!--
+Problems with putting the ecell logo in here is that
+1. it is white themed, and doesn't look good on a white preview 
+2. image gets clipped out on whatsapp web
+-->
