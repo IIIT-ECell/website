@@ -12,16 +12,28 @@ function getAllCompanies() {
     }));
 }
 
+/**
+ * @param {Element} element
+ * @param {String?} defaultVal
+ * @returns {String} innerhtml of element, or default value if null element
+ */
+function getSafeInnerHTML(element, defaultVal) {
+    return element ? element.innerHTML : defaultVal || "";
+}
+
 function getCompanyStipend(company) {
-    return company.querySelector(".stipend").innerHTML;
+    let stipendContainer = company.querySelector(".stipend");
+    return getSafeInnerHTML(stipendContainer);
 }
 
 function getCompanyDuration(company) {
-    return Number.parseInt(company.querySelector(".duration").innerHTML, 10);
+    let durationContainer = company.querySelector(".duration");
+    return Number.parseInt(getSafeInnerHTML(durationContainer, 0), 10);
 }
 
 function getCompanyRemote(company) {
-    return company.querySelector(".type").innerHTML;
+    let remoteContainer = company.querySelector(".type");
+    return getSafeInnerHTML(remoteContainer);
 }
 
 // string, function
